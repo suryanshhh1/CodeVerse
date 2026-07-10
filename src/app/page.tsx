@@ -30,7 +30,7 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] overflow-hidden">
       {/* Background gradients */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary/20 blur-[120px] rounded-full opacity-50" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[300px] bg-primary/20 blur-[120px] rounded-full opacity-50" />
 
       <motion.div
         className="container px-4 md:px-6 flex flex-col items-center text-center space-y-8 md:space-y-12"
@@ -85,6 +85,27 @@ export default function Home() {
           ))}
         </motion.div>
       </motion.div>
+
+      {/* Footer */}
+      <footer className="w-full mt-24 py-8 border-t border-border/40 bg-background/50 backdrop-blur-sm">
+        <div className="container px-4 md:px-6 mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+          <div className="flex items-center gap-2">
+            <Code className="h-5 w-5 text-primary" />
+            <span className="font-semibold text-lg">CodeVerse</span>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            &copy; {new Date().getFullYear()} CodeVerse. All rights reserved.
+          </p>
+          <div className="flex gap-4">
+            <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors min-h-[44px] flex items-center">
+              Terms
+            </Link>
+            <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors min-h-[44px] flex items-center">
+              Privacy
+            </Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

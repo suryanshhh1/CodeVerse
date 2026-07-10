@@ -56,6 +56,7 @@
     "@types/react-syntax-highlighter": "^15.5.13",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
+    "puppeteer": "^24.43.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
