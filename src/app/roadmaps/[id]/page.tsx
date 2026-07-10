@@ -6,20 +6,22 @@ import RoadmapClient from "./RoadmapClient";
 export default async function RoadmapDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
   
-  const roadmap = await prisma.roadmap.findUnique({
-    where: { slug: resolvedParams.id },
-    include: {
-      nodes: {
-        orderBy: { order: 'asc' }
+  const [roadmap, session] = await Promise.all([
+    prisma.roadmap.findUnique({
+      where: { slug: resolvedParams.id },
+      include: {
+        nodes: {
+          orderBy: { order: 'asc' }
+        }
       }
-    }
-  });
+    }),
+    auth()
+  ]);
 
   if (!roadmap) {
     notFound();
   }
 
-  const session = await auth();
   let completedNodeIds: string[] = [];
 
   if (session?.user?.id) {

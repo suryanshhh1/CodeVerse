@@ -471,7 +471,7 @@ export default function ChatClient({ initialConversations = [], user }: { initia
                     <div className={`rounded-2xl px-5 py-4 overflow-x-auto ${
                       msg.role === "user" 
                         ? "bg-primary text-primary-foreground rounded-tr-sm" 
-                        : "bg-card border border-border/50 shadow-sm rounded-tl-sm text-card-foreground prose prose-invert prose-p:leading-relaxed prose-pre:p-0 prose-pre:bg-transparent max-w-none w-full"
+                        : "bg-card border border-border/50 shadow-sm rounded-tl-sm text-card-foreground prose prose-invert prose-p:leading-relaxed prose-pre:p-0 prose-pre:bg-transparent max-w-full w-full"
                     }`}>
                       {msg.role === "user" ? (
                         <div className="flex flex-col gap-2">
@@ -505,15 +505,17 @@ export default function ChatClient({ initialConversations = [], user }: { initia
                                       toast.success("Code copied!");
                                     }} className="hover:text-white transition-colors">Copy</button>
                                   </div>
-                                  <SyntaxHighlighter
-                                    {...props}
-                                    style={vscDarkPlus}
-                                    language={match[1]}
-                                    PreTag="div"
-                                    customStyle={{ margin: 0, padding: '1rem', background: 'transparent' }}
-                                  >
-                                    {String(children).replace(/\n$/, '')}
-                                  </SyntaxHighlighter>
+                                  <div className="w-full overflow-x-auto">
+                                    <SyntaxHighlighter
+                                      {...props}
+                                      style={vscDarkPlus}
+                                      language={match[1]}
+                                      PreTag="div"
+                                      customStyle={{ margin: 0, padding: '1rem', background: 'transparent', minWidth: 'max-content' }}
+                                    >
+                                      {String(children).replace(/\n$/, '')}
+                                    </SyntaxHighlighter>
+                                  </div>
                                 </div>
                               ) : (
                                 <code {...props} className="bg-primary/10 text-primary px-1.5 py-0.5 rounded-md text-sm font-mono">
