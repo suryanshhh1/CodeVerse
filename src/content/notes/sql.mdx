@@ -1,0 +1,66 @@
+---
+title: "SQL"
+category: "Database"
+readTime: 8
+---
+
+## Overview
+SQL (Structured Query Language) is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS).
+
+## Definition
+SQL is the standard language for querying, updating, and managing relational databases.
+
+## Beginner Explanation
+Imagine an Excel spreadsheet with thousands of rows. SQL is a way to speak to the computer and say, "Give me all the rows where the user is older than 25 and lives in New York," and it instantly fetches exactly that.
+
+## Real World Example
+Every time you log into a website, a SQL query checks if your username and password exist in the Users database table. E-commerce sites use SQL to track inventory and orders.
+
+## Syntax
+```sql
+SELECT first_name, last_name 
+FROM employees 
+WHERE department = 'Sales';
+```
+
+## Code Example
+```sql
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO users (username, email) 
+VALUES ('johndoe', 'john@example.com');
+
+SELECT * FROM users WHERE username = 'johndoe';
+```
+
+## Important Points
+- **Relational Data:** Data is stored in tables consisting of rows and columns.
+- **ACID Properties:** Ensures database transactions are processed reliably (Atomicity, Consistency, Isolation, Durability).
+- **Primary/Foreign Keys:** Used to uniquely identify rows and link tables together.
+
+## Best Practices
+- Always use parameterized queries in your application code to prevent SQL Injection.
+- Index columns that are frequently used in WHERE clauses to speed up reads.
+- Avoid using `SELECT *` in production; specify only the columns you need.
+
+## Common Mistakes
+- Forgetting the WHERE clause in an UPDATE or DELETE statement (updating/deleting the entire table).
+- Creating too many indexes, which slows down write operations.
+- Storing sensitive data like passwords in plain text.
+
+## Interview Questions
+1. **What is a JOIN?**
+   - A clause used to combine rows from two or more tables, based on a related column between them (e.g., INNER JOIN, LEFT JOIN).
+2. **What is normalization?**
+   - The process of organizing data in a database to reduce redundancy and improve data integrity.
+
+## Quick Revision
+SQL is for relational databases. DDL (Data Definition: CREATE/ALTER), DML (Data Manipulation: SELECT/INSERT/UPDATE). Uses Primary and Foreign keys.
+
+## Summary
+SQL is a foundational skill for any backend or full-stack developer. Relational databases remain the backbone of the vast majority of software applications worldwide.

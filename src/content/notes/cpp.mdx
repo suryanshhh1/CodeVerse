@@ -1,0 +1,81 @@
+---
+title: "C++"
+category: "Backend"
+readTime: 12
+---
+
+## Overview
+C++ is a high-performance, compiled, general-purpose programming language. It is an extension of the C programming language that includes object-oriented, generic, and functional features.
+
+## Definition
+C++ is a statically typed, compiled, object-oriented language known for its system-level access and high performance.
+
+## Beginner Explanation
+If C is a manual transmission car, C++ is a manual car but with autopilot options, an upgraded stereo, and cup holders. You still have full control over the engine (memory), but you have a lot of tools to make driving (programming) easier.
+
+## Real World Example
+Game engines (Unreal Engine), high-frequency trading systems, operating systems, and web browsers (Chrome V8 engine) are written in C++ due to its raw speed and memory control.
+
+## Syntax
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+## Code Example
+```cpp
+#include <iostream>
+#include <vector>
+
+class Inventory {
+private:
+    std::vector<std::string> items;
+public:
+    void addItem(std::string item) {
+        items.push_back(item);
+    }
+    void showInventory() {
+        for(const auto& item : items) {
+            std::cout << "- " << item << "\n";
+        }
+    }
+};
+
+int main() {
+    Inventory myInv;
+    myInv.addItem("Sword");
+    myInv.showInventory();
+    return 0;
+}
+```
+
+## Important Points
+- **Manual Memory Management:** You must manage memory manually using `new` and `delete` (or smart pointers).
+- **STL (Standard Template Library):** Provides a rich set of methods for manipulating data structures.
+- **Pointers:** Variables that store memory addresses.
+
+## Best Practices
+- Prefer smart pointers (`std::unique_ptr`, `std::shared_ptr`) over raw pointers.
+- Use `const` and references wherever possible to prevent unnecessary copying.
+- Use auto keyword when the type is obvious.
+
+## Common Mistakes
+- Forgetting to free dynamically allocated memory (Memory Leaks).
+- Accessing out-of-bounds array elements (Segmentation Fault).
+- Using uninitialized variables.
+
+## Interview Questions
+1. **What is a virtual function?**
+   - A member function in a base class that you redefine in a derived class. It tells the compiler to perform dynamic linkage or late binding.
+2. **What is the difference between malloc() and new?**
+   - `new` allocates memory and calls the constructor, whereas `malloc` only allocates memory.
+
+## Quick Revision
+C++ = C + Classes. Highly performant, requires manual memory management, supports pointers and multiple inheritance.
+
+## Summary
+C++ remains the king of performance-critical applications. Mastering C++ gives you a profound understanding of how computers work at a fundamental level.

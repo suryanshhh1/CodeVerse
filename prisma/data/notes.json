@@ -1,0 +1,988 @@
+[
+  {
+    "slug": "programming-languages",
+    "title": "Programming Languages",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Programming Languages.",
+    "definition": "Programming Languages is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Programming Languages as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Programming Languages to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'programming languages';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Programming Languages\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Programming Languages?",
+      "How does Programming Languages scale in production?",
+      "What are the alternatives to Programming Languages?"
+    ],
+    "quickRevision": "Remember: Programming Languages is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 10
+  },
+  {
+    "slug": "dsa",
+    "title": "DSA",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on DSA.",
+    "definition": "DSA is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of DSA as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on DSA to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'dsa';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering DSA\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of DSA?",
+      "How does DSA scale in production?",
+      "What are the alternatives to DSA?"
+    ],
+    "quickRevision": "Remember: DSA is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 14
+  },
+  {
+    "slug": "operating-systems",
+    "title": "Operating Systems",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Operating Systems.",
+    "definition": "Operating Systems is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Operating Systems as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Operating Systems to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'operating systems';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Operating Systems\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Operating Systems?",
+      "How does Operating Systems scale in production?",
+      "What are the alternatives to Operating Systems?"
+    ],
+    "quickRevision": "Remember: Operating Systems is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 9
+  },
+  {
+    "slug": "computer-networks",
+    "title": "Computer Networks",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Computer Networks.",
+    "definition": "Computer Networks is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Computer Networks as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Computer Networks to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'computer networks';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Computer Networks\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Computer Networks?",
+      "How does Computer Networks scale in production?",
+      "What are the alternatives to Computer Networks?"
+    ],
+    "quickRevision": "Remember: Computer Networks is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 7
+  },
+  {
+    "slug": "dbms",
+    "title": "DBMS",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on DBMS.",
+    "definition": "DBMS is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of DBMS as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on DBMS to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'dbms';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering DBMS\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of DBMS?",
+      "How does DBMS scale in production?",
+      "What are the alternatives to DBMS?"
+    ],
+    "quickRevision": "Remember: DBMS is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 5
+  },
+  {
+    "slug": "oop",
+    "title": "OOP",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on OOP.",
+    "definition": "OOP is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of OOP as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on OOP to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'oop';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering OOP\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of OOP?",
+      "How does OOP scale in production?",
+      "What are the alternatives to OOP?"
+    ],
+    "quickRevision": "Remember: OOP is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 14
+  },
+  {
+    "slug": "software-engineering",
+    "title": "Software Engineering",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Software Engineering.",
+    "definition": "Software Engineering is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Software Engineering as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Software Engineering to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'software engineering';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Software Engineering\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Software Engineering?",
+      "How does Software Engineering scale in production?",
+      "What are the alternatives to Software Engineering?"
+    ],
+    "quickRevision": "Remember: Software Engineering is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 14
+  },
+  {
+    "slug": "web-development",
+    "title": "Web Development",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Web Development.",
+    "definition": "Web Development is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Web Development as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Web Development to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'web development';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Web Development\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Web Development?",
+      "How does Web Development scale in production?",
+      "What are the alternatives to Web Development?"
+    ],
+    "quickRevision": "Remember: Web Development is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 5
+  },
+  {
+    "slug": "react",
+    "title": "React",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on React.",
+    "definition": "React is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of React as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on React to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'react';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering React\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of React?",
+      "How does React scale in production?",
+      "What are the alternatives to React?"
+    ],
+    "quickRevision": "Remember: React is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 7
+  },
+  {
+    "slug": "nextdotjs",
+    "title": "Next.js",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Next.js.",
+    "definition": "Next.js is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Next.js as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Next.js to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'next.js';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Next.js\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Next.js?",
+      "How does Next.js scale in production?",
+      "What are the alternatives to Next.js?"
+    ],
+    "quickRevision": "Remember: Next.js is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 8
+  },
+  {
+    "slug": "nodedotjs",
+    "title": "Node.js",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Node.js.",
+    "definition": "Node.js is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Node.js as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Node.js to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'node.js';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Node.js\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Node.js?",
+      "How does Node.js scale in production?",
+      "What are the alternatives to Node.js?"
+    ],
+    "quickRevision": "Remember: Node.js is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 6
+  },
+  {
+    "slug": "expressdotjs",
+    "title": "Express.js",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Express.js.",
+    "definition": "Express.js is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Express.js as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Express.js to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'express.js';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Express.js\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Express.js?",
+      "How does Express.js scale in production?",
+      "What are the alternatives to Express.js?"
+    ],
+    "quickRevision": "Remember: Express.js is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 5
+  },
+  {
+    "slug": "mongodb",
+    "title": "MongoDB",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on MongoDB.",
+    "definition": "MongoDB is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of MongoDB as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on MongoDB to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'mongodb';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering MongoDB\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of MongoDB?",
+      "How does MongoDB scale in production?",
+      "What are the alternatives to MongoDB?"
+    ],
+    "quickRevision": "Remember: MongoDB is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 14
+  },
+  {
+    "slug": "postgresql",
+    "title": "PostgreSQL",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on PostgreSQL.",
+    "definition": "PostgreSQL is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of PostgreSQL as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on PostgreSQL to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'postgresql';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering PostgreSQL\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of PostgreSQL?",
+      "How does PostgreSQL scale in production?",
+      "What are the alternatives to PostgreSQL?"
+    ],
+    "quickRevision": "Remember: PostgreSQL is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 5
+  },
+  {
+    "slug": "sql",
+    "title": "SQL",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on SQL.",
+    "definition": "SQL is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of SQL as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on SQL to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'sql';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering SQL\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of SQL?",
+      "How does SQL scale in production?",
+      "What are the alternatives to SQL?"
+    ],
+    "quickRevision": "Remember: SQL is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 12
+  },
+  {
+    "slug": "git",
+    "title": "Git",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Git.",
+    "definition": "Git is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Git as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Git to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'git';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Git\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Git?",
+      "How does Git scale in production?",
+      "What are the alternatives to Git?"
+    ],
+    "quickRevision": "Remember: Git is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 8
+  },
+  {
+    "slug": "github",
+    "title": "GitHub",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on GitHub.",
+    "definition": "GitHub is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of GitHub as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on GitHub to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'github';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering GitHub\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of GitHub?",
+      "How does GitHub scale in production?",
+      "What are the alternatives to GitHub?"
+    ],
+    "quickRevision": "Remember: GitHub is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 13
+  },
+  {
+    "slug": "docker",
+    "title": "Docker",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Docker.",
+    "definition": "Docker is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Docker as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Docker to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'docker';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Docker\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Docker?",
+      "How does Docker scale in production?",
+      "What are the alternatives to Docker?"
+    ],
+    "quickRevision": "Remember: Docker is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 14
+  },
+  {
+    "slug": "linux",
+    "title": "Linux",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Linux.",
+    "definition": "Linux is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Linux as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Linux to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'linux';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Linux\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Linux?",
+      "How does Linux scale in production?",
+      "What are the alternatives to Linux?"
+    ],
+    "quickRevision": "Remember: Linux is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 7
+  },
+  {
+    "slug": "cloud-computing",
+    "title": "Cloud Computing",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Cloud Computing.",
+    "definition": "Cloud Computing is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Cloud Computing as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Cloud Computing to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'cloud computing';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Cloud Computing\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Cloud Computing?",
+      "How does Cloud Computing scale in production?",
+      "What are the alternatives to Cloud Computing?"
+    ],
+    "quickRevision": "Remember: Cloud Computing is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 12
+  },
+  {
+    "slug": "cybersecurity",
+    "title": "Cybersecurity",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Cybersecurity.",
+    "definition": "Cybersecurity is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Cybersecurity as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Cybersecurity to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'cybersecurity';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Cybersecurity\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Cybersecurity?",
+      "How does Cybersecurity scale in production?",
+      "What are the alternatives to Cybersecurity?"
+    ],
+    "quickRevision": "Remember: Cybersecurity is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 12
+  },
+  {
+    "slug": "artificial-intelligence",
+    "title": "Artificial Intelligence",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Artificial Intelligence.",
+    "definition": "Artificial Intelligence is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Artificial Intelligence as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Artificial Intelligence to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'artificial intelligence';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Artificial Intelligence\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Artificial Intelligence?",
+      "How does Artificial Intelligence scale in production?",
+      "What are the alternatives to Artificial Intelligence?"
+    ],
+    "quickRevision": "Remember: Artificial Intelligence is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 13
+  },
+  {
+    "slug": "machine-learning",
+    "title": "Machine Learning",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Machine Learning.",
+    "definition": "Machine Learning is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Machine Learning as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Machine Learning to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'machine learning';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Machine Learning\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Machine Learning?",
+      "How does Machine Learning scale in production?",
+      "What are the alternatives to Machine Learning?"
+    ],
+    "quickRevision": "Remember: Machine Learning is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 9
+  },
+  {
+    "slug": "prompt-engineering",
+    "title": "Prompt Engineering",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Prompt Engineering.",
+    "definition": "Prompt Engineering is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Prompt Engineering as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Prompt Engineering to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'prompt engineering';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Prompt Engineering\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Prompt Engineering?",
+      "How does Prompt Engineering scale in production?",
+      "What are the alternatives to Prompt Engineering?"
+    ],
+    "quickRevision": "Remember: Prompt Engineering is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 8
+  },
+  {
+    "slug": "system-design",
+    "title": "System Design",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on System Design.",
+    "definition": "System Design is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of System Design as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on System Design to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'system design';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering System Design\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of System Design?",
+      "How does System Design scale in production?",
+      "What are the alternatives to System Design?"
+    ],
+    "quickRevision": "Remember: System Design is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 6
+  },
+  {
+    "slug": "rest-apis",
+    "title": "REST APIs",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on REST APIs.",
+    "definition": "REST APIs is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of REST APIs as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on REST APIs to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'rest apis';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering REST APIs\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of REST APIs?",
+      "How does REST APIs scale in production?",
+      "What are the alternatives to REST APIs?"
+    ],
+    "quickRevision": "Remember: REST APIs is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 5
+  },
+  {
+    "slug": "authentication",
+    "title": "Authentication",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Authentication.",
+    "definition": "Authentication is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Authentication as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Authentication to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'authentication';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Authentication\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Authentication?",
+      "How does Authentication scale in production?",
+      "What are the alternatives to Authentication?"
+    ],
+    "quickRevision": "Remember: Authentication is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 6
+  },
+  {
+    "slug": "json",
+    "title": "JSON",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on JSON.",
+    "definition": "JSON is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of JSON as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on JSON to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'json';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering JSON\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of JSON?",
+      "How does JSON scale in production?",
+      "What are the alternatives to JSON?"
+    ],
+    "quickRevision": "Remember: JSON is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 10
+  },
+  {
+    "slug": "http",
+    "title": "HTTP",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on HTTP.",
+    "definition": "HTTP is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of HTTP as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on HTTP to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'http';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering HTTP\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of HTTP?",
+      "How does HTTP scale in production?",
+      "What are the alternatives to HTTP?"
+    ],
+    "quickRevision": "Remember: HTTP is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 13
+  },
+  {
+    "slug": "html",
+    "title": "HTML",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on HTML.",
+    "definition": "HTML is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of HTML as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on HTML to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'html';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering HTML\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of HTML?",
+      "How does HTML scale in production?",
+      "What are the alternatives to HTML?"
+    ],
+    "quickRevision": "Remember: HTML is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 6
+  },
+  {
+    "slug": "css",
+    "title": "CSS",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on CSS.",
+    "definition": "CSS is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of CSS as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on CSS to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'css';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering CSS\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of CSS?",
+      "How does CSS scale in production?",
+      "What are the alternatives to CSS?"
+    ],
+    "quickRevision": "Remember: CSS is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 12
+  },
+  {
+    "slug": "tailwind-css",
+    "title": "Tailwind CSS",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on Tailwind CSS.",
+    "definition": "Tailwind CSS is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of Tailwind CSS as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on Tailwind CSS to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'tailwind css';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering Tailwind CSS\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of Tailwind CSS?",
+      "How does Tailwind CSS scale in production?",
+      "What are the alternatives to Tailwind CSS?"
+    ],
+    "quickRevision": "Remember: Tailwind CSS is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 5
+  },
+  {
+    "slug": "javascript-es6",
+    "title": "JavaScript ES6",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on JavaScript ES6.",
+    "definition": "JavaScript ES6 is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of JavaScript ES6 as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on JavaScript ES6 to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'javascript es6';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering JavaScript ES6\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of JavaScript ES6?",
+      "How does JavaScript ES6 scale in production?",
+      "What are the alternatives to JavaScript ES6?"
+    ],
+    "quickRevision": "Remember: JavaScript ES6 is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 13
+  },
+  {
+    "slug": "typescript",
+    "title": "TypeScript",
+    "category": "Computer Science",
+    "overview": "A comprehensive professional guide on TypeScript.",
+    "definition": "TypeScript is a critical component of modern software architecture and development.",
+    "simpleExplanation": "Think of TypeScript as a tool that helps you solve complex problems efficiently and securely.",
+    "realWorldExample": "When you use your smartphone to order food, the backend relies heavily on TypeScript to ensure your order is processed.",
+    "syntax": "// Standard Implementation\nimport { feature } from 'typescript';\n\nfeature.initialize();",
+    "codeExample": "function demonstrate() {\n  console.log(\"Mastering TypeScript\");\n}",
+    "bestPractices": [
+      "Always keep security in mind.",
+      "Optimize for performance.",
+      "Write clean, readable code.",
+      "Document your architecture."
+    ],
+    "commonMistakes": [
+      "Ignoring edge cases.",
+      "Over-engineering simple problems.",
+      "Forgetting to handle exceptions."
+    ],
+    "interviewQuestions": [
+      "Explain the core mechanism of TypeScript?",
+      "How does TypeScript scale in production?",
+      "What are the alternatives to TypeScript?"
+    ],
+    "quickRevision": "Remember: TypeScript is used for building scalable, efficient systems. Master the basics first.",
+    "readTime": 5
+  }
+]

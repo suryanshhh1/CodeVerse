@@ -1,0 +1,75 @@
+---
+title: "HTML"
+category: "Frontend"
+readTime: 5
+---
+
+## Overview
+HTML (HyperText Markup Language) is the standard markup language for documents designed to be displayed in a web browser.
+
+## Definition
+HTML is the standard markup language used to structure and display content on the World Wide Web.
+
+## Beginner Explanation
+HTML is the skeleton of a web page. It defines where the text goes, where the images go, and where the links point to. Without HTML, there is no web page.
+
+## Real World Example
+Every single website you visit, from Google to Wikipedia, uses HTML to define its basic structure before styling it with CSS or making it interactive with JavaScript.
+
+## Syntax
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p>
+</body>
+</html>
+```
+
+## Code Example
+```html
+<article>
+    <header>
+        <h2>The Basics of HTML</h2>
+        <p>Published on: <time datetime="2023-10-25">October 25, 2023</time></p>
+    </header>
+    <section>
+        <p>HTML elements are the building blocks of HTML pages. They are represented by tags.</p>
+        <img src="html-logo.png" alt="HTML5 Logo" width="100">
+    </section>
+    <footer>
+        <p>Written by Jane Doe</p>
+    </footer>
+</article>
+```
+
+## Important Points
+- **Semantic HTML:** Using tags that convey meaning (like `<article>`, `<footer>`) rather than just `<div>` improves accessibility and SEO.
+- **Attributes:** Tags can have attributes (like `href` for links) that provide additional information.
+- **Not a Programming Language:** HTML is a markup language; it does not have logic (if statements, loops).
+
+## Best Practices
+- Always use the `alt` attribute on images for screen readers.
+- Ensure proper nesting of elements (don't close a parent tag before closing its children).
+- Use semantic tags instead of nesting endless `<div>`s (Divitis).
+
+## Common Mistakes
+- Forgetting to close tags (e.g., `<p>Text</p>` instead of `<p>Text`).
+- Using inline CSS (`style="..."`) instead of an external stylesheet.
+- Using heading tags (`<h1>` to `<h6>`) for styling rather than structural hierarchy.
+
+## Interview Questions
+1. **What is the purpose of the DOCTYPE declaration?**
+   - It tells the web browser what version of HTML the page is written in.
+2. **What are Semantic Elements?**
+   - Elements with a meaning (e.g., `<form>`, `<table>`, `<article>`) that clearly describe their meaning to both the browser and the developer.
+
+## Quick Revision
+HTML = Structure. Uses tags and attributes. Focus on semantic tags for accessibility.
+
+## Summary
+HTML is the fundamental building block of the Web. While simple to learn, mastering semantic HTML is crucial for creating accessible and SEO-friendly websites.

@@ -1,0 +1,1932 @@
+[
+  {
+    "slug": "programming-fundamentals",
+    "title": "Programming Fundamentals",
+    "description": "Complete guide and interactive roadmap for mastering Programming Fundamentals. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 207,
+    "prerequisites": [],
+    "skillsGained": [
+      "Programming Fundamentals Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Programming Fundamentals and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "frontend-development",
+    "title": "Frontend Development",
+    "description": "Complete guide and interactive roadmap for mastering Frontend Development. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Intermediate",
+    "estimatedHours": 101,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Frontend Development Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Frontend Development and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "backend-development",
+    "title": "Backend Development",
+    "description": "Complete guide and interactive roadmap for mastering Backend Development. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Advanced",
+    "estimatedHours": 79,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Backend Development Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Backend Development and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "full-stack-development",
+    "title": "Full Stack Development",
+    "description": "Complete guide and interactive roadmap for mastering Full Stack Development. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 148,
+    "prerequisites": [],
+    "skillsGained": [
+      "Full Stack Development Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Full Stack Development and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "android-development",
+    "title": "Android Development",
+    "description": "Complete guide and interactive roadmap for mastering Android Development. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Advanced",
+    "estimatedHours": 162,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Android Development Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Android Development and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "ios-development",
+    "title": "iOS Development",
+    "description": "Complete guide and interactive roadmap for mastering iOS Development. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Intermediate",
+    "estimatedHours": 79,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "iOS Development Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of iOS Development and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "flutter",
+    "title": "Flutter",
+    "description": "Complete guide and interactive roadmap for mastering Flutter. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 91,
+    "prerequisites": [],
+    "skillsGained": [
+      "Flutter Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Flutter and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "react-native",
+    "title": "React Native",
+    "description": "Complete guide and interactive roadmap for mastering React Native. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Intermediate",
+    "estimatedHours": 146,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "React Native Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of React Native and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "artificial-intelligence",
+    "title": "Artificial Intelligence",
+    "description": "Complete guide and interactive roadmap for mastering Artificial Intelligence. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Advanced",
+    "estimatedHours": 112,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Artificial Intelligence Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Artificial Intelligence and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "machine-learning",
+    "title": "Machine Learning",
+    "description": "Complete guide and interactive roadmap for mastering Machine Learning. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 188,
+    "prerequisites": [],
+    "skillsGained": [
+      "Machine Learning Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Machine Learning and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "deep-learning",
+    "title": "Deep Learning",
+    "description": "Complete guide and interactive roadmap for mastering Deep Learning. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Advanced",
+    "estimatedHours": 233,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Deep Learning Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Deep Learning and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "generative-ai",
+    "title": "Generative AI",
+    "description": "Complete guide and interactive roadmap for mastering Generative AI. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Intermediate",
+    "estimatedHours": 182,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Generative AI Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Generative AI and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "prompt-engineering",
+    "title": "Prompt Engineering",
+    "description": "Complete guide and interactive roadmap for mastering Prompt Engineering. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 111,
+    "prerequisites": [],
+    "skillsGained": [
+      "Prompt Engineering Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Prompt Engineering and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "large-language-models",
+    "title": "Large Language Models",
+    "description": "Complete guide and interactive roadmap for mastering Large Language Models. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Intermediate",
+    "estimatedHours": 81,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Large Language Models Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Large Language Models and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "ai-agents",
+    "title": "AI Agents",
+    "description": "Complete guide and interactive roadmap for mastering AI Agents. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Advanced",
+    "estimatedHours": 62,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "AI Agents Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of AI Agents and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "natural-language-processing",
+    "title": "Natural Language Processing",
+    "description": "Complete guide and interactive roadmap for mastering Natural Language Processing. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 197,
+    "prerequisites": [],
+    "skillsGained": [
+      "Natural Language Processing Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Natural Language Processing and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "computer-vision",
+    "title": "Computer Vision",
+    "description": "Complete guide and interactive roadmap for mastering Computer Vision. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Advanced",
+    "estimatedHours": 147,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Computer Vision Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Computer Vision and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "data-science",
+    "title": "Data Science",
+    "description": "Complete guide and interactive roadmap for mastering Data Science. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Intermediate",
+    "estimatedHours": 84,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Data Science Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Data Science and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "data-analytics",
+    "title": "Data Analytics",
+    "description": "Complete guide and interactive roadmap for mastering Data Analytics. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 151,
+    "prerequisites": [],
+    "skillsGained": [
+      "Data Analytics Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Data Analytics and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "data-engineering",
+    "title": "Data Engineering",
+    "description": "Complete guide and interactive roadmap for mastering Data Engineering. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Intermediate",
+    "estimatedHours": 136,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Data Engineering Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Data Engineering and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "cybersecurity",
+    "title": "Cybersecurity",
+    "description": "Complete guide and interactive roadmap for mastering Cybersecurity. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Advanced",
+    "estimatedHours": 222,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Cybersecurity Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Cybersecurity and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "ethical-hacking",
+    "title": "Ethical Hacking",
+    "description": "Complete guide and interactive roadmap for mastering Ethical Hacking. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 174,
+    "prerequisites": [],
+    "skillsGained": [
+      "Ethical Hacking Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Ethical Hacking and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "cloud-computing",
+    "title": "Cloud Computing",
+    "description": "Complete guide and interactive roadmap for mastering Cloud Computing. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Advanced",
+    "estimatedHours": 224,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Cloud Computing Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Cloud Computing and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "aws",
+    "title": "AWS",
+    "description": "Complete guide and interactive roadmap for mastering AWS. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Intermediate",
+    "estimatedHours": 76,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "AWS Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of AWS and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "azure",
+    "title": "Azure",
+    "description": "Complete guide and interactive roadmap for mastering Azure. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 130,
+    "prerequisites": [],
+    "skillsGained": [
+      "Azure Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Azure and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "google-cloud",
+    "title": "Google Cloud",
+    "description": "Complete guide and interactive roadmap for mastering Google Cloud. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Intermediate",
+    "estimatedHours": 167,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Google Cloud Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Google Cloud and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "devops",
+    "title": "DevOps",
+    "description": "Complete guide and interactive roadmap for mastering DevOps. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Advanced",
+    "estimatedHours": 140,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "DevOps Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of DevOps and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "docker",
+    "title": "Docker",
+    "description": "Complete guide and interactive roadmap for mastering Docker. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 164,
+    "prerequisites": [],
+    "skillsGained": [
+      "Docker Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Docker and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "kubernetes",
+    "title": "Kubernetes",
+    "description": "Complete guide and interactive roadmap for mastering Kubernetes. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Advanced",
+    "estimatedHours": 153,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Kubernetes Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Kubernetes and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "system-design",
+    "title": "System Design",
+    "description": "Complete guide and interactive roadmap for mastering System Design. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Intermediate",
+    "estimatedHours": 216,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "System Design Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of System Design and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "software-engineering",
+    "title": "Software Engineering",
+    "description": "Complete guide and interactive roadmap for mastering Software Engineering. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 229,
+    "prerequisites": [],
+    "skillsGained": [
+      "Software Engineering Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Software Engineering and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "database-engineering",
+    "title": "Database Engineering",
+    "description": "Complete guide and interactive roadmap for mastering Database Engineering. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Intermediate",
+    "estimatedHours": 121,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Database Engineering Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Database Engineering and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "sql",
+    "title": "SQL",
+    "description": "Complete guide and interactive roadmap for mastering SQL. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Advanced",
+    "estimatedHours": 241,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "SQL Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of SQL and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "nosql",
+    "title": "NoSQL",
+    "description": "Complete guide and interactive roadmap for mastering NoSQL. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 136,
+    "prerequisites": [],
+    "skillsGained": [
+      "NoSQL Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of NoSQL and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "operating-systems",
+    "title": "Operating Systems",
+    "description": "Complete guide and interactive roadmap for mastering Operating Systems. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Advanced",
+    "estimatedHours": 195,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Operating Systems Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Operating Systems and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "computer-networks",
+    "title": "Computer Networks",
+    "description": "Complete guide and interactive roadmap for mastering Computer Networks. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Intermediate",
+    "estimatedHours": 189,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Computer Networks Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Computer Networks and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "linux",
+    "title": "Linux",
+    "description": "Complete guide and interactive roadmap for mastering Linux. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 233,
+    "prerequisites": [],
+    "skillsGained": [
+      "Linux Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Linux and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "blockchain",
+    "title": "Blockchain",
+    "description": "Complete guide and interactive roadmap for mastering Blockchain. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Intermediate",
+    "estimatedHours": 64,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Blockchain Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Blockchain and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "game-development",
+    "title": "Game Development",
+    "description": "Complete guide and interactive roadmap for mastering Game Development. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Advanced",
+    "estimatedHours": 149,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Game Development Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Game Development and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "embedded-systems",
+    "title": "Embedded Systems",
+    "description": "Complete guide and interactive roadmap for mastering Embedded Systems. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 249,
+    "prerequisites": [],
+    "skillsGained": [
+      "Embedded Systems Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Embedded Systems and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "iot",
+    "title": "IoT",
+    "description": "Complete guide and interactive roadmap for mastering IoT. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Advanced",
+    "estimatedHours": 116,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "IoT Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of IoT and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "competitive-programming",
+    "title": "Competitive Programming",
+    "description": "Complete guide and interactive roadmap for mastering Competitive Programming. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Intermediate",
+    "estimatedHours": 147,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Competitive Programming Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Competitive Programming and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "git-github",
+    "title": "Git & GitHub",
+    "description": "Complete guide and interactive roadmap for mastering Git & GitHub. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 203,
+    "prerequisites": [],
+    "skillsGained": [
+      "Git & GitHub Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Git & GitHub and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "open-source",
+    "title": "Open Source",
+    "description": "Complete guide and interactive roadmap for mastering Open Source. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Intermediate",
+    "estimatedHours": 216,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Open Source Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Open Source and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "interview-preparation",
+    "title": "Interview Preparation",
+    "description": "Complete guide and interactive roadmap for mastering Interview Preparation. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Advanced",
+    "estimatedHours": 133,
+    "prerequisites": [
+      "Basic Programming",
+      "Computer Literacy"
+    ],
+    "skillsGained": [
+      "Interview Preparation Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Interview Preparation and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  },
+  {
+    "slug": "freelancing",
+    "title": "Freelancing",
+    "description": "Complete guide and interactive roadmap for mastering Freelancing. Learn the core concepts, advanced techniques, and practical applications required for industry-level proficiency.",
+    "difficulty": "Beginner",
+    "estimatedHours": 117,
+    "prerequisites": [],
+    "skillsGained": [
+      "Freelancing Fundamentals",
+      "Problem Solving",
+      "Architecture"
+    ],
+    "nodes": [
+      {
+        "title": "Introduction & Basics",
+        "description": "Understand the absolute fundamentals of Freelancing and set up your environment.",
+        "order": 1
+      },
+      {
+        "title": "Core Concepts",
+        "description": "Deep dive into the main theoretical and practical building blocks.",
+        "order": 2
+      },
+      {
+        "title": "Advanced Patterns",
+        "description": "Explore complex architectures and optimal design patterns.",
+        "order": 3
+      },
+      {
+        "title": "Practical Implementation",
+        "description": "Build real-world projects applying what you have learned.",
+        "order": 4
+      },
+      {
+        "title": "Interview Preparation",
+        "description": "Master the most common interview questions for this niche.",
+        "order": 5
+      }
+    ]
+  }
+]

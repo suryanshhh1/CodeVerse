@@ -1,0 +1,67 @@
+---
+title: "Git"
+category: "DevOps"
+readTime: 6
+---
+
+## Overview
+Git is a free and open-source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+## Definition
+Git is a version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers.
+
+## Beginner Explanation
+Git is like a time machine and a save point system for your code. If you make a mistake, you can instantly go back in time to when the code worked. It also lets multiple people work on the same project without overwriting each other's work.
+
+## Real World Example
+Every major tech company uses Git. Platforms like GitHub and GitLab host Git repositories, enabling open-source collaboration across the globe.
+
+## Syntax
+```bash
+# Initialize a new repository
+git init
+
+# Check the status of files
+git status
+```
+
+## Code Example
+```bash
+# A typical Git workflow
+git checkout -b feature/new-login-page
+git add .
+git commit -m "feat: implement new login page UI"
+git push origin feature/new-login-page
+
+# Later, merging into main
+git checkout main
+git pull origin main
+git merge feature/new-login-page
+```
+
+## Important Points
+- **Distributed:** Every developer has a full copy of the repository history locally.
+- **Branches:** Lightweight pointers to a specific commit, allowing isolated environments for new features.
+- **Commits:** Snapshots of the repository at a specific point in time.
+
+## Best Practices
+- Commit often, and write clear, descriptive commit messages.
+- Never commit secrets (API keys, passwords). Use `.gitignore`.
+- Use feature branches instead of committing directly to `main` or `master`.
+
+## Common Mistakes
+- Forgetting to pull before pushing, resulting in merge conflicts.
+- Committing large binaries or node_modules.
+- Running `git push --force` on a shared branch, erasing coworkers' commits.
+
+## Interview Questions
+1. **What is the difference between git pull and git fetch?**
+   - `git fetch` downloads changes from the remote without modifying your local working state. `git pull` fetches and then automatically merges them into your current branch.
+2. **What is a merge conflict?**
+   - It occurs when two branches have changed the same part of the same file differently, and Git cannot automatically determine which change to keep.
+
+## Quick Revision
+Git = Version Control. init -> add -> commit -> push. Branches allow isolated development.
+
+## Summary
+Git is an indispensable tool in modern software development. Without it, collaboration at scale and managing software versions would be chaotic and highly error-prone.

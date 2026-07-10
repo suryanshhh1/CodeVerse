@@ -1,0 +1,72 @@
+---
+title: "JavaScript"
+category: "Frontend"
+readTime: 9
+---
+
+## Overview
+JavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it.
+
+## Definition
+JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods.
+
+## Beginner Explanation
+If a website is a house, HTML is the structure (walls), CSS is the design (paint), and JavaScript is the electricity and plumbing that makes things actually work (buttons clicking, data loading).
+
+## Real World Example
+Every interactive website you use (Twitter, Facebook, YouTube) uses JavaScript to fetch new data without reloading the page, handle clicks, and play animations.
+
+## Syntax
+```javascript
+const greet = (name) => {
+    console.log(`Hello, ${name}!`);
+};
+greet("World");
+```
+
+## Code Example
+```javascript
+class UserTracker {
+    constructor() {
+        this.users = new Set();
+    }
+
+    async fetchUsers() {
+        try {
+            const response = await fetch('https://api.example.com/users');
+            const data = await response.json();
+            data.forEach(user => this.users.add(user.name));
+            return Array.from(this.users);
+        } catch (error) {
+            console.error("Failed to fetch users", error);
+        }
+    }
+}
+```
+
+## Important Points
+- **Single-Threaded:** Runs on a single thread but handles concurrency via the Event Loop.
+- **First-Class Functions:** Functions are treated like any other variable.
+- **Prototypal Inheritance:** Objects inherit from other objects, not classes.
+
+## Best Practices
+- Always use `const` or `let` instead of `var`.
+- Use strict equality (`===`) to avoid type coercion bugs.
+- Prefer async/await over raw Promises for readability.
+
+## Common Mistakes
+- Misunderstanding how `this` binding works in different contexts.
+- Forgetting to handle Promise rejections.
+- Accidentally creating global variables by omitting variable declarations.
+
+## Interview Questions
+1. **Explain the Event Loop.**
+   - It constantly checks the call stack and the task queue. If the stack is empty, it pushes the first task from the queue to the stack to execute.
+2. **What is a closure?**
+   - A function bundled together with its lexical environment, allowing it to remember the variables from its outer scope even after the outer function has finished executing.
+
+## Quick Revision
+JavaScript is single-threaded but asynchronous via the event loop. Uses prototypal inheritance. The standard language of the web.
+
+## Summary
+JavaScript has evolved from a simple client-side scripting language into a versatile, powerful tool capable of driving complex web applications, server-side backends (Node.js), and mobile applications.

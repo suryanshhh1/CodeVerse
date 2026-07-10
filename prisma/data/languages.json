@@ -1,0 +1,522 @@
+[
+  {
+    "slug": "c",
+    "name": "C",
+    "introduction": "C is a powerful programming language widely used in the industry for building robust software applications.",
+    "history": "Originally created decades ago, C has evolved significantly, adding modern features and an expansive ecosystem.",
+    "whyLearn": "Learning C opens up massive career opportunities and gives you a strong foundation in algorithmic thinking.",
+    "setupGuide": "1. Download the compiler/interpreter. \n2. Set up your IDE (VS Code or IntelliJ). \n3. Run your first Hello World program.",
+    "topics": [
+      {
+        "title": "Variables & Data Types",
+        "content": "Learn how to declare variables and manage primitive types.",
+        "order": 1,
+        "codeExample": "let x = 10;"
+      },
+      {
+        "title": "Control Flow & Loops",
+        "content": "Master if statements, switch cases, and loops (for, while).",
+        "order": 2,
+        "codeExample": "for(let i=0; i<10; i++) {}"
+      },
+      {
+        "title": "Functions & Scope",
+        "content": "Understand how to modularize your code using reusable functions.",
+        "order": 3,
+        "codeExample": "function greet() { return 'Hello'; }"
+      },
+      {
+        "title": "Object Oriented Programming",
+        "content": "Classes, Inheritance, Polymorphism, and Encapsulation.",
+        "order": 4,
+        "codeExample": "class Car {}"
+      },
+      {
+        "title": "Advanced Memory & Multithreading",
+        "content": "Handle complex operations securely and concurrently.",
+        "order": 5,
+        "codeExample": "// Complex implementation here"
+      }
+    ]
+  },
+  {
+    "slug": "cpp",
+    "name": "C++",
+    "introduction": "C++ is a powerful programming language widely used in the industry for building robust software applications.",
+    "history": "Originally created decades ago, C++ has evolved significantly, adding modern features and an expansive ecosystem.",
+    "whyLearn": "Learning C++ opens up massive career opportunities and gives you a strong foundation in algorithmic thinking.",
+    "setupGuide": "1. Download the compiler/interpreter. \n2. Set up your IDE (VS Code or IntelliJ). \n3. Run your first Hello World program.",
+    "topics": [
+      {
+        "title": "Variables & Data Types",
+        "content": "Learn how to declare variables and manage primitive types.",
+        "order": 1,
+        "codeExample": "let x = 10;"
+      },
+      {
+        "title": "Control Flow & Loops",
+        "content": "Master if statements, switch cases, and loops (for, while).",
+        "order": 2,
+        "codeExample": "for(let i=0; i<10; i++) {}"
+      },
+      {
+        "title": "Functions & Scope",
+        "content": "Understand how to modularize your code using reusable functions.",
+        "order": 3,
+        "codeExample": "function greet() { return 'Hello'; }"
+      },
+      {
+        "title": "Object Oriented Programming",
+        "content": "Classes, Inheritance, Polymorphism, and Encapsulation.",
+        "order": 4,
+        "codeExample": "class Car {}"
+      },
+      {
+        "title": "Advanced Memory & Multithreading",
+        "content": "Handle complex operations securely and concurrently.",
+        "order": 5,
+        "codeExample": "// Complex implementation here"
+      }
+    ]
+  },
+  {
+    "slug": "java",
+    "name": "Java",
+    "introduction": "Java is a powerful programming language widely used in the industry for building robust software applications.",
+    "history": "Originally created decades ago, Java has evolved significantly, adding modern features and an expansive ecosystem.",
+    "whyLearn": "Learning Java opens up massive career opportunities and gives you a strong foundation in algorithmic thinking.",
+    "setupGuide": "1. Download the compiler/interpreter. \n2. Set up your IDE (VS Code or IntelliJ). \n3. Run your first Hello World program.",
+    "topics": [
+      {
+        "title": "Variables & Data Types",
+        "content": "Learn how to declare variables and manage primitive types.",
+        "order": 1,
+        "codeExample": "let x = 10;"
+      },
+      {
+        "title": "Control Flow & Loops",
+        "content": "Master if statements, switch cases, and loops (for, while).",
+        "order": 2,
+        "codeExample": "for(let i=0; i<10; i++) {}"
+      },
+      {
+        "title": "Functions & Scope",
+        "content": "Understand how to modularize your code using reusable functions.",
+        "order": 3,
+        "codeExample": "function greet() { return 'Hello'; }"
+      },
+      {
+        "title": "Object Oriented Programming",
+        "content": "Classes, Inheritance, Polymorphism, and Encapsulation.",
+        "order": 4,
+        "codeExample": "class Car {}"
+      },
+      {
+        "title": "Advanced Memory & Multithreading",
+        "content": "Handle complex operations securely and concurrently.",
+        "order": 5,
+        "codeExample": "// Complex implementation here"
+      }
+    ]
+  },
+  {
+    "slug": "python",
+    "name": "Python",
+    "introduction": "Python is a powerful programming language widely used in the industry for building robust software applications.",
+    "history": "Originally created decades ago, Python has evolved significantly, adding modern features and an expansive ecosystem.",
+    "whyLearn": "Learning Python opens up massive career opportunities and gives you a strong foundation in algorithmic thinking.",
+    "setupGuide": "1. Download the compiler/interpreter. \n2. Set up your IDE (VS Code or IntelliJ). \n3. Run your first Hello World program.",
+    "topics": [
+      {
+        "title": "Variables & Data Types",
+        "content": "Learn how to declare variables and manage primitive types.",
+        "order": 1,
+        "codeExample": "let x = 10;"
+      },
+      {
+        "title": "Control Flow & Loops",
+        "content": "Master if statements, switch cases, and loops (for, while).",
+        "order": 2,
+        "codeExample": "for(let i=0; i<10; i++) {}"
+      },
+      {
+        "title": "Functions & Scope",
+        "content": "Understand how to modularize your code using reusable functions.",
+        "order": 3,
+        "codeExample": "function greet() { return 'Hello'; }"
+      },
+      {
+        "title": "Object Oriented Programming",
+        "content": "Classes, Inheritance, Polymorphism, and Encapsulation.",
+        "order": 4,
+        "codeExample": "class Car {}"
+      },
+      {
+        "title": "Advanced Memory & Multithreading",
+        "content": "Handle complex operations securely and concurrently.",
+        "order": 5,
+        "codeExample": "// Complex implementation here"
+      }
+    ]
+  },
+  {
+    "slug": "javascript",
+    "name": "JavaScript",
+    "introduction": "JavaScript is a powerful programming language widely used in the industry for building robust software applications.",
+    "history": "Originally created decades ago, JavaScript has evolved significantly, adding modern features and an expansive ecosystem.",
+    "whyLearn": "Learning JavaScript opens up massive career opportunities and gives you a strong foundation in algorithmic thinking.",
+    "setupGuide": "1. Download the compiler/interpreter. \n2. Set up your IDE (VS Code or IntelliJ). \n3. Run your first Hello World program.",
+    "topics": [
+      {
+        "title": "Variables & Data Types",
+        "content": "Learn how to declare variables and manage primitive types.",
+        "order": 1,
+        "codeExample": "let x = 10;"
+      },
+      {
+        "title": "Control Flow & Loops",
+        "content": "Master if statements, switch cases, and loops (for, while).",
+        "order": 2,
+        "codeExample": "for(let i=0; i<10; i++) {}"
+      },
+      {
+        "title": "Functions & Scope",
+        "content": "Understand how to modularize your code using reusable functions.",
+        "order": 3,
+        "codeExample": "function greet() { return 'Hello'; }"
+      },
+      {
+        "title": "Object Oriented Programming",
+        "content": "Classes, Inheritance, Polymorphism, and Encapsulation.",
+        "order": 4,
+        "codeExample": "class Car {}"
+      },
+      {
+        "title": "Advanced Memory & Multithreading",
+        "content": "Handle complex operations securely and concurrently.",
+        "order": 5,
+        "codeExample": "// Complex implementation here"
+      }
+    ]
+  },
+  {
+    "slug": "typescript",
+    "name": "TypeScript",
+    "introduction": "TypeScript is a powerful programming language widely used in the industry for building robust software applications.",
+    "history": "Originally created decades ago, TypeScript has evolved significantly, adding modern features and an expansive ecosystem.",
+    "whyLearn": "Learning TypeScript opens up massive career opportunities and gives you a strong foundation in algorithmic thinking.",
+    "setupGuide": "1. Download the compiler/interpreter. \n2. Set up your IDE (VS Code or IntelliJ). \n3. Run your first Hello World program.",
+    "topics": [
+      {
+        "title": "Variables & Data Types",
+        "content": "Learn how to declare variables and manage primitive types.",
+        "order": 1,
+        "codeExample": "let x = 10;"
+      },
+      {
+        "title": "Control Flow & Loops",
+        "content": "Master if statements, switch cases, and loops (for, while).",
+        "order": 2,
+        "codeExample": "for(let i=0; i<10; i++) {}"
+      },
+      {
+        "title": "Functions & Scope",
+        "content": "Understand how to modularize your code using reusable functions.",
+        "order": 3,
+        "codeExample": "function greet() { return 'Hello'; }"
+      },
+      {
+        "title": "Object Oriented Programming",
+        "content": "Classes, Inheritance, Polymorphism, and Encapsulation.",
+        "order": 4,
+        "codeExample": "class Car {}"
+      },
+      {
+        "title": "Advanced Memory & Multithreading",
+        "content": "Handle complex operations securely and concurrently.",
+        "order": 5,
+        "codeExample": "// Complex implementation here"
+      }
+    ]
+  },
+  {
+    "slug": "go",
+    "name": "Go",
+    "introduction": "Go is a powerful programming language widely used in the industry for building robust software applications.",
+    "history": "Originally created decades ago, Go has evolved significantly, adding modern features and an expansive ecosystem.",
+    "whyLearn": "Learning Go opens up massive career opportunities and gives you a strong foundation in algorithmic thinking.",
+    "setupGuide": "1. Download the compiler/interpreter. \n2. Set up your IDE (VS Code or IntelliJ). \n3. Run your first Hello World program.",
+    "topics": [
+      {
+        "title": "Variables & Data Types",
+        "content": "Learn how to declare variables and manage primitive types.",
+        "order": 1,
+        "codeExample": "let x = 10;"
+      },
+      {
+        "title": "Control Flow & Loops",
+        "content": "Master if statements, switch cases, and loops (for, while).",
+        "order": 2,
+        "codeExample": "for(let i=0; i<10; i++) {}"
+      },
+      {
+        "title": "Functions & Scope",
+        "content": "Understand how to modularize your code using reusable functions.",
+        "order": 3,
+        "codeExample": "function greet() { return 'Hello'; }"
+      },
+      {
+        "title": "Object Oriented Programming",
+        "content": "Classes, Inheritance, Polymorphism, and Encapsulation.",
+        "order": 4,
+        "codeExample": "class Car {}"
+      },
+      {
+        "title": "Advanced Memory & Multithreading",
+        "content": "Handle complex operations securely and concurrently.",
+        "order": 5,
+        "codeExample": "// Complex implementation here"
+      }
+    ]
+  },
+  {
+    "slug": "rust",
+    "name": "Rust",
+    "introduction": "Rust is a powerful programming language widely used in the industry for building robust software applications.",
+    "history": "Originally created decades ago, Rust has evolved significantly, adding modern features and an expansive ecosystem.",
+    "whyLearn": "Learning Rust opens up massive career opportunities and gives you a strong foundation in algorithmic thinking.",
+    "setupGuide": "1. Download the compiler/interpreter. \n2. Set up your IDE (VS Code or IntelliJ). \n3. Run your first Hello World program.",
+    "topics": [
+      {
+        "title": "Variables & Data Types",
+        "content": "Learn how to declare variables and manage primitive types.",
+        "order": 1,
+        "codeExample": "let x = 10;"
+      },
+      {
+        "title": "Control Flow & Loops",
+        "content": "Master if statements, switch cases, and loops (for, while).",
+        "order": 2,
+        "codeExample": "for(let i=0; i<10; i++) {}"
+      },
+      {
+        "title": "Functions & Scope",
+        "content": "Understand how to modularize your code using reusable functions.",
+        "order": 3,
+        "codeExample": "function greet() { return 'Hello'; }"
+      },
+      {
+        "title": "Object Oriented Programming",
+        "content": "Classes, Inheritance, Polymorphism, and Encapsulation.",
+        "order": 4,
+        "codeExample": "class Car {}"
+      },
+      {
+        "title": "Advanced Memory & Multithreading",
+        "content": "Handle complex operations securely and concurrently.",
+        "order": 5,
+        "codeExample": "// Complex implementation here"
+      }
+    ]
+  },
+  {
+    "slug": "php",
+    "name": "PHP",
+    "introduction": "PHP is a powerful programming language widely used in the industry for building robust software applications.",
+    "history": "Originally created decades ago, PHP has evolved significantly, adding modern features and an expansive ecosystem.",
+    "whyLearn": "Learning PHP opens up massive career opportunities and gives you a strong foundation in algorithmic thinking.",
+    "setupGuide": "1. Download the compiler/interpreter. \n2. Set up your IDE (VS Code or IntelliJ). \n3. Run your first Hello World program.",
+    "topics": [
+      {
+        "title": "Variables & Data Types",
+        "content": "Learn how to declare variables and manage primitive types.",
+        "order": 1,
+        "codeExample": "let x = 10;"
+      },
+      {
+        "title": "Control Flow & Loops",
+        "content": "Master if statements, switch cases, and loops (for, while).",
+        "order": 2,
+        "codeExample": "for(let i=0; i<10; i++) {}"
+      },
+      {
+        "title": "Functions & Scope",
+        "content": "Understand how to modularize your code using reusable functions.",
+        "order": 3,
+        "codeExample": "function greet() { return 'Hello'; }"
+      },
+      {
+        "title": "Object Oriented Programming",
+        "content": "Classes, Inheritance, Polymorphism, and Encapsulation.",
+        "order": 4,
+        "codeExample": "class Car {}"
+      },
+      {
+        "title": "Advanced Memory & Multithreading",
+        "content": "Handle complex operations securely and concurrently.",
+        "order": 5,
+        "codeExample": "// Complex implementation here"
+      }
+    ]
+  },
+  {
+    "slug": "csharp",
+    "name": "C#",
+    "introduction": "C# is a powerful programming language widely used in the industry for building robust software applications.",
+    "history": "Originally created decades ago, C# has evolved significantly, adding modern features and an expansive ecosystem.",
+    "whyLearn": "Learning C# opens up massive career opportunities and gives you a strong foundation in algorithmic thinking.",
+    "setupGuide": "1. Download the compiler/interpreter. \n2. Set up your IDE (VS Code or IntelliJ). \n3. Run your first Hello World program.",
+    "topics": [
+      {
+        "title": "Variables & Data Types",
+        "content": "Learn how to declare variables and manage primitive types.",
+        "order": 1,
+        "codeExample": "let x = 10;"
+      },
+      {
+        "title": "Control Flow & Loops",
+        "content": "Master if statements, switch cases, and loops (for, while).",
+        "order": 2,
+        "codeExample": "for(let i=0; i<10; i++) {}"
+      },
+      {
+        "title": "Functions & Scope",
+        "content": "Understand how to modularize your code using reusable functions.",
+        "order": 3,
+        "codeExample": "function greet() { return 'Hello'; }"
+      },
+      {
+        "title": "Object Oriented Programming",
+        "content": "Classes, Inheritance, Polymorphism, and Encapsulation.",
+        "order": 4,
+        "codeExample": "class Car {}"
+      },
+      {
+        "title": "Advanced Memory & Multithreading",
+        "content": "Handle complex operations securely and concurrently.",
+        "order": 5,
+        "codeExample": "// Complex implementation here"
+      }
+    ]
+  },
+  {
+    "slug": "kotlin",
+    "name": "Kotlin",
+    "introduction": "Kotlin is a powerful programming language widely used in the industry for building robust software applications.",
+    "history": "Originally created decades ago, Kotlin has evolved significantly, adding modern features and an expansive ecosystem.",
+    "whyLearn": "Learning Kotlin opens up massive career opportunities and gives you a strong foundation in algorithmic thinking.",
+    "setupGuide": "1. Download the compiler/interpreter. \n2. Set up your IDE (VS Code or IntelliJ). \n3. Run your first Hello World program.",
+    "topics": [
+      {
+        "title": "Variables & Data Types",
+        "content": "Learn how to declare variables and manage primitive types.",
+        "order": 1,
+        "codeExample": "let x = 10;"
+      },
+      {
+        "title": "Control Flow & Loops",
+        "content": "Master if statements, switch cases, and loops (for, while).",
+        "order": 2,
+        "codeExample": "for(let i=0; i<10; i++) {}"
+      },
+      {
+        "title": "Functions & Scope",
+        "content": "Understand how to modularize your code using reusable functions.",
+        "order": 3,
+        "codeExample": "function greet() { return 'Hello'; }"
+      },
+      {
+        "title": "Object Oriented Programming",
+        "content": "Classes, Inheritance, Polymorphism, and Encapsulation.",
+        "order": 4,
+        "codeExample": "class Car {}"
+      },
+      {
+        "title": "Advanced Memory & Multithreading",
+        "content": "Handle complex operations securely and concurrently.",
+        "order": 5,
+        "codeExample": "// Complex implementation here"
+      }
+    ]
+  },
+  {
+    "slug": "swift",
+    "name": "Swift",
+    "introduction": "Swift is a powerful programming language widely used in the industry for building robust software applications.",
+    "history": "Originally created decades ago, Swift has evolved significantly, adding modern features and an expansive ecosystem.",
+    "whyLearn": "Learning Swift opens up massive career opportunities and gives you a strong foundation in algorithmic thinking.",
+    "setupGuide": "1. Download the compiler/interpreter. \n2. Set up your IDE (VS Code or IntelliJ). \n3. Run your first Hello World program.",
+    "topics": [
+      {
+        "title": "Variables & Data Types",
+        "content": "Learn how to declare variables and manage primitive types.",
+        "order": 1,
+        "codeExample": "let x = 10;"
+      },
+      {
+        "title": "Control Flow & Loops",
+        "content": "Master if statements, switch cases, and loops (for, while).",
+        "order": 2,
+        "codeExample": "for(let i=0; i<10; i++) {}"
+      },
+      {
+        "title": "Functions & Scope",
+        "content": "Understand how to modularize your code using reusable functions.",
+        "order": 3,
+        "codeExample": "function greet() { return 'Hello'; }"
+      },
+      {
+        "title": "Object Oriented Programming",
+        "content": "Classes, Inheritance, Polymorphism, and Encapsulation.",
+        "order": 4,
+        "codeExample": "class Car {}"
+      },
+      {
+        "title": "Advanced Memory & Multithreading",
+        "content": "Handle complex operations securely and concurrently.",
+        "order": 5,
+        "codeExample": "// Complex implementation here"
+      }
+    ]
+  },
+  {
+    "slug": "dart",
+    "name": "Dart",
+    "introduction": "Dart is a powerful programming language widely used in the industry for building robust software applications.",
+    "history": "Originally created decades ago, Dart has evolved significantly, adding modern features and an expansive ecosystem.",
+    "whyLearn": "Learning Dart opens up massive career opportunities and gives you a strong foundation in algorithmic thinking.",
+    "setupGuide": "1. Download the compiler/interpreter. \n2. Set up your IDE (VS Code or IntelliJ). \n3. Run your first Hello World program.",
+    "topics": [
+      {
+        "title": "Variables & Data Types",
+        "content": "Learn how to declare variables and manage primitive types.",
+        "order": 1,
+        "codeExample": "let x = 10;"
+      },
+      {
+        "title": "Control Flow & Loops",
+        "content": "Master if statements, switch cases, and loops (for, while).",
+        "order": 2,
+        "codeExample": "for(let i=0; i<10; i++) {}"
+      },
+      {
+        "title": "Functions & Scope",
+        "content": "Understand how to modularize your code using reusable functions.",
+        "order": 3,
+        "codeExample": "function greet() { return 'Hello'; }"
+      },
+      {
+        "title": "Object Oriented Programming",
+        "content": "Classes, Inheritance, Polymorphism, and Encapsulation.",
+        "order": 4,
+        "codeExample": "class Car {}"
+      },
+      {
+        "title": "Advanced Memory & Multithreading",
+        "content": "Handle complex operations securely and concurrently.",
+        "order": 5,
+        "codeExample": "// Complex implementation here"
+      }
+    ]
+  }
+]

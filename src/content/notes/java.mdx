@@ -1,0 +1,75 @@
+---
+title: "Java"
+category: "Backend"
+readTime: 10
+---
+
+## Overview
+Java is a high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let programmers write once, run anywhere (WORA).
+
+## Definition
+Java is a statically-typed, object-oriented compiled language that runs on the Java Virtual Machine (JVM).
+
+## Beginner Explanation
+Imagine you want to build a house, but you want to be able to move this house to any city in the world without rebuilding it. Java is like a magical blueprint (code) that gets turned into a universal house (bytecode) which can be placed on any foundation (JVM) anywhere.
+
+## Real World Example
+Android apps, large-scale enterprise systems like banking software, and high-frequency trading platforms are primarily built using Java due to its reliability, multithreading capabilities, and robust ecosystem.
+
+## Syntax
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+## Code Example
+```java
+public class BankAccount {
+    private double balance;
+
+    public BankAccount(double initialBalance) {
+        this.balance = initialBalance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposited: $" + amount);
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+```
+
+## Important Points
+- **Platform Independent:** Bytecode runs on JVM, not directly on the OS.
+- **Garbage Collection:** Automatic memory management.
+- **Multithreading:** Built-in support for concurrent execution.
+
+## Best Practices
+- Always use descriptive naming conventions (CamelCase for classes, camelCase for variables).
+- Use interface-based programming instead of concrete implementation inheritance.
+- Leverage the `final` keyword for immutability whenever possible.
+
+## Common Mistakes
+- Comparing strings using `==` instead of `.equals()`.
+- Forgetting to handle exceptions properly (swallowing exceptions).
+- Creating memory leaks by holding onto object references unnecessarily.
+
+## Interview Questions
+1. **What is the difference between JVM, JRE, and JDK?**
+   - JVM executes bytecode. JRE contains JVM + libraries. JDK contains JRE + development tools.
+2. **How does Garbage Collection work in Java?**
+   - It automatically identifies and discards objects that are no longer referenced by the program to free up memory.
+
+## Quick Revision
+Java is an OOP, statically-typed language running on JVM. It is strictly pass-by-value. It is widely used in enterprise and Android development.
+
+## Summary
+Java remains one of the most popular and powerful programming languages in the world. Its "write once, run anywhere" philosophy, combined with strong memory management and a massive ecosystem, makes it the go-to choice for complex, large-scale applications.

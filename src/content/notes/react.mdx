@@ -1,0 +1,69 @@
+---
+title: "React"
+category: "Frontend"
+readTime: 10
+---
+
+## Overview
+React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta (formerly Facebook).
+
+## Definition
+React is a declarative, component-based library for building interactive user interfaces.
+
+## Beginner Explanation
+Imagine building a house with Lego blocks. Instead of building the whole house as one piece, you build windows, doors, and walls separately, and then assemble them. React lets you build websites exactly like that using "Components".
+
+## Real World Example
+Facebook, Instagram, Netflix, and Airbnb use React to build fast, interactive user interfaces that update without reloading the page.
+
+## Syntax
+```jsx
+function Greeting({ name }) {
+    return <h1>Hello, {name}!</h1>;
+}
+```
+
+## Code Example
+```jsx
+import { useState } from 'react';
+
+export default function Counter() {
+    const [count, setCount] = useState(0);
+
+    return (
+        <div className="p-4 border rounded">
+            <p>You clicked {count} times</p>
+            <button onClick={() => setCount(count + 1)}>
+                Click me
+            </button>
+        </div>
+    );
+}
+```
+
+## Important Points
+- **Virtual DOM:** React keeps a lightweight representation of the real DOM in memory, making updates extremely fast.
+- **JSX:** A syntax extension for JavaScript that looks like HTML.
+- **State & Props:** Data is managed locally via State, and passed down to children via Props.
+
+## Best Practices
+- Keep components small and focused on a single responsibility.
+- Use functional components and Hooks instead of class components.
+- Lift state up only when necessary to avoid excessive re-renders.
+
+## Common Mistakes
+- Mutating state directly instead of using the setter function (e.g., `state = newValue`).
+- Forgetting to include a unique `key` prop when rendering arrays.
+- Missing dependencies in the `useEffect` dependency array.
+
+## Interview Questions
+1. **What is the Virtual DOM?**
+   - A programming concept where an ideal, or "virtual", representation of a UI is kept in memory and synced with the "real" DOM.
+2. **Explain useEffect.**
+   - A Hook that lets you perform side effects in function components, like fetching data or subscribing to events.
+
+## Quick Revision
+React = UI Library, uses JSX, Virtual DOM, Components, Props, and State. Data flows one way (downwards).
+
+## Summary
+React revolutionized frontend development by introducing the component-based architecture and Virtual DOM. It remains the industry standard for modern web development.

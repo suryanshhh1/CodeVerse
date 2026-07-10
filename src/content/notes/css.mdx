@@ -1,0 +1,76 @@
+---
+title: "CSS"
+category: "Frontend"
+readTime: 7
+---
+
+## Overview
+Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.
+
+## Definition
+CSS handles the look and feel of a web page, controlling layout, colors, typography, and animations.
+
+## Beginner Explanation
+If HTML is the skeleton of the house, CSS is the interior design, paint, and architecture that makes it look beautiful.
+
+## Real World Example
+When a website switches smoothly from light mode to dark mode, or when a button elegantly scales up when you hover over it, that is CSS in action.
+
+## Syntax
+```css
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+```
+
+## Code Example
+```css
+/* Flexbox Layout Example */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+```
+
+## Important Points
+- **The Box Model:** Every element is a rectangular box composed of margins, borders, padding, and the actual content.
+- **Flexbox & Grid:** Modern layout systems that replace older hacky methods like floats and tables.
+- **Specificity:** The rule determining which styles apply when multiple rules target the same element.
+
+## Best Practices
+- Prefer external stylesheets over inline styles.
+- Use REM and EM for font sizes and spacing instead of static PX for better accessibility.
+- Organize CSS using methodologies like BEM (Block Element Modifier).
+
+## Common Mistakes
+- Misunderstanding the Box Model (forgetting that padding adds to total width unless `box-sizing: border-box` is used).
+- Overusing `!important`, which makes debugging specificity nightmares.
+- Not designing mobile-first.
+
+## Interview Questions
+1. **What is the CSS Box Model?**
+   - It is a box that wraps around every HTML element, consisting of margins, borders, padding, and the actual content.
+2. **Difference between Flexbox and CSS Grid?**
+   - Flexbox is designed for one-dimensional layouts (either a row or a column). Grid is for two-dimensional layouts (rows and columns simultaneously).
+
+## Quick Revision
+CSS = Styling. Box Model = Content + Padding + Border + Margin. Layouts = Flexbox & Grid.
+
+## Summary
+CSS transforms plain text documents into engaging user experiences. Mastering modern CSS layouts and animations is essential for any frontend developer.

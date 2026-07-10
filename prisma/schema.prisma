@@ -1,0 +1,538 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum Role {
+  STUDENT
+  ADMIN
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  passwordHash  String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts          Account[]
+  sessions          Session[]
+  profile           UserProfile?
+  learningStats     LearningStats?
+  studySessions     StudySession[]
+  studyGoals        StudyGoal[]
+  roadmapProgress   RoadmapProgress[]
+  nodeProgress      NodeProgress[]
+  noteProgress      NoteProgress[]
+  languageProgress  LanguageProgress[]
+  bookmarks         Bookmark[]
+  recentActivities  RecentActivity[]
+  learningStreak    LearningStreak?
+  quizResults       QuizResult[]
+  projectProgress   ProjectProgress[]
+  solvedProblems    SolvedProblem[]
+  learningHistory   LearningHistory[]
+  studyPlanners     StudyPlanner[]
+  learningGoals     LearningGoal[]
+  achievements      Achievement[]
+  notifications     Notification[]
+  recentSearches    RecentSearch[]
+  analytics         Analytics?
+  learningCalendars LearningCalendar[]
+  role              Role             @default(STUDENT)
+  certificates      Certificate[]
+  conversations     Conversation[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model UserProfile {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  bio         String?
+  learningGoal String?
+  country     String?
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model LearningStats {
+  id                String @id @default(cuid())
+  userId            String @unique
+  totalStudyTimeMs  BigInt @default(0)
+  completedTopics   Int    @default(0)
+  completedRoadmaps Int    @default(0)
+  averageQuizScore  Float  @default(0.0)
+  user              User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model LearningStreak {
+  id            String   @id @default(cuid())
+  userId        String   @unique
+  currentStreak Int      @default(0)
+  longestStreak Int      @default(0)
+  lastStudyDate DateTime?
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model StudySession {
+  id          String   @id @default(cuid())
+  userId      String
+  date        DateTime @default(now())
+  durationMs  Int
+  topicId     String
+  categoryId  String
+  roadmapId   String?
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model StudyGoal {
+  id          String   @id @default(cuid())
+  userId      String
+  type        String   // "Weekly" or "Monthly"
+  targetHours Int
+  progressMs  BigInt   @default(0)
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// ----------------------------------------------------
+// PHASE 2 CONTENT MODELS
+// ----------------------------------------------------
+
+model Roadmap {
+  id             String        @id @default(cuid())
+  slug           String        @unique
+  title          String
+  description    String
+  difficulty     String        // "Beginner" | "Intermediate" | "Advanced"
+  estimatedHours Int
+  prerequisites  String[]      // Arrays are supported natively in PostgreSQL
+  skillsGained   String[]
+  recommendedProjects String[]
+  interviewQuestions  String[]
+  resources           String[]
+  createdAt      DateTime      @default(now())
+
+  nodes          RoadmapNode[]
+  progress       RoadmapProgress[]
+}
+
+model RoadmapNode {
+  id          String   @id @default(cuid())
+  roadmapId   String
+  title       String
+  description String
+  order       Int
+  createdAt   DateTime @default(now())
+
+  roadmap     Roadmap  @relation(fields: [roadmapId], references: [id], onDelete: Cascade)
+  progress    NodeProgress[]
+}
+
+model Language {
+  id             String          @id @default(cuid())
+  slug           String          @unique
+  name           String
+  description    String          @db.Text @default("")
+  createdAt      DateTime        @default(now())
+
+  progress       LanguageProgress[]
+}
+
+model Note {
+  id                 String   @id @default(cuid())
+  slug               String   @unique
+  title              String
+  category           String
+  description        String   @db.Text @default("")
+  readTime           Int      @default(5)
+  createdAt          DateTime @default(now())
+
+  progress           NoteProgress[]
+}
+
+// ----------------------------------------------------
+// PROGRESS TRACKING MODELS
+// ----------------------------------------------------
+
+model RoadmapProgress {
+  id          String   @id @default(cuid())
+  userId      String
+  roadmapId   String
+  progressPct Float    @default(0)
+  completed   Boolean  @default(false)
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  roadmap     Roadmap  @relation(fields: [roadmapId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, roadmapId])
+}
+
+model NodeProgress {
+  id          String      @id @default(cuid())
+  userId      String
+  nodeId      String
+  completed   Boolean     @default(false)
+  completedAt DateTime?   @default(now())
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  node        RoadmapNode @relation(fields: [nodeId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, nodeId])
+}
+
+model NoteProgress {
+  id          String   @id @default(cuid())
+  userId      String
+  noteId      String
+  isRead      Boolean  @default(false)
+  readAt      DateTime?
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  note        Note     @relation(fields: [noteId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, noteId])
+}
+
+model LanguageProgress {
+  id          String   @id @default(cuid())
+  userId      String
+  languageId  String
+  progressPct Float    @default(0)
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  language    Language @relation(fields: [languageId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, languageId])
+}
+
+model Bookmark {
+  id        String   @id @default(cuid())
+  userId    String
+  itemType  String   // "Note", "Roadmap", "Language"
+  itemId    String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, itemType, itemId])
+}
+
+model RecentActivity {
+  id        String   @id @default(cuid())
+  userId    String
+  title     String
+  type      String   // "quiz", "note", "roadmap", "achievement"
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// ----------------------------------------------------
+// PHASE 3 CONTENT MODELS (DSA & PROJECTS)
+// ----------------------------------------------------
+
+model DSATopic {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  description String   @db.Text
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  problems    Problem[]
+  quizzes     Quiz[]
+}
+
+model Problem {
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  title        String
+  difficulty   String   // "Easy", "Medium", "Hard"
+  timeEstimate Int      // in minutes
+  tags         String[]
+  companies    String[]
+  hints        String[]
+  
+  topicId      String
+  topic        DSATopic @relation(fields: [topicId], references: [id], onDelete: Cascade)
+
+  solvedBy     SolvedProblem[]
+  createdAt    DateTime @default(now())
+}
+
+model Quiz {
+  id          String   @id @default(cuid())
+  topicId     String
+  topic       DSATopic @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  title       String
+  questions   Json     // Array of questions
+  createdAt   DateTime @default(now())
+
+  results     QuizResult[]
+}
+
+model Project {
+  id               String   @id @default(cuid())
+  slug             String   @unique
+  title            String
+  description      String   @db.Text
+  difficulty       String   // "Beginner", "Intermediate", "Advanced"
+  techStack        String[]
+  estimatedHours   Int
+  learningOutcomes String[]
+  roadmapId        String?  // Optional roadmap linking
+
+  progress         ProjectProgress[]
+  createdAt        DateTime @default(now())
+}
+
+model QuizResult {
+  id          String   @id @default(cuid())
+  userId      String
+  quizId      String
+  score       Int
+  accuracy    Float
+  createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  quiz        Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
+}
+
+model ProjectProgress {
+  id          String   @id @default(cuid())
+  userId      String
+  projectId   String
+  completed   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  project     Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, projectId])
+}
+
+model SolvedProblem {
+  id          String   @id @default(cuid())
+  userId      String
+  problemId   String
+  code        String?  @db.Text
+  language    String?
+  createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  problem     Problem  @relation(fields: [problemId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, problemId])
+}
+
+model LearningHistory {
+  id          String   @id @default(cuid())
+  userId      String
+  action      String   // e.g. "Completed Arrays", "Solved Binary Search"
+  type        String   // "dsa_topic", "problem", "quiz", "project"
+  targetId    String   // the ID of the completed item
+  createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// ----------------------------------------------------
+// PHASE 4: PERSONALIZED LEARNING PLATFORM
+// ----------------------------------------------------
+
+model StudyPlanner {
+  id          String   @id @default(cuid())
+  userId      String
+  title       String
+  description String?  @db.Text
+  startDate   DateTime @default(now())
+  endDate     DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  tasks       StudyTask[]
+}
+
+model StudyTask {
+  id              String       @id @default(cuid())
+  plannerId       String
+  title           String
+  description     String?      @db.Text
+  roadmapId       String?
+  category        String?
+  estimatedTime   Int?         // in minutes
+  priority        String       @default("Medium") // "Low", "Medium", "High"
+  deadline        DateTime?
+  status          String       @default("Todo")   // "Todo", "In Progress", "Done"
+  order           Int          @default(0)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  planner         StudyPlanner @relation(fields: [plannerId], references: [id], onDelete: Cascade)
+}
+
+model LearningGoal {
+  id          String   @id @default(cuid())
+  userId      String
+  title       String
+  description String?  @db.Text
+  target      Int      @default(100)
+  current     Int      @default(0)
+  deadline    DateTime?
+  status      String   @default("In Progress") // "In Progress", "Completed", "Failed"
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Achievement {
+  id          String   @id @default(cuid())
+  userId      String
+  badgeName   String
+  description String   @db.Text
+  icon        String?
+  unlockedAt  DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, badgeName])
+}
+
+model Notification {
+  id          String   @id @default(cuid())
+  userId      String
+  title       String
+  message     String   @db.Text
+  type        String   @default("info") // "info", "success", "warning", "error"
+  isRead      Boolean  @default(false)
+  link        String?
+  createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model RecentSearch {
+  id          String   @id @default(cuid())
+  userId      String
+  query       String
+  createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Analytics {
+  id                  String   @id @default(cuid())
+  userId              String   @unique
+  studyTimeDaily      Json?    // Store weekly/daily study time arrays
+  activityMonthly     Json?
+  weakestTopics       String[]
+  strongestTopics     String[]
+  favoriteCategories  String[]
+  updatedAt           DateTime @updatedAt
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model LearningCalendar {
+  id          String   @id @default(cuid())
+  userId      String
+  date        DateTime @default(now()) @db.Date
+  count       Int      @default(1)
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, date])
+}
+
+// ----------------------------------------------------
+// PHASE 5: SAAS TRANSFORMATION
+// ----------------------------------------------------
+
+model Announcement {
+  id          String   @id @default(cuid())
+  title       String
+  content     String   @db.Text
+  type        String   @default("info") // "info", "warning", "success", "update"
+  isPublished Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Certificate {
+  id          String   @id @default(cuid())
+  userId      String
+  courseName  String
+  uniqueId    String   @unique
+  issuedAt    DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model CertificateTemplate {
+  id          String   @id @default(cuid())
+  name        String
+  content     String   @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model PlatformSettings {
+  id          String   @id @default(cuid())
+  key         String   @unique
+  value       Json
+  updatedAt   DateTime @updatedAt
+}
+
+// ----------------------------------------------------
+// PHASE 6: AI ASSISTANT (GEMINI)
+// ----------------------------------------------------
+
+model Conversation {
+  id          String    @id @default(cuid())
+  userId      String
+  title       String    @default("New Chat")
+  contextUrl  String?
+  isPinned    Boolean   @default(false)
+  isFavorite  Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages    Message[]
+}
+
+model Message {
+  id             String       @id @default(cuid())
+  conversationId String
+  role           String       // "user" or "model"
+  content        String       @db.Text
+  createdAt      DateTime     @default(now())
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  attachments    Attachment[]
+}
+
+model Attachment {
+  id         String   @id @default(cuid())
+  messageId  String
+  type       String   // "image/png", "application/pdf", etc.
+  url        String   // Supabase storage URL or base64
+  name       String
+  message    Message  @relation(fields: [messageId], references: [id], onDelete: Cascade)
+}

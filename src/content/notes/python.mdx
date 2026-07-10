@@ -1,0 +1,67 @@
+---
+title: "Python"
+category: "General Purpose"
+readTime: 8
+---
+
+## Overview
+Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.
+
+## Definition
+Python is a dynamically typed, interpreted language known for its simplicity and extensive standard library.
+
+## Beginner Explanation
+Python is like writing instructions in plain English. Instead of worrying about complex symbols and brackets, you just write what you want the computer to do, step by step.
+
+## Real World Example
+Instagram's backend is powered heavily by Python (Django). It is also the dominant language in Data Science, AI (ChatGPT was trained using Python libraries), and scripting.
+
+## Syntax
+```python
+def greet(name):
+    print(f"Hello, {name}!")
+
+greet("World")
+```
+
+## Code Example
+```python
+class DataAnalyzer:
+    def __init__(self, data):
+        self.data = data
+        
+    def get_average(self):
+        if not self.data:
+            return 0
+        return sum(self.data) / len(self.data)
+
+analyzer = DataAnalyzer([10, 20, 30])
+print(f"Average: {analyzer.get_average()}")
+```
+
+## Important Points
+- **Dynamically Typed:** Variables don't need explicit type declarations.
+- **Interpreted:** Code runs line-by-line, making debugging easier.
+- **Indentation:** White-space is structurally significant.
+
+## Best Practices
+- Follow PEP 8 guidelines for code formatting.
+- Use list comprehensions for cleaner loop constructs.
+- Utilize virtual environments for dependency management.
+
+## Common Mistakes
+- Modifying a list while iterating over it.
+- Misunderstanding mutable default arguments in functions (e.g., `def func(items=[])`).
+- Mixing tabs and spaces for indentation.
+
+## Interview Questions
+1. **What is a Python decorator?**
+   - A function that takes another function and extends its behavior without explicitly modifying it.
+2. **What is the Global Interpreter Lock (GIL)?**
+   - A mutex that protects access to Python objects, preventing multiple native threads from executing Python bytecodes at once.
+
+## Quick Revision
+Python is an interpreted, dynamically typed language. It uses indentation for blocks. Perfect for scripting, backend (Django/FastAPI), and AI/Data Science.
+
+## Summary
+Python's elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.
