@@ -428,7 +428,7 @@ export default function ChatClient({ initialConversations = [], user }: { initia
         </div>
 
         {/* Chat window */}
-        <div className="flex-1 overflow-y-auto p-4 md:p-8 space-y-6">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 md:p-8 space-y-6">
           {!activeConversation || activeConversation.messages.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center max-w-2xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
               <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-4 ring-8 ring-primary/5">
@@ -455,12 +455,12 @@ export default function ChatClient({ initialConversations = [], user }: { initia
           ) : (
             <>
               {activeConversation.messages.map((msg, i) => (
-                <motion.div 
-                  key={msg.id || i}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className={`flex gap-4 max-w-3xl mx-auto \${msg.role === "user" ? "justify-end" : "justify-start"}`}
-                >
+                  <motion.div 
+                    key={msg.id || i}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className={`flex gap-4 w-full max-w-3xl mx-auto ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+                  >
                   {msg.role !== "user" && (
                     <Avatar className="w-8 h-8 shrink-0 ring-1 ring-border/50">
                       <AvatarFallback className="bg-primary/10 text-primary"><Bot className="w-4 h-4" /></AvatarFallback>
