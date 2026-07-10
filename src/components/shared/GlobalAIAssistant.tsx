@@ -50,6 +50,9 @@ export function GlobalAIAssistant() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+
+  // Hide the global widget completely on the dedicated chat page to avoid overlapping inputs
+  if (pathname?.startsWith("/chat")) return null;
   
   const [messages, setMessages] = useState<Message[]>([
     {

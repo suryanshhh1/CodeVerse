@@ -114,7 +114,7 @@ export default function DashboardClient({ user, stats, streak, recentActivities,
           whileInView={{ opacity: 1, x: 0 }} 
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="lg:col-span-4 space-y-6"
+          className="lg:col-span-4 space-y-8"
         >
           <Card className="bg-card/50 backdrop-blur-sm border-border/50 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
             <CardHeader className="border-b border-border/50 bg-background/50">
@@ -124,7 +124,7 @@ export default function DashboardClient({ user, stats, streak, recentActivities,
               </CardTitle>
             </CardHeader>
             <CardContent className="p-6 overflow-x-auto">
-              <div className="min-w-[700px] flex justify-start md:justify-center min-h-[150px] items-center">
+              <div className="w-full min-w-max flex justify-start md:justify-center min-h-[150px] items-center">
                 <ActivityCalendar 
                   data={safeCalendarData} 
                   theme={explicitTheme}
@@ -193,7 +193,7 @@ export default function DashboardClient({ user, stats, streak, recentActivities,
           whileInView={{ opacity: 1, x: 0 }} 
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="lg:col-span-3 space-y-6"
+          className="lg:col-span-3 space-y-8"
         >
           <Card className="bg-card/50 backdrop-blur-sm border-border/50 h-full max-h-[600px] flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300">
             <CardHeader className="border-b border-border/50 bg-background/50">

@@ -467,11 +467,11 @@ export default function ChatClient({ initialConversations = [], user }: { initia
                     </Avatar>
                   )}
                   
-                  <div className="flex flex-col gap-2 max-w-[85%]">
-                    <div className={`rounded-2xl px-5 py-4 ${
+                  <div className="flex flex-col gap-2 max-w-[95%] md:max-w-[85%] min-w-0">
+                    <div className={`rounded-2xl px-5 py-4 overflow-x-auto ${
                       msg.role === "user" 
                         ? "bg-primary text-primary-foreground rounded-tr-sm" 
-                        : "bg-card border border-border/50 shadow-sm rounded-tl-sm text-card-foreground prose prose-invert prose-p:leading-relaxed prose-pre:p-0 prose-pre:bg-transparent max-w-none"
+                        : "bg-card border border-border/50 shadow-sm rounded-tl-sm text-card-foreground prose prose-invert prose-p:leading-relaxed prose-pre:p-0 prose-pre:bg-transparent max-w-none w-full"
                     }`}>
                       {msg.role === "user" ? (
                         <div className="flex flex-col gap-2">
@@ -497,7 +497,7 @@ export default function ChatClient({ initialConversations = [], user }: { initia
                             code({node, inline, className, children, ...props}: any) {
                               const match = /language-(\w+)/.exec(className || '')
                               return !inline && match ? (
-                                <div className="rounded-lg overflow-hidden my-4 border border-border/50 bg-[#1e1e1e]">
+                                <div className="rounded-lg overflow-hidden my-4 border border-border/50 bg-[#1e1e1e] max-w-full">
                                   <div className="bg-zinc-900 px-4 py-2 text-xs text-zinc-400 border-b border-zinc-800 flex justify-between">
                                     <span>{match[1]}</span>
                                     <button onClick={() => {
