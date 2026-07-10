@@ -9,15 +9,18 @@ import { cn } from "@/lib/utils";
 import { NotificationCenter } from "../layout/NotificationCenter";
 import { NavLinks } from "./NavLinks";
 
+import { MobileNav } from "./MobileNav";
+
 export async function Navbar() {
   const session = await auth();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/60 backdrop-blur-xl">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4">
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-2 md:gap-6">
+          <MobileNav />
           <Link href="/" className="flex items-center gap-2 transition-transform hover:scale-105 active:scale-95">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground hidden sm:flex">
               <Code2 className="h-5 w-5" />
             </div>
             <span className="font-bold tracking-tight text-lg">CodeVerse</span>

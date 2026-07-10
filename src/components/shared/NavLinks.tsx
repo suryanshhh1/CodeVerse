@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-const links = [
+export const navLinksList = [
   { href: "/dashboard", label: "Dashboard" },
   { href: "/roadmaps", label: "Roadmaps" },
   { href: "/notes", label: "Notes" },
@@ -20,7 +20,7 @@ export function NavLinks() {
 
   return (
     <nav className="hidden md:flex gap-6 text-sm font-medium text-muted-foreground">
-      {links.map(({ href, label }) => {
+      {navLinksList.map(({ href, label }) => {
         // Active if exact match OR if it's a nested route under this href
         // e.g. href="/notes" matches pathname="/notes" and "/notes/java"
         const isActive = pathname === href || pathname.startsWith(`${href}/`);

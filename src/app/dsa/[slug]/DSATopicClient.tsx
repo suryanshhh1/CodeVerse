@@ -52,7 +52,7 @@ export default function DSATopicClient({ topic }: any) {
       </div>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="grid w-full grid-cols-4 max-w-2xl bg-card/50 backdrop-blur-sm border border-border/50 p-1 rounded-xl">
+        <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 max-w-2xl bg-card/50 backdrop-blur-sm border border-border/50 p-1 rounded-xl h-auto">
           <TabsTrigger value="overview" className="rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"><BookOpen className="w-4 h-4 mr-2 hidden sm:inline-block"/>Overview</TabsTrigger>
           <TabsTrigger value="visualizer" className="rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"><MonitorPlay className="w-4 h-4 mr-2 hidden sm:inline-block"/>Visualizer</TabsTrigger>
           <TabsTrigger value="problems" className="rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"><Code className="w-4 h-4 mr-2 hidden sm:inline-block"/>Problems</TabsTrigger>

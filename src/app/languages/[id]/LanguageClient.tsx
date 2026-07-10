@@ -31,7 +31,7 @@ export default function LanguageClient({ language, mdxContent }: any) {
         </p>
       </div>
 
-      <div className="pt-10 prose prose-slate dark:prose-invert max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-a:text-primary hover:prose-a:text-primary/80 prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-muted prose-pre:text-muted-foreground prose-pre:border prose-pre:border-border/50">
+      <div className="pt-10 prose prose-slate break-words dark:prose-invert max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-a:text-primary hover:prose-a:text-primary/80 prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-muted prose-pre:text-muted-foreground prose-pre:border prose-pre:border-border/50 overflow-hidden sm:overflow-visible">
         {mdxContent}
       </div>
     </div>

@@ -195,7 +195,7 @@ export function GlobalAIAssistant() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-20 right-6 z-50 w-[400px] h-[600px] max-h-[80vh] flex flex-col shadow-2xl rounded-2xl overflow-hidden border border-border/50"
+            className="fixed bottom-20 right-4 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-[400px] h-[600px] max-h-[80vh] flex flex-col shadow-2xl rounded-2xl overflow-hidden border border-border/50"
           >
             <Card className="flex-1 flex flex-col h-full bg-card/95 backdrop-blur-xl border-none">
               <CardHeader className="border-b border-border/50 bg-background/90 p-4 flex flex-row items-center justify-between space-y-0">
