@@ -182,8 +182,6 @@ export default function DashboardClient({ user, stats, streak, recentActivities,
                     labels={{
                       totalCount: "{{count}} activities in the last year",
                     }}
-                    hideColorLegend
-                    hideMonthLabels={false}
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-muted-foreground">Loading Calendar...</div>

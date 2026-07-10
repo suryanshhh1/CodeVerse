@@ -46,7 +46,7 @@ export async function generateGroqStream(messages: any[], systemInstruction: str
 
   const stream = await groq.chat.completions.create({
     model,
-    messages: formattedMessages,
+    messages: formattedMessages as any,
     temperature: 0.7,
     stream: true,
   });
