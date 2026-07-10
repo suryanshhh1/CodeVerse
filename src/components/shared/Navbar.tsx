@@ -15,7 +15,7 @@ export async function Navbar() {
   const session = await auth();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/60 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/50 backdrop-blur-2xl transition-all duration-300">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4">
         <div className="flex items-center gap-2 md:gap-6">
           <MobileNav session={session} />
@@ -34,7 +34,7 @@ export async function Navbar() {
               name="q"
               type="search" 
               placeholder="Search anything..." 
-              className="w-full bg-background/50 pl-9 border-border/50 focus-visible:ring-primary/50 transition-all rounded-full"
+              className="w-full bg-background/50 pl-9 border-border/50 focus-ring transition-all rounded-full"
             />
           </form>
         </div>

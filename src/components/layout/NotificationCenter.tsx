@@ -12,10 +12,6 @@ export function NotificationCenter() {
   const [notifications, setNotifications] = useState<any[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
 
-  useEffect(() => {
-    fetchNotifications();
-  }, []);
-
   const fetchNotifications = async () => {
     try {
       const res = await fetch("/api/notifications");
@@ -28,6 +24,11 @@ export function NotificationCenter() {
       console.error("Failed to fetch notifications");
     }
   };
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    fetchNotifications();
+  }, []);
 
   const markAsRead = async (id?: string) => {
     try {

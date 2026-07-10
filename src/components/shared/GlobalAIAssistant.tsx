@@ -51,8 +51,7 @@ export function GlobalAIAssistant() {
   const pathname = usePathname();
   const router = useRouter();
 
-  // Hide the global widget completely on the dedicated chat page to avoid overlapping inputs
-  if (pathname?.startsWith("/chat")) return null;
+  // We will hide the global widget completely on the dedicated chat page later in the render function
   
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -79,7 +78,7 @@ export function GlobalAIAssistant() {
     const prompt = customPrompt || input;
     if (!prompt.trim()) return;
 
-    const userMsg: Message = { id: Date.now().toString(), role: "user", content: prompt };
+    const userMsg: Message = { id: crypto.randomUUID(), role: "user", content: prompt };
     const newMessages = [...messages, userMsg];
     setMessages(newMessages);
     setInput("");
@@ -146,6 +145,7 @@ export function GlobalAIAssistant() {
           if (done) break;
           
           const chunkText = decoder.decode(value, { stream: true });
+          // eslint-disable-next-line react-hooks/immutability
           fullReply += chunkText;
 
           setMessages((prev) => prev.map(m => m.id === botMsgId ? { ...m, content: fullReply } : m));
@@ -188,6 +188,9 @@ export function GlobalAIAssistant() {
   };
 
   const suggestedQuestions = ["Explain this topic simpler", "Give me practice problems"];
+
+  // Hide the global widget completely on the dedicated chat page
+  if (pathname?.startsWith("/chat")) return null;
 
   return (
     <>

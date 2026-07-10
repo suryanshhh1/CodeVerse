@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/shared/ThemeProvider";
 import { Navbar } from "@/components/shared/Navbar";
 import AnnouncementsBanner from "@/components/shared/AnnouncementsBanner";
 import { GlobalAIAssistant } from "@/components/shared/GlobalAIAssistant";
+import { PremiumBackground } from "@/components/layout/PremiumBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -51,6 +52,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <PremiumBackground />
           <div className="relative flex min-h-screen flex-col">
             <AnnouncementsBanner />
             <Navbar />
