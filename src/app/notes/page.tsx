@@ -25,8 +25,8 @@ export default async function NotesPage() {
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pt-8">
         {notes.map((note) => (
-          <Link key={note.id} href={`/notes/${note.slug}`} className="group block">
-            <Card className="h-full bg-card/50 backdrop-blur-sm border-border/50 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden relative">
+          <Link key={note.id} href={`/notes/${note.slug}`} className="group block outline-none focus-ring rounded-xl">
+            <Card className="h-full premium-glass border-border/40 premium-shadow hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-out overflow-hidden relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <CardHeader className="relative">
                 <div className="flex justify-between items-start mb-2">

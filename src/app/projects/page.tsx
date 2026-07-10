@@ -28,8 +28,8 @@ export default async function ProjectsPage() {
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
-          <Link key={project.id} href={`/projects/${project.slug}`} className="group block h-full">
-            <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all h-full flex flex-col">
+          <Link key={project.id} href={`/projects/${project.slug}`} className="group block h-full outline-none focus-ring rounded-xl">
+            <Card className="premium-glass border-border/40 premium-shadow hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out h-full flex flex-col">
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">
                   <Badge variant={project.difficulty === "Beginner" ? "default" : project.difficulty === "Intermediate" ? "secondary" : "destructive"}>

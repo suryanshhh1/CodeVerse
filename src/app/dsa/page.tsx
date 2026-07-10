@@ -38,8 +38,8 @@ export default async function DSAPage() {
         <h2 className="text-2xl font-bold">Explore Topics</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {topics.map((topic) => (
-            <Link key={topic.id} href={`/dsa/${topic.slug}`} className="group block h-full">
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all h-full flex flex-col">
+            <Link key={topic.id} href={`/dsa/${topic.slug}`} className="group block h-full outline-none focus-ring rounded-xl">
+              <Card className="premium-glass border-border/40 premium-shadow hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out h-full flex flex-col">
                 <CardHeader>
                   <div className="flex justify-between items-start mb-2">
                     <Badge variant="outline" className="bg-background">DSA Topic</Badge>

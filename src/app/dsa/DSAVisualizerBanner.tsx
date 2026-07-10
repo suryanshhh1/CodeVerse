@@ -25,13 +25,13 @@ export default function DSAVisualizerBanner() {
   const bubbleSort = async () => {
     if (isSorting) return;
     setIsSorting(true);
-    let arr = [...array];
+    const arr = [...array];
     for (let i = 0; i < arr.length; i++) {
       for (let j = 0; j < arr.length - i - 1; j++) {
         setActiveIndices([j, j + 1]);
         await new Promise((resolve) => setTimeout(resolve, 150));
         if (arr[j] > arr[j + 1]) {
-          let temp = arr[j];
+          const temp = arr[j];
           arr[j] = arr[j + 1];
           arr[j + 1] = temp;
           setArray([...arr]);

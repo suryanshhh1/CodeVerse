@@ -40,11 +40,11 @@ type DashboardProps = {
 const StatCard = React.memo(({ title, icon: Icon, value, subtitle, iconColor }: { title: string, icon: any, value: string | number, subtitle: string, iconColor: string }) => {
   const item = {
     hidden: { y: 20, opacity: 0 },
-    show: { y: 0, opacity: 1, transition: { type: "spring" as const, stiffness: 100 } }
+    show: { y: 0, opacity: 1, transition: { type: "spring" as const, stiffness: 300, damping: 30 } }
   };
   return (
     <motion.div variants={item} viewport={{ once: true }}>
-      <Card className="bg-card/50 backdrop-blur-sm border-border/50 shadow-sm hover:shadow-md hover:-translate-y-1 hover:border-primary/40 transition-all duration-300 h-full">
+      <Card className="premium-glass premium-shadow hover:shadow-lg hover:-translate-y-1 hover:border-primary/40 transition-all duration-300 h-full">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">{title}</CardTitle>
           <Icon className={`h-4 w-4 ${iconColor}`} />
@@ -80,7 +80,7 @@ export default function DashboardClient({ user, stats, streak, recentActivities,
           <p className="text-muted-foreground">Here is a summary of your learning progress.</p>
         </div>
         
-        <div className="flex items-center gap-4 bg-card/50 backdrop-blur-sm border border-border/50 px-6 py-3 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+        <div className="flex items-center gap-4 premium-glass px-6 py-3 rounded-2xl premium-shadow hover:shadow-md transition-all duration-300">
           <div className="flex items-center justify-center bg-primary/20 p-3 rounded-full">
             <Zap className="h-6 w-6 text-primary" />
           </div>
@@ -116,7 +116,7 @@ export default function DashboardClient({ user, stats, streak, recentActivities,
           transition={{ delay: 0.2 }}
           className="lg:col-span-4 space-y-8"
         >
-          <Card className="bg-card/50 backdrop-blur-sm border-border/50 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+          <Card className="premium-glass premium-shadow overflow-hidden hover:shadow-lg transition-all duration-300 ease-out">
             <CardHeader className="border-b border-border/50 bg-background/50">
               <CardTitle className="flex items-center gap-2">
                 <CalendarIcon className="w-5 h-5 text-primary" />
@@ -137,7 +137,7 @@ export default function DashboardClient({ user, stats, streak, recentActivities,
           </Card>
 
           <div className="grid md:grid-cols-2 gap-4">
-            <Card className="bg-card/50 backdrop-blur-sm border-border/50 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <Card className="premium-glass premium-shadow hover:shadow-lg transition-all duration-300 ease-out">
               <CardHeader className="pb-3 border-b border-border/50 bg-background/50">
                 <CardTitle className="text-lg">Continue Learning</CardTitle>
               </CardHeader>
@@ -147,7 +147,7 @@ export default function DashboardClient({ user, stats, streak, recentActivities,
                 ) : (
                   continueLearning.map(item => (
                     <Link key={item.id} href={item.link}>
-                      <div className="flex justify-between items-center bg-background p-3 rounded-lg hover:border-primary/50 cursor-pointer transition-all duration-300 hover:-translate-y-1 border border-border/50 shadow-sm hover:shadow-md group mb-3 last:mb-0">
+                      <div className="flex justify-between items-center bg-background/50 p-3 rounded-lg hover:border-primary/50 cursor-pointer transition-all duration-300 hover:-translate-y-1 border border-border/40 premium-shadow hover:shadow-md group mb-3 last:mb-0">
                         <div className="space-y-1">
                           <p className="text-sm font-medium group-hover:text-primary transition-colors">{item.title}</p>
                           <p className="text-xs text-muted-foreground">{item.category}</p>
@@ -160,13 +160,13 @@ export default function DashboardClient({ user, stats, streak, recentActivities,
               </CardContent>
             </Card>
 
-            <Card className="bg-card/50 backdrop-blur-sm border-border/50 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <Card className="premium-glass premium-shadow hover:shadow-lg transition-all duration-300 ease-out">
               <CardHeader className="pb-3 border-b border-border/50 bg-background/50">
                 <CardTitle className="text-lg">Recommendations</CardTitle>
               </CardHeader>
               <CardContent className="p-4 space-y-3">
                 <Link href="/projects/todo-list-app">
-                  <div className="flex justify-between items-center bg-background p-3 rounded-lg hover:border-primary/50 cursor-pointer transition-all duration-300 hover:-translate-y-1 border border-border/50 shadow-sm hover:shadow-md group mb-3">
+                  <div className="flex justify-between items-center bg-background/50 p-3 rounded-lg hover:border-primary/50 cursor-pointer transition-all duration-300 hover:-translate-y-1 border border-border/40 premium-shadow hover:shadow-md group mb-3">
                     <div className="space-y-1">
                       <p className="text-sm font-medium group-hover:text-primary transition-colors">Build a Task Manager</p>
                       <p className="text-xs text-muted-foreground">Project</p>
@@ -175,7 +175,7 @@ export default function DashboardClient({ user, stats, streak, recentActivities,
                   </div>
                 </Link>
                 <Link href="/roadmaps/backend-development">
-                  <div className="flex justify-between items-center bg-background p-3 rounded-lg hover:border-primary/50 cursor-pointer transition-all duration-300 hover:-translate-y-1 border border-border/50 shadow-sm hover:shadow-md group">
+                  <div className="flex justify-between items-center bg-background/50 p-3 rounded-lg hover:border-primary/50 cursor-pointer transition-all duration-300 hover:-translate-y-1 border border-border/40 premium-shadow hover:shadow-md group">
                     <div className="space-y-1">
                       <p className="text-sm font-medium group-hover:text-primary transition-colors">Backend Development</p>
                       <p className="text-xs text-muted-foreground">Roadmap</p>
@@ -195,7 +195,7 @@ export default function DashboardClient({ user, stats, streak, recentActivities,
           transition={{ delay: 0.3 }}
           className="lg:col-span-3 space-y-8"
         >
-          <Card className="bg-card/50 backdrop-blur-sm border-border/50 h-full max-h-[600px] flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300">
+          <Card className="premium-glass premium-shadow h-full max-h-[600px] flex flex-col hover:shadow-lg transition-all duration-300 ease-out">
             <CardHeader className="border-b border-border/50 bg-background/50">
               <CardTitle>Recent Activity</CardTitle>
               <CardDescription>Your latest achievements and studies.</CardDescription>

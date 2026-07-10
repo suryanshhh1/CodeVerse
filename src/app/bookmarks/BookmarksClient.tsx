@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 export default function BookmarksClient({ initialBookmarks }: { initialBookmarks: any[] }) {
   const router = useRouter();
@@ -70,15 +71,27 @@ export default function BookmarksClient({ initialBookmarks }: { initialBookmarks
       </div>
 
       {filteredBookmarks.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-20 text-center space-y-4">
-          <Bookmark className="w-16 h-16 text-muted-foreground opacity-50" />
-          <h2 className="text-2xl font-semibold">No bookmarks found</h2>
-          <p className="text-muted-foreground">Start exploring the platform and save items for later.</p>
-        </div>
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.98, y: 10 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ type: "spring", stiffness: 400, damping: 30 }}
+          className="flex flex-col items-center justify-center py-20 text-center space-y-6 premium-glass premium-shadow rounded-3xl border border-border/40 mt-10 max-w-2xl mx-auto"
+        >
+          <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center ring-8 ring-primary/5">
+            <Bookmark className="w-10 h-10 text-primary" />
+          </div>
+          <div className="space-y-2">
+            <h2 className="text-2xl font-bold tracking-tight">No bookmarks found</h2>
+            <p className="text-muted-foreground max-w-md mx-auto">Start exploring the platform and save items for later to build your personal library.</p>
+          </div>
+          <Link href="/projects" className="mt-4">
+            <Button className="rounded-full px-8">Explore Projects</Button>
+          </Link>
+        </motion.div>
       ) : (
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredBookmarks.map((bookmark) => (
-            <Card key={bookmark.id} className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-colors flex flex-col">
+            <Card key={bookmark.id} className="premium-glass premium-shadow border-border/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col">
               <CardHeader className="pb-3">
                 <div className="flex justify-between items-start">
                   <Badge variant="secondary" className="flex items-center gap-1.5">

@@ -129,3 +129,21 @@
     @apply font-sans;
   }
 }
+
+@layer utilities {
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-shadow duration-200;
+  }
+
+  .premium-shadow {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05), 0 1px 4px 0 rgb(0 0 0 / 0.02), 0 4px 12px 0 rgb(0 0 0 / 0.03);
+  }
+  
+  .dark .premium-shadow {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.3), 0 1px 4px 0 rgb(0 0 0 / 0.2), 0 4px 12px 0 rgb(0 0 0 / 0.2);
+  }
+
+  .premium-glass {
+    @apply bg-background/60 backdrop-blur-xl border border-border/40;
+  }
+}

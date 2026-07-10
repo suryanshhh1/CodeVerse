@@ -15,14 +15,13 @@ export function MobileNav({ session }: { session?: any }) {
   const pathname = usePathname();
 
   // Close the sheet when the pathname changes (user navigated)
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
+  // We handle this via onClick on links instead of an effect to avoid cascading renders
+
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger className={cn("md:hidden", "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium hover:bg-accent hover:text-accent-foreground h-10 w-10")}>
-        <Menu className="h-6 w-6" />
+      <SheetTrigger className={cn("md:hidden", "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium hover:bg-accent hover:text-accent-foreground h-12 w-12 transition-all active:scale-[0.95]")}>
+        <Menu className="h-7 w-7" />
         <span className="sr-only">Toggle navigation menu</span>
       </SheetTrigger>
       <SheetContent side="left" className="w-[300px] sm:w-[350px] p-0 flex flex-col">
@@ -44,7 +43,7 @@ export function MobileNav({ session }: { session?: any }) {
               name="q"
               type="search" 
               placeholder="Search..." 
-              className="w-full bg-background/50 pl-9 border-border/50 focus-visible:ring-primary/50"
+              className="w-full bg-background/50 pl-9 border-border/50 focus-ring"
             />
           </form>
         </div>
@@ -79,8 +78,8 @@ export function MobileNav({ session }: { session?: any }) {
               </>
             ) : (
               <>
-                <Link href="/login" onClick={() => setOpen(false)} className={cn("inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground", "h-11 w-full")}>Login</Link>
-                <Link href="/signup" onClick={() => setOpen(false)} className={cn("inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90", "h-11 w-full")}>Sign Up</Link>
+                <Link href="/login" onClick={() => setOpen(false)} className={cn("inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-all duration-200 focus-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground active:scale-[0.98]", "h-12 w-full")}>Login</Link>
+                <Link href="/signup" onClick={() => setOpen(false)} className={cn("inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-all duration-200 focus-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 active:scale-[0.98]", "h-12 w-full")}>Sign Up</Link>
               </>
             )}
           </div>

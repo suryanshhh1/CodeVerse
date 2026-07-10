@@ -457,8 +457,9 @@ export default function ChatClient({ initialConversations = [], user }: { initia
               {activeConversation.messages.map((msg, i) => (
                   <motion.div 
                     key={msg.id || i}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     className={`flex gap-4 w-full max-w-3xl mx-auto ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                   >
                   {msg.role !== "user" && (
@@ -470,8 +471,8 @@ export default function ChatClient({ initialConversations = [], user }: { initia
                   <div className="flex flex-col gap-2 max-w-[95%] md:max-w-[85%] min-w-0">
                     <div className={`rounded-2xl px-5 py-4 overflow-x-auto ${
                       msg.role === "user" 
-                        ? "bg-primary text-primary-foreground rounded-tr-sm" 
-                        : "bg-card border border-border/50 shadow-sm rounded-tl-sm text-card-foreground prose prose-invert prose-p:leading-relaxed prose-pre:p-0 prose-pre:bg-transparent max-w-full w-full"
+                        ? "bg-primary text-primary-foreground premium-shadow rounded-tr-sm" 
+                        : "premium-glass premium-shadow border-border/40 rounded-tl-sm text-foreground prose prose-invert prose-p:leading-relaxed prose-pre:p-0 prose-pre:bg-transparent max-w-full w-full"
                     }`}>
                       {msg.role === "user" ? (
                         <div className="flex flex-col gap-2">
@@ -485,10 +486,10 @@ export default function ChatClient({ initialConversations = [], user }: { initia
                           <span>{msg.content}</span>
                         </div>
                       ) : msg.content === "" ? (
-                        <div className="flex items-center gap-1 h-6">
-                          <span className="w-2 h-2 rounded-full bg-primary animate-bounce" style={{ animationDelay: '0ms' }} />
-                          <span className="w-2 h-2 rounded-full bg-primary animate-bounce" style={{ animationDelay: '150ms' }} />
-                          <span className="w-2 h-2 rounded-full bg-primary animate-bounce" style={{ animationDelay: '300ms' }} />
+                        <div className="flex items-center gap-1.5 h-6 px-1">
+                          <motion.span animate={{ opacity: [0.3, 1, 0.3], scale: [0.8, 1, 0.8] }} transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }} className="w-2 h-2 rounded-full bg-primary/70" />
+                          <motion.span animate={{ opacity: [0.3, 1, 0.3], scale: [0.8, 1, 0.8] }} transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut", delay: 0.2 }} className="w-2 h-2 rounded-full bg-primary/70" />
+                          <motion.span animate={{ opacity: [0.3, 1, 0.3], scale: [0.8, 1, 0.8] }} transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut", delay: 0.4 }} className="w-2 h-2 rounded-full bg-primary/70" />
                         </div>
                       ) : (
                         <ReactMarkdown 

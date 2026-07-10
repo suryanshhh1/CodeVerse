@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Target, Plus, CheckCircle2, AlertCircle } from "lucide-react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 export default function GoalsClient({ initialGoals }: { initialGoals: any[] }) {
   const router = useRouter();
@@ -85,11 +86,23 @@ export default function GoalsClient({ initialGoals }: { initialGoals: any[] }) {
       )}
 
       {goals.length === 0 && !isCreating ? (
-        <div className="flex flex-col items-center justify-center py-20 text-center space-y-4">
-          <Target className="w-16 h-16 text-muted-foreground opacity-50" />
-          <h2 className="text-2xl font-semibold">No goals set yet</h2>
-          <p className="text-muted-foreground">Create a goal to start tracking your progress.</p>
-        </div>
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.98, y: 10 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ type: "spring", stiffness: 400, damping: 30 }}
+          className="flex flex-col items-center justify-center py-20 text-center space-y-6 premium-glass premium-shadow rounded-3xl border border-border/40 mt-10 max-w-2xl mx-auto"
+        >
+          <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center ring-8 ring-primary/5">
+            <Target className="w-10 h-10 text-primary" />
+          </div>
+          <div className="space-y-2">
+            <h2 className="text-2xl font-bold tracking-tight">No goals set yet</h2>
+            <p className="text-muted-foreground max-w-md mx-auto">Create a goal to start tracking your progress and hit your personal targets.</p>
+          </div>
+          <Button onClick={() => setIsCreating(true)} className="mt-4 rounded-full px-8">
+            <Plus className="w-4 h-4 mr-2" /> Create First Goal
+          </Button>
+        </motion.div>
       ) : (
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {goals.map((goal) => {
@@ -97,7 +110,7 @@ export default function GoalsClient({ initialGoals }: { initialGoals: any[] }) {
             const isCompleted = goal.status === 'Completed' || percentage >= 100;
             
             return (
-              <Card key={goal.id} className={`bg-card/50 backdrop-blur-sm transition-all ${isCompleted ? 'border-green-500/50' : 'border-border/50 hover:border-primary/50'}`}>
+              <Card key={goal.id} className={`premium-glass premium-shadow hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col ${isCompleted ? 'border-green-500/50' : 'border-border/40'}`}>
                 <CardHeader className="pb-3">
                   <div className="flex justify-between items-start">
                     <Badge variant={isCompleted ? "default" : "secondary"} className={isCompleted ? "bg-green-500 hover:bg-green-600" : ""}>

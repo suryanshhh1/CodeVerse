@@ -146,7 +146,7 @@ export function GlobalAIAssistant() {
           if (done) break;
           
           const chunkText = decoder.decode(value, { stream: true });
-          fullReply = fullReply + chunkText;
+          fullReply += chunkText;
 
           setMessages((prev) => prev.map(m => m.id === botMsgId ? { ...m, content: fullReply } : m));
         }

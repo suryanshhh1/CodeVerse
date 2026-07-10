@@ -61,7 +61,7 @@ export default async function DashboardPage() {
 
   // Calculate streaks logic if they studied today
   let currentStreak = userStreak?.currentStreak || 0;
-  let longestStreak = userStreak?.longestStreak || 0;
+  const longestStreak = userStreak?.longestStreak || 0;
   
   if (userStreak?.lastStudyDate) {
     const today = new Date();
