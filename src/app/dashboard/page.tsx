@@ -9,40 +9,48 @@ export default async function DashboardPage() {
     redirect("/login");
   }
 
-  // Fetch all user stats from Database
-  const userStats = await prisma.learningStats.findUnique({
-    where: { userId: session.user.id }
-  });
+  // Fetch all user stats from Database in parallel to drastically improve Time to First Byte
+  const [
+    userStats,
+    userStreak,
+    recentActs,
+    learningCalendar,
+    incompleteNotes,
+    solvedProblemsCount,
+    completedProjectsCount,
+    learningHistories
+  ] = await Promise.all([
+    prisma.learningStats.findUnique({ where: { userId: session.user.id } }),
+    prisma.learningStreak.findUnique({ where: { userId: session.user.id } }),
+    prisma.recentActivity.findMany({
+      where: { userId: session.user.id },
+      orderBy: { createdAt: "desc" },
+      take: 5
+    }),
+    prisma.learningCalendar.findMany({
+      where: { userId: session.user.id },
+      orderBy: { date: "asc" }
+    }),
+    prisma.noteProgress.findMany({
+      where: { userId: session.user.id, isRead: false },
+      include: { note: true },
+      take: 2
+    }),
+    prisma.solvedProblem.count({ where: { userId: session.user.id } }),
+    prisma.projectProgress.count({ where: { userId: session.user.id, completed: true } }),
+    prisma.learningHistory.findMany({
+      where: { userId: session.user.id },
+      orderBy: { createdAt: "desc" },
+      take: 5
+    })
+  ]);
 
-  const userStreak = await prisma.learningStreak.findUnique({
-    where: { userId: session.user.id }
-  });
-
-  const recentActs = await prisma.recentActivity.findMany({
-    where: { userId: session.user.id },
-    orderBy: { createdAt: "desc" },
-    take: 5
-  });
-
-  // Fetch Learning Calendar for Heatmap
-  const learningCalendar = await prisma.learningCalendar.findMany({
-    where: { userId: session.user.id },
-    orderBy: { date: "asc" }
-  });
-  
   // Format calendar for react-activity-calendar
   const calendarData = learningCalendar.map(c => ({
     date: c.date.toISOString().split('T')[0],
     count: c.count,
     level: Math.min(4, Math.ceil(c.count / 2))
   }));
-
-  // Fetch Continue Learning (Latest incomplete notes/topics)
-  const incompleteNotes = await prisma.noteProgress.findMany({
-    where: { userId: session.user.id, isRead: false },
-    include: { note: true },
-    take: 2
-  });
 
   const continueLearning = incompleteNotes.map(n => ({
     id: n.note.id,
@@ -65,20 +73,6 @@ export default async function DashboardPage() {
       currentStreak = 0; // Streak broken
     }
   }
-
-  const solvedProblemsCount = await prisma.solvedProblem.count({
-    where: { userId: session.user.id }
-  });
-
-  const completedProjectsCount = await prisma.projectProgress.count({
-    where: { userId: session.user.id, completed: true }
-  });
-
-  const learningHistories = await prisma.learningHistory.findMany({
-    where: { userId: session.user.id },
-    orderBy: { createdAt: "desc" },
-    take: 5
-  });
 
   // Calculate XP and Level
   const studyMinutes = userStats ? Math.floor(Number(userStats.totalStudyTimeMs) / 60000) : 0;

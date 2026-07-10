@@ -9,8 +9,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Send, Bot, User as UserIcon, Plus, MessageSquare, Search, Trash2, Edit2, Download, MoreVertical, Pin, Star, StopCircle, RefreshCw, Sparkles, Settings, Paperclip, X } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import dynamic from "next/dynamic";
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
+const SyntaxHighlighter = dynamic(() => import("react-syntax-highlighter").then(mod => mod.Prism), {
+  ssr: false,
+  loading: () => <div className="w-full h-24 bg-muted/50 animate-pulse rounded-md my-2" />
+});
 import { createConversation, saveMessage, deleteConversation, renameConversation, togglePin, toggleFavorite } from "./actions";
 import { toast } from "sonner";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";

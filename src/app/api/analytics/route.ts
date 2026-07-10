@@ -41,33 +41,32 @@ export async function GET() {
       };
     });
 
-    // We can also fetch the custom Phase 4 Analytics if it exists, else create it
-    let analytics = await prisma.analytics.findUnique({ where: { userId } });
-    if (!analytics) {
-      analytics = await prisma.analytics.create({
-        data: {
-          userId,
-          studyTimeDaily: JSON.stringify([
-            { name: "Mon", time: Math.floor(Math.random() * 120) },
-            { name: "Tue", time: Math.floor(Math.random() * 120) },
-            { name: "Wed", time: Math.floor(Math.random() * 120) },
-            { name: "Thu", time: Math.floor(Math.random() * 120) },
-            { name: "Fri", time: Math.floor(Math.random() * 120) },
-            { name: "Sat", time: Math.floor(Math.random() * 120) },
-            { name: "Sun", time: Math.floor(Math.random() * 120) }
-          ]),
-          activityMonthly: JSON.stringify([
-            { name: "Jan", activity: 10 },
-            { name: "Feb", activity: 20 },
-            { name: "Mar", activity: 15 },
-            { name: "Apr", activity: 30 }
-          ]),
-          weakestTopics: ["Dynamic Programming", "Graphs"],
-          strongestTopics: ["Arrays", "Strings"],
-          favoriteCategories: ["Frontend", "Data Structures"]
-        }
-      });
-    }
+    // We can also fetch the custom Phase 4 Analytics if it exists, else create it atomically
+    const analytics = await prisma.analytics.upsert({
+      where: { userId },
+      update: {}, // no-op if it exists
+      create: {
+        userId,
+        studyTimeDaily: JSON.stringify([
+          { name: "Mon", time: Math.floor(Math.random() * 120) },
+          { name: "Tue", time: Math.floor(Math.random() * 120) },
+          { name: "Wed", time: Math.floor(Math.random() * 120) },
+          { name: "Thu", time: Math.floor(Math.random() * 120) },
+          { name: "Fri", time: Math.floor(Math.random() * 120) },
+          { name: "Sat", time: Math.floor(Math.random() * 120) },
+          { name: "Sun", time: Math.floor(Math.random() * 120) }
+        ]),
+        activityMonthly: JSON.stringify([
+          { name: "Jan", activity: 10 },
+          { name: "Feb", activity: 20 },
+          { name: "Mar", activity: 15 },
+          { name: "Apr", activity: 30 }
+        ]),
+        weakestTopics: ["Dynamic Programming", "Graphs"],
+        strongestTopics: ["Arrays", "Strings"],
+        favoriteCategories: ["Frontend", "Data Structures"]
+      }
+    });
 
     return NextResponse.json({
       stats: stats || { totalStudyTimeMs: 0, completedTopics: 0, completedRoadmaps: 0, averageQuizScore: 0 },

@@ -1,7 +1,13 @@
 import { generateGroqStream } from "./groq";
 import { generateGeminiStream } from "./gemini";
 
-export async function generateAIResponse(messages: any[], pageContext?: string) {
+export interface AIMessage {
+  role: string;
+  content: string;
+  attachments?: { url: string; name?: string }[];
+}
+
+export async function generateAIResponse(messages: AIMessage[], pageContext?: string) {
   let systemInstruction = "You are the CodeVerse AI Study Assistant. You are a helpful, brilliant computer science tutor. You explain concepts clearly, provide code snippets when helpful, and guide the user in learning programming and computer science. Always format your code snippets with markdown and include the language name.";
 
   if (pageContext) {

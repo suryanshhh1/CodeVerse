@@ -1,6 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
+import { AIMessage } from "./index";
 
-export async function generateGeminiStream(messages: any[], systemInstruction: string) {
+export async function generateGeminiStream(messages: AIMessage[], systemInstruction: string) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     throw new Error("Gemini API key not configured");
@@ -9,7 +10,7 @@ export async function generateGeminiStream(messages: any[], systemInstruction: s
   const ai = new GoogleGenAI({ apiKey });
 
   // Format messages for Gemini API
-  const formattedMessages = messages.map((msg: any) => {
+  const formattedMessages = messages.map((msg: AIMessage) => {
     const parts: any[] = [{ text: msg.content }];
     
     if (msg.attachments && Array.isArray(msg.attachments)) {

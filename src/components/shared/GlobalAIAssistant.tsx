@@ -10,8 +10,13 @@ import { Badge } from "@/components/ui/badge";
 import { Bot, Send, User, Sparkles, X, MessageCircle, ArrowRight, StopCircle, RefreshCw } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import dynamic from "next/dynamic";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
+
+const SyntaxHighlighter = dynamic(() => import("react-syntax-highlighter").then(mod => mod.Prism), {
+  ssr: false,
+  loading: () => <div className="w-full h-24 bg-muted/50 animate-pulse rounded-md my-2" />
+});
 import { createConversation, saveMessage } from "@/app/chat/actions";
 import { toast } from "sonner";
 
@@ -129,7 +134,7 @@ export function GlobalAIAssistant() {
       const decoder = new TextDecoder("utf-8");
       let fullReply = "";
       
-      const botMsgId = (Date.now() + 1).toString();
+      const botMsgId = "msg-" + crypto.randomUUID();
       setMessages((prev) => [...prev, { id: botMsgId, role: "assistant", content: "" }]);
 
       if (reader) {
@@ -138,7 +143,7 @@ export function GlobalAIAssistant() {
           if (done) break;
           
           const chunkText = decoder.decode(value, { stream: true });
-          fullReply += chunkText;
+          fullReply = fullReply + chunkText;
 
           setMessages((prev) => prev.map(m => m.id === botMsgId ? { ...m, content: fullReply } : m));
         }
@@ -151,7 +156,7 @@ export function GlobalAIAssistant() {
         console.error("Chat error:", error);
         setIsTyping(false);
         const errorMsg: Message = { 
-          id: (Date.now() + 1).toString(), 
+          id: "msg-" + crypto.randomUUID(), 
           role: "assistant", 
           content: `**Error:** ${error.message || "An unexpected error occurred."}` 
         };

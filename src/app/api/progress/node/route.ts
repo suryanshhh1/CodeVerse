@@ -15,45 +15,22 @@ export async function POST(req: Request) {
       return NextResponse.json({ message: "Missing required fields" }, { status: 400 });
     }
 
-    // 1. Mark Node as Completed
-    const progress = await prisma.nodeProgress.upsert({
-      where: {
-        userId_nodeId: { userId, nodeId },
-      },
-      update: {
-        completed: true,
-        completedAt: new Date()
-      },
-      create: {
-        userId,
-        nodeId,
-        completed: true,
-      }
-    });
-
-    // 2. Add to Recent Activity
-    await prisma.recentActivity.create({
-      data: {
-        userId,
-        title: `Completed: ${nodeTitle}`,
-        type: "roadmap"
-      }
-    });
-
-    // 3. Update Learning Stats (Add time and topic count)
-    // Assuming each node takes about 2 hours (7200000 ms)
-    await prisma.learningStats.upsert({
-      where: { userId },
-      update: {
-        completedTopics: { increment: 1 },
-        totalStudyTimeMs: { increment: 7200000 }
-      },
-      create: {
-        userId,
-        completedTopics: 1,
-        totalStudyTimeMs: 7200000
-      }
-    });
+    // 1-3. Mark Node, Add Activity, and Update Stats in parallel
+    const [progress] = await Promise.all([
+      prisma.nodeProgress.upsert({
+        where: { userId_nodeId: { userId, nodeId } },
+        update: { completed: true, completedAt: new Date() },
+        create: { userId, nodeId, completed: true }
+      }),
+      prisma.recentActivity.create({
+        data: { userId, title: `Completed: ${nodeTitle}`, type: "roadmap" }
+      }),
+      prisma.learningStats.upsert({
+        where: { userId },
+        update: { completedTopics: { increment: 1 }, totalStudyTimeMs: { increment: 7200000 } },
+        create: { userId, completedTopics: 1, totalStudyTimeMs: 7200000 }
+      })
+    ]);
 
     // 4. Update Streak
     const today = new Date();
@@ -95,10 +72,12 @@ export async function POST(req: Request) {
     }
 
     // 5. Update Roadmap Progress Pct
-    const allNodes = await prisma.roadmapNode.count({ where: { roadmapId } });
-    const completedNodes = await prisma.nodeProgress.count({ 
-      where: { userId, node: { roadmapId }, completed: true } 
-    });
+    const [allNodes, completedNodes] = await Promise.all([
+      prisma.roadmapNode.count({ where: { roadmapId } }),
+      prisma.nodeProgress.count({ 
+        where: { userId, node: { roadmapId }, completed: true } 
+      })
+    ]);
     const pct = allNodes > 0 ? (completedNodes / allNodes) * 100 : 0;
 
     await prisma.roadmapProgress.upsert({

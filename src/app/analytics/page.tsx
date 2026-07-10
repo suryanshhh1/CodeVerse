@@ -46,32 +46,31 @@ export default async function AnalyticsPage() {
     };
   });
 
-  let analytics = await prisma.analytics.findUnique({ where: { userId } });
-  if (!analytics) {
-    analytics = await prisma.analytics.create({
-      data: {
-        userId,
-        studyTimeDaily: [
-          { name: "Mon", time: 30 },
-          { name: "Tue", time: 45 },
-          { name: "Wed", time: 60 },
-          { name: "Thu", time: 20 },
-          { name: "Fri", time: 90 },
-          { name: "Sat", time: 120 },
-          { name: "Sun", time: 60 }
-        ],
-        activityMonthly: [
-          { name: "Jan", activity: 10 },
-          { name: "Feb", activity: 20 },
-          { name: "Mar", activity: 15 },
-          { name: "Apr", activity: 30 }
-        ],
-        weakestTopics: ["Dynamic Programming", "Graphs"],
-        strongestTopics: ["Arrays", "Strings"],
-        favoriteCategories: ["Frontend", "Data Structures"]
-      }
-    });
-  }
+  const analytics = await prisma.analytics.upsert({
+    where: { userId },
+    update: {},
+    create: {
+      userId,
+      studyTimeDaily: [
+        { name: "Mon", time: 30 },
+        { name: "Tue", time: 45 },
+        { name: "Wed", time: 60 },
+        { name: "Thu", time: 20 },
+        { name: "Fri", time: 90 },
+        { name: "Sat", time: 120 },
+        { name: "Sun", time: 60 }
+      ],
+      activityMonthly: [
+        { name: "Jan", activity: 10 },
+        { name: "Feb", activity: 20 },
+        { name: "Mar", activity: 15 },
+        { name: "Apr", activity: 30 }
+      ],
+      weakestTopics: ["Dynamic Programming", "Graphs"],
+      strongestTopics: ["Arrays", "Strings"],
+      favoriteCategories: ["Frontend", "Data Structures"]
+    }
+  });
 
   return (
     <AnalyticsClient 

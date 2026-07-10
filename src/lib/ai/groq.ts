@@ -1,6 +1,7 @@
 import Groq from "groq-sdk";
+import { AIMessage } from "./index";
 
-export async function generateGroqStream(messages: any[], systemInstruction: string) {
+export async function generateGroqStream(messages: AIMessage[], systemInstruction: string) {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
     throw new Error("Groq API key not configured");
@@ -10,7 +11,7 @@ export async function generateGroqStream(messages: any[], systemInstruction: str
 
   let hasAttachments = false;
 
-  const formattedMessages = messages.map((msg: any) => {
+  const formattedMessages = messages.map((msg: AIMessage) => {
     let content: any = msg.content;
     
     if (msg.attachments && Array.isArray(msg.attachments) && msg.attachments.length > 0) {
