@@ -54,7 +54,7 @@ export default function DashboardClient({ user, stats, streak, recentActivities,
   };
 
   return (
-    <div className="container max-w-7xl px-4 py-10 mx-auto space-y-8">
+    <div className="container max-w-7xl px-4 py-6 md:py-10 mx-auto space-y-6 md:space-y-8 min-h-[calc(100vh-4rem)] overflow-hidden sm:overflow-visible">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="flex flex-col gap-2">
           <h1 className="text-3xl font-bold tracking-tight">Welcome back, {user.name || "Student"}!</h1>

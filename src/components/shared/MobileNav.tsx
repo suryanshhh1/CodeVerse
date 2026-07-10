@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { navLinksList } from "./NavLinks";
 
-export function MobileNav() {
+export function MobileNav({ session }: { session?: any }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -56,6 +56,7 @@ export function MobileNav() {
               <Link
                 key={href}
                 href={href}
+                onClick={() => setOpen(false)}
                 className={cn(
                   "text-lg font-medium transition-colors hover:text-primary min-h-[44px] flex items-center",
                   isActive ? "text-primary font-bold" : "text-foreground/80"
@@ -65,6 +66,24 @@ export function MobileNav() {
               </Link>
             );
           })}
+          
+          <div className="mt-8 pt-6 border-t border-border/50 flex flex-col gap-4">
+            {session ? (
+              <>
+                <Link href="/profile" onClick={() => setOpen(false)} className="flex items-center min-h-[44px] text-lg font-medium text-foreground/80 hover:text-primary">
+                  Profile ({session.user?.name})
+                </Link>
+                <form action="/api/auth/signout" method="POST" onSubmit={() => setOpen(false)}>
+                   <Button variant="outline" className="w-full h-11" type="submit">Log out</Button>
+                </form>
+              </>
+            ) : (
+              <>
+                <Link href="/login" onClick={() => setOpen(false)} className={cn("inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground", "h-11 w-full")}>Login</Link>
+                <Link href="/signup" onClick={() => setOpen(false)} className={cn("inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90", "h-11 w-full")}>Sign Up</Link>
+              </>
+            )}
+          </div>
         </nav>
       </SheetContent>
     </Sheet>

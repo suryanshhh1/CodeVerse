@@ -32,7 +32,7 @@ export default function DSATopicClient({ topic }: any) {
   };
 
   return (
-    <div className="container max-w-7xl px-4 py-10 mx-auto space-y-8">
+    <div className="container max-w-7xl px-4 py-6 md:py-10 mx-auto space-y-6 md:space-y-8 overflow-hidden sm:overflow-visible">
       {/* Header */}
       <div className="flex flex-col gap-4">
         <Link href="/dsa" className="text-muted-foreground hover:text-primary flex items-center gap-1 text-sm w-fit transition-colors">

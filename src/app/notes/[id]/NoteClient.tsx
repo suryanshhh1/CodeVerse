@@ -40,8 +40,8 @@ export default function NoteClient({ note, isReadInitially, isLoggedIn }: any) {
   };
 
   return (
-    <div className="container max-w-4xl px-4 py-10 mx-auto space-y-10">
-      <Link href="/notes" className={buttonVariants({ variant: "ghost", className: "mb-4 inline-flex items-center gap-2" })}>
+    <div className="container max-w-4xl px-4 py-6 md:py-10 mx-auto space-y-6 md:space-y-10 overflow-hidden sm:overflow-visible">
+      <Link href="/notes" className={buttonVariants({ variant: "ghost", className: "mb-2 md:mb-4 inline-flex items-center gap-2" })}>
         <ArrowLeft className="h-4 w-4" /> Back to Notes Library
       </Link>
       

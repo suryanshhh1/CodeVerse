@@ -18,7 +18,7 @@ export async function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/60 backdrop-blur-xl">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4">
         <div className="flex items-center gap-2 md:gap-6">
-          <MobileNav />
+          <MobileNav session={session} />
           <Link href="/" className="flex items-center gap-2 transition-transform hover:scale-105 active:scale-95">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground hidden sm:flex">
               <Code2 className="h-5 w-5" />
@@ -38,7 +38,7 @@ export async function Navbar() {
             />
           </form>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 hidden md:flex">
           {session ? (
             <div className="flex items-center gap-3">
               <Link href="/profile" className="text-sm font-medium hidden md:inline-block hover:text-primary transition-colors">
@@ -62,6 +62,8 @@ export async function Navbar() {
               </Link>
             </div>
           )}
+        </div>
+        <div className="flex items-center gap-2">
           <ThemeToggle />
         </div>
       </div>

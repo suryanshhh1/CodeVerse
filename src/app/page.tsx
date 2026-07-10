@@ -33,7 +33,7 @@ export default function Home() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary/20 blur-[120px] rounded-full opacity-50" />
 
       <motion.div
-        className="container px-4 md:px-6 flex flex-col items-center text-center space-y-12"
+        className="container px-4 md:px-6 flex flex-col items-center text-center space-y-8 md:space-y-12"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -43,33 +43,33 @@ export default function Home() {
             <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
             The Ultimate CS Learning Platform
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground">
-            Master Computer Science <br />
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-foreground leading-tight md:leading-tight">
+            Master Computer Science <br className="hidden sm:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-500">
               The Modern Way
             </span>
           </h1>
-          <p className="mx-auto max-w-[700px] text-lg md:text-xl text-muted-foreground mt-6 leading-relaxed">
+          <p className="mx-auto max-w-[700px] text-base sm:text-lg md:text-xl text-muted-foreground mt-4 md:mt-6 leading-relaxed">
             Structured roadmaps, interactive visualizers, concise notes, and an AI study assistant—everything you need to ace your exams and interviews.
           </p>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 w-full justify-center">
+        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full justify-center">
           <Link 
             href="/roadmaps" 
-            className={cn(buttonVariants({ size: "lg" }), "rounded-full px-8 shadow-lg shadow-primary/25 text-md h-12")}
+            className={cn(buttonVariants({ size: "lg" }), "rounded-full px-8 shadow-lg shadow-primary/25 text-md h-12 w-full sm:w-auto max-w-[280px]")}
           >
             Start Learning <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
           <Link 
             href="/dsa" 
-            className={cn(buttonVariants({ size: "lg", variant: "outline" }), "rounded-full px-8 bg-background/50 backdrop-blur-md text-md h-12")}
+            className={cn(buttonVariants({ size: "lg", variant: "outline" }), "rounded-full px-8 bg-background/50 backdrop-blur-md text-md h-12 w-full sm:w-auto max-w-[280px]")}
           >
             Explore DSA
           </Link>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-12 w-full max-w-6xl">
+        <motion.div variants={itemVariants} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 pt-8 md:pt-12 w-full max-w-6xl">
           {[
             { title: "Structured Roadmaps", icon: BookOpen, desc: "Step-by-step paths from beginner to advanced." },
             { title: "Interactive DSA", icon: Code, desc: "Visualize algorithms and data structures in real-time." },
