@@ -8,17 +8,13 @@ import { getNoteData } from "@/lib/noteParser";
 export default async function NoteDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
   
-  const dbNote = await prisma.note.findUnique({
-    where: { slug: resolvedParams.id }
-  });
+  const [dbNote, mdxData, session] = await Promise.all([
+    prisma.note.findUnique({ where: { slug: resolvedParams.id } }),
+    getNoteData(resolvedParams.id),
+    auth()
+  ]);
 
-  if (!dbNote) {
-    notFound();
-  }
-
-  const mdxData = await getNoteData(resolvedParams.id);
-  
-  if (!mdxData) {
+  if (!dbNote || !mdxData) {
     notFound();
   }
 
@@ -28,7 +24,6 @@ export default async function NoteDetailPage({ params }: { params: Promise<{ id:
     id: dbNote.id,
   };
 
-  const session = await auth();
   let isRead = false;
 
   if (session?.user?.id) {
