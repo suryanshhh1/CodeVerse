@@ -193,19 +193,19 @@ function HeroWatermark() {
         animate={{ y: ["-3px", "3px", "-3px"] }}
         transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
       >
-        <Code2 className={`w-[500px] h-[500px] md:w-[700px] md:h-[700px] text-primary transition-opacity duration-700 blur-sm ${isDark ? "opacity-10" : "opacity-[0.06]"}`} />
-        
-        {/* Soft Radial Glow */}
+        {/* Soft Radial Ambient Glow */}
         <motion.div
-          className="absolute inset-0 rounded-full blur-[100px] mix-blend-screen"
+          className="absolute w-[800px] h-[800px] md:w-[1200px] md:h-[1200px] rounded-full mix-blend-screen pointer-events-none"
           style={{
             background: isDark 
-              ? "radial-gradient(circle, rgba(147,51,234,0.25) 0%, rgba(0,0,0,0) 70%)"
-              : "radial-gradient(circle, rgba(147,51,234,0.08) 0%, rgba(255,255,255,0) 70%)"
+              ? "radial-gradient(circle at center, rgba(139,92,246,0.08) 0%, rgba(139,92,246,0.03) 30%, rgba(0,0,0,0) 60%)"
+              : "radial-gradient(circle at center, rgba(139,92,246,0.04) 0%, rgba(139,92,246,0.01) 30%, rgba(255,255,255,0) 60%)"
           }}
-          animate={{ opacity: [0.4, 0.8, 0.4] }}
+          animate={{ opacity: [0.6, 1, 0.6] }}
           transition={{ repeat: Infinity, duration: 15, ease: "easeInOut" }}
         />
+
+        <Code2 className={`relative w-[500px] h-[500px] md:w-[700px] md:h-[700px] text-primary transition-opacity duration-700 blur-md ${isDark ? "opacity-[0.07]" : "opacity-[0.04]"}`} />
       </motion.div>
     </div>
   );
