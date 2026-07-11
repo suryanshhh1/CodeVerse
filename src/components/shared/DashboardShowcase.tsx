@@ -96,7 +96,13 @@ export function DashboardShowcase() {
               </CardHeader>
               <CardContent className="p-6 overflow-x-auto">
                 <div className="w-full min-w-max flex justify-start md:justify-center min-h-[150px] items-center opacity-80">
-                  <ActivityCalendar data={calendarData} theme={explicitTheme} hideTotalCount />
+                  <ActivityCalendar 
+                    data={calendarData} 
+                    theme={explicitTheme} 
+                    labels={{
+                      totalCount: "{{count}} activities in the last year",
+                    }}
+                  />
                 </div>
               </CardContent>
             </Card>
