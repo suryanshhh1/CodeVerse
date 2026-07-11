@@ -2,10 +2,13 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, BrainCircuit, Code, Search } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/shared/Footer";
+import { FloatingLogos } from "@/components/shared/FloatingLogos";
+import { DashboardShowcase } from "@/components/shared/DashboardShowcase";
+import { LandingSections } from "@/components/shared/LandingSections";
 
 export default function Home() {
   const containerVariants = {
@@ -29,63 +32,83 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] overflow-hidden">
-      {/* Background gradients */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[300px] bg-primary/20 blur-[120px] rounded-full opacity-50" />
-
-      <motion.div
-        className="container px-4 md:px-6 flex flex-col items-center text-center space-y-8 md:space-y-12"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.div variants={itemVariants} className="space-y-4 max-w-3xl">
-          <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4 backdrop-blur-sm">
-            <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
-            The Ultimate CS Learning Platform
-          </div>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-foreground leading-tight md:leading-tight">
-            Master Computer Science <br className="hidden sm:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-500">
-              The Modern Way
-            </span>
-          </h1>
-          <p className="mx-auto max-w-[700px] text-base sm:text-lg md:text-xl text-muted-foreground mt-4 md:mt-6 leading-relaxed">
-            Structured roadmaps, interactive visualizers, concise notes, and an AI study assistant—everything you need to ace your exams and interviews.
-          </p>
-        </motion.div>
-
-        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full justify-center">
-          <Link 
-            href="/roadmaps" 
-            className={cn(buttonVariants({ size: "lg" }), "rounded-full px-8 shadow-lg shadow-primary/25 text-md h-12 w-full sm:w-auto max-w-[280px]")}
-          >
-            Start Learning <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-          <Link 
-            href="/dsa" 
-            className={cn(buttonVariants({ size: "lg", variant: "outline" }), "rounded-full px-8 bg-background/50 backdrop-blur-md text-md h-12 w-full sm:w-auto max-w-[280px]")}
-          >
-            Explore DSA
-          </Link>
-        </motion.div>
-
-        <motion.div variants={itemVariants} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 pt-8 md:pt-12 w-full max-w-6xl">
-          {[
-            { title: "Structured Roadmaps", icon: BookOpen, desc: "Step-by-step paths from beginner to advanced." },
-            { title: "Interactive DSA", icon: Code, desc: "Visualize algorithms and data structures in real-time." },
-            { title: "AI Study Assistant", icon: BrainCircuit, desc: "Get instantly unstuck with AI-powered tutoring." },
-            { title: "Universal Search", icon: Search, desc: "Find notes, cheatsheets, and quizzes instantly." },
-          ].map((feature, i) => (
-            <div key={i} className="group relative overflow-hidden rounded-2xl border border-border/50 bg-background/40 p-6 text-left backdrop-blur-md hover:bg-background/60 hover:border-primary/50 transition-all duration-300">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <feature.icon className="h-8 w-8 text-primary mb-4" />
-              <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground">{feature.desc}</p>
+      {/* Section 2: Cinematic Hero */}
+      <section className="relative w-full min-h-screen flex items-center justify-center pt-24 pb-32 overflow-hidden">
+        <FloatingLogos />
+        
+        <motion.div
+          className="container px-4 md:px-6 relative z-10 flex flex-col items-center text-center space-y-12"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div variants={itemVariants} className="space-y-6 max-w-4xl mx-auto flex flex-col items-center">
+            <div className="inline-flex items-center rounded-full border border-primary/30 premium-glass px-4 py-2 text-sm font-medium text-primary mb-2 shadow-xl shadow-primary/10">
+              <Sparkles className="h-4 w-4 mr-2 animate-pulse text-primary" />
+              The Premium Computer Science Experience
             </div>
-          ))}
+            
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter text-foreground leading-[1.1] md:leading-[1.1]">
+              Master CS. <br className="hidden sm:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-indigo-400 to-primary/80 drop-shadow-sm">
+                The Modern Way.
+              </span>
+            </h1>
+            
+            <p className="max-w-[700px] text-lg sm:text-xl md:text-2xl text-muted-foreground mt-4 leading-relaxed font-light">
+              Structured roadmaps, interactive visualizers, concise notes, and an AI study assistant. Stop searching. Start building.
+            </p>
+          </motion.div>
+
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full justify-center pt-8">
+            <Link 
+              href="/roadmaps" 
+              className={cn(buttonVariants({ size: "lg" }), "rounded-full px-10 shadow-2xl shadow-primary/30 text-lg h-14 w-full sm:w-auto transition-transform active:scale-95 group")}
+            >
+              Get Started <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+            <Link 
+              href="/login" 
+              className={cn(buttonVariants({ size: "lg", variant: "outline" }), "rounded-full px-10 premium-glass text-lg h-14 w-full sm:w-auto transition-transform active:scale-95")}
+            >
+              Sign In
+            </Link>
+          </motion.div>
         </motion.div>
-      </motion.div>
+
+        {/* Ambient Hero Glows */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-primary/20 blur-[150px] rounded-[100%] opacity-40 pointer-events-none mix-blend-screen" />
+      </section>
+
+      {/* Section 3: Premium Dashboard Showcase */}
+      <section className="relative w-full py-24 z-20 flex flex-col items-center justify-center -mt-20 overflow-hidden">
+        <div className="container px-4 md:px-6 relative z-10 flex flex-col items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.2 }}
+            className="w-full max-w-6xl mx-auto perspective-[2000px]"
+          >
+            <motion.div
+              whileHover={{ rotateX: 0, rotateY: 0, scale: 1.02 }}
+              initial={{ rotateX: 5, rotateY: 0, scale: 0.95 }}
+              whileInView={{ rotateX: 0, rotateY: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", stiffness: 100, damping: 30 }}
+              style={{ transformStyle: "preserve-3d" }}
+              className="w-full shadow-2xl shadow-primary/20 rounded-xl"
+            >
+              <DashboardShowcase />
+            </motion.div>
+          </motion.div>
+        </div>
+        
+        {/* Glow behind dashboard */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[400px] bg-indigo-500/10 blur-[120px] rounded-[100%] opacity-50 pointer-events-none mix-blend-screen" />
+      </section>
+
+      <LandingSections />
 
       <Footer />
     </div>
