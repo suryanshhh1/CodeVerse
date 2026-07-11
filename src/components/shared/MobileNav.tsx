@@ -20,7 +20,7 @@ export function MobileNav({ session }: { session?: any }) {
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger className={cn("md:hidden", "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium hover:bg-accent hover:text-accent-foreground h-12 w-12 transition-all active:scale-[0.95]")}>
+      <SheetTrigger className={cn("xl:hidden", "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium hover:bg-accent hover:text-accent-foreground h-12 w-12 transition-all active:scale-[0.95]")}>
         <Menu className="h-7 w-7" />
         <span className="sr-only">Toggle navigation menu</span>
       </SheetTrigger>
