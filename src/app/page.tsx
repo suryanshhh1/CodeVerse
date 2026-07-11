@@ -16,7 +16,8 @@ export default function Home() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.15,
+        ease: [0.16, 1, 0.3, 1] as const,
       },
     },
   };
@@ -26,7 +27,7 @@ export default function Home() {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { type: "spring" as const, stiffness: 100 },
+      transition: { type: "spring" as const, stiffness: 100, damping: 20 },
     },
   };
 
@@ -44,19 +45,35 @@ export default function Home() {
         >
           <motion.div variants={itemVariants} className="space-y-6 max-w-4xl mx-auto flex flex-col items-center">
             <div className="flex flex-col items-center justify-center mb-4">
-              <div className="flex items-center justify-center gap-3 sm:gap-4">
+              <motion.div 
+                className="flex items-center justify-center gap-3 sm:gap-4"
+                animate={{ y: [-3, 3, -3] }}
+                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+              >
                 <div className="flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-2xl shadow-primary/40">
                   <Code2 className="h-6 w-6 sm:h-8 sm:w-8" />
                 </div>
                 <span className="font-black tracking-tighter text-4xl sm:text-5xl md:text-6xl text-foreground">
                   CodeVerse
                 </span>
-              </div>
+              </motion.div>
               <motion.div 
                 initial={{ opacity: 0, scaleX: 0 }}
-                animate={{ opacity: 1, scaleX: 1 }}
-                transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-                className="mt-8 w-32 h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent drop-shadow-[0_0_8px_rgba(139,92,246,0.8)]"
+                animate={{ 
+                  opacity: 1, 
+                  scaleX: 1,
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                }}
+                transition={{ 
+                  opacity: { delay: 0.4, duration: 0.8, ease: "easeOut" },
+                  scaleX: { delay: 0.4, duration: 0.8, ease: "easeOut" },
+                  backgroundPosition: { repeat: Infinity, duration: 8, ease: "linear" }
+                }}
+                className="mt-8 w-32 h-[1px] drop-shadow-[0_0_8px_rgba(139,92,246,0.8)]"
+                style={{
+                  background: "linear-gradient(90deg, transparent, rgba(139,92,246,0.2), rgba(139,92,246,0.8), rgba(139,92,246,0.2), transparent)",
+                  backgroundSize: "200% 100%"
+                }}
               />
             </div>
             
@@ -73,23 +90,31 @@ export default function Home() {
           </motion.div>
 
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full justify-center pt-8">
-            <Link 
-              href="/roadmaps" 
-              className={cn(buttonVariants({ size: "lg" }), "rounded-full px-10 shadow-2xl shadow-primary/30 text-lg h-14 w-full sm:w-auto transition-transform active:scale-95 group")}
-            >
-              Get Started <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Link>
-            <Link 
-              href="/login" 
-              className={cn(buttonVariants({ size: "lg", variant: "outline" }), "rounded-full px-10 premium-glass text-lg h-14 w-full sm:w-auto transition-transform active:scale-95")}
-            >
-              Sign In
-            </Link>
+            <motion.div whileHover={{ y: -2, scale: 1.02, filter: "drop-shadow(0 0 10px rgba(139,92,246,0.4))" }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
+              <Link 
+                href="/roadmaps" 
+                className={cn(buttonVariants({ size: "lg" }), "rounded-full px-10 shadow-2xl shadow-primary/30 text-lg h-14 w-full transition-transform group")}
+              >
+                Get Started <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </motion.div>
+            <motion.div whileHover={{ y: -2, scale: 1.02 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
+              <Link 
+                href="/login" 
+                className={cn(buttonVariants({ size: "lg", variant: "outline" }), "rounded-full px-10 premium-glass text-lg h-14 w-full transition-transform")}
+              >
+                Sign In
+              </Link>
+            </motion.div>
           </motion.div>
         </motion.div>
 
         {/* Ambient Hero Glows */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-primary/20 blur-[150px] rounded-[100%] opacity-40 pointer-events-none mix-blend-screen" />
+        <motion.div 
+          animate={{ opacity: [0.3, 0.5, 0.3] }}
+          transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-primary/20 blur-[150px] rounded-[100%] pointer-events-none mix-blend-screen" 
+        />
       </section>
 
       {/* Section 3: Premium Dashboard Showcase */}

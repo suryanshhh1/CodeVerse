@@ -30,11 +30,15 @@ export function NavLinks() {
             key={href}
             href={href}
             className={cn(
-              "transition-colors hover:text-foreground",
+              "relative transition-colors hover:text-foreground group",
               isActive ? "text-primary font-semibold" : ""
             )}
           >
             {label}
+            <span className={cn(
+              "absolute -bottom-1 left-0 w-full h-[2px] bg-primary scale-x-0 origin-left transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
+              isActive ? "scale-x-100" : "group-hover:scale-x-100"
+            )} />
           </Link>
         );
       })}

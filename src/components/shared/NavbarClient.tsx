@@ -27,7 +27,7 @@ export function NavbarClient({ session, signOutAction }: { session: unknown, sig
   const navWidth = useTransform(scrollY, [0, 100], ["100%", "90%"]);
   const navY = useTransform(scrollY, [0, 100], [0, 16]);
   const navRadius = useTransform(scrollY, [0, 100], ["0px", "24px"]);
-  const blurValue = useTransform(scrollY, [0, 100], ["blur(12px)", "blur(24px)"]);
+  const blurValue = useTransform(scrollY, [0, 100], ["blur(12px)", "blur(32px)"]);
   const bgColor = useTransform(
     scrollY,
     [0, 100],
@@ -66,9 +66,12 @@ export function NavbarClient({ session, signOutAction }: { session: unknown, sig
           {/* Center: Logo */}
           <div className="flex-1 flex justify-center">
             <Link href="/" className="flex items-center gap-2 group transition-transform active:scale-95">
-              <div className="flex h-8 w-8 items-center justify-center rounded-[10px] bg-primary text-primary-foreground premium-shadow transition-transform group-hover:scale-105 group-hover:shadow-primary/50">
+              <motion.div 
+                whileHover={{ scale: 1.05 }}
+                className="flex h-8 w-8 items-center justify-center rounded-[10px] bg-primary text-primary-foreground premium-shadow transition-transform group-hover:shadow-primary/50"
+              >
                 <Code2 className="h-5 w-5" />
-              </div>
+              </motion.div>
               <span className="font-extrabold tracking-tight text-xl hidden sm:inline-block transition-opacity group-hover:opacity-80">
                 CodeVerse
               </span>
@@ -83,7 +86,7 @@ export function NavbarClient({ session, signOutAction }: { session: unknown, sig
                 name="q"
                 type="search" 
                 placeholder="Search..." 
-                className="w-full bg-background/30 pl-9 border-border/30 hover:bg-background/50 focus-ring transition-all rounded-full h-9"
+                className="w-full bg-background/30 pl-9 border-border/30 hover:bg-background/50 focus-ring transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] focus-within:w-64 rounded-full h-9"
               />
             </form>
 

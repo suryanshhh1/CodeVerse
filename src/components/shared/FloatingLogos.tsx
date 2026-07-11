@@ -50,14 +50,16 @@ export function FloatingLogos() {
             y: smoothMouseY,
           }}
           animate={{
-            y: ["0%", "-10%", "0%"],
-            rotate: [0, 5, -5, 0],
+            y: ["0%", "-15%", "0%", "10%", "0%"],
+            x: ["0%", "5%", "0%", "-5%", "0%"],
+            rotate: [0, 3, -3, 0],
+            opacity: [0.5, 0.8, 0.5],
           }}
           transition={{
-            duration: 8 + (i % 5),
+            duration: 10 + (i * 1.5) % 8,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: i * 0.5,
+            delay: i * 0.2,
           }}
         >
           <div className="relative w-12 h-12 md:w-16 md:h-16 premium-glass rounded-2xl flex items-center justify-center filter drop-shadow-2xl">

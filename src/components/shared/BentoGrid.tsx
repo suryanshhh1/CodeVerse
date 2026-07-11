@@ -93,11 +93,12 @@ export function BentoGrid() {
       {features.map((feature, i) => (
         <motion.div
           key={i}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20, delay: i * 0.1 }}
-          className={`group relative overflow-hidden rounded-3xl premium-glass border border-border/50 p-6 md:p-8 flex flex-col justify-end min-h-[200px] hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 ${feature.colSpan} ${feature.rowSpan}`}
+          whileHover={{ y: -4, scale: 1.01 }}
+          className={`group relative overflow-hidden rounded-3xl premium-glass border border-border/50 p-6 md:p-8 flex flex-col justify-end min-h-[200px] hover:shadow-2xl hover:shadow-primary/20 hover:border-primary/30 transition-all duration-300 ${feature.colSpan} ${feature.rowSpan}`}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           

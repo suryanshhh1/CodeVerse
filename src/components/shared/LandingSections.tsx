@@ -128,13 +128,18 @@ export function LandingSections() {
                   { name: "Elena M.", role: "CS Student", text: "The AI Study Assistant is like having a senior engineer sitting next to you 24/7. Worth every penny." },
                   { name: "James R.", role: "Backend Engineer", text: "Finally, a platform that doesn't just give you a wall of text. The interactive learning approach is the future." },
                 ].map((t, i) => (
-                  <div key={i} className="w-[350px] shrink-0 premium-glass border border-border/50 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl shadow-primary/5">
+                  <motion.div 
+                    key={i} 
+                    whileHover={{ y: -4, scale: 1.01 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    className="w-[350px] shrink-0 premium-glass border border-border/50 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/20 hover:border-primary/30 transition-all duration-300"
+                  >
                     <p className="text-muted-foreground font-medium leading-relaxed">&quot;{t.text}&quot;</p>
                     <div>
                       <div className="font-bold text-foreground">{t.name}</div>
                       <div className="text-sm text-primary/80">{t.role}</div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             ))}
@@ -146,20 +151,67 @@ export function LandingSections() {
       <section className="w-full py-32 pb-40 flex flex-col items-center justify-center relative">
         <div className="absolute inset-0 bg-primary/5 blur-[100px] rounded-[100%] pointer-events-none" />
         <div className="container px-4 text-center space-y-8 relative z-10">
-          <h2 className="text-4xl md:text-7xl font-black tracking-tighter leading-tight">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-7xl font-black tracking-tighter leading-tight"
+          >
             Stop searching. <br/> Start <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-400">building.</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-xl text-muted-foreground max-w-2xl mx-auto"
+          >
             Join thousands of developers mastering computer science the modern way.
-          </p>
-          <div className="pt-8">
-            <a href="/signup" className="inline-flex h-16 items-center justify-center rounded-full bg-primary px-12 text-lg font-medium text-primary-foreground shadow-2xl shadow-primary/40 hover:scale-105 active:scale-95 transition-all">
-              Start Learning Now
-            </a>
-          </div>
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="pt-8 flex justify-center"
+          >
+            <MagneticButton>
+              <a href="/signup" className="inline-flex h-16 items-center justify-center rounded-full bg-primary px-12 text-lg font-medium text-primary-foreground shadow-2xl shadow-primary/40 hover:scale-105 active:scale-95 transition-all">
+                Start Learning Now
+              </a>
+            </MagneticButton>
+          </motion.div>
         </div>
       </section>
     </div>
+  );
+}
+
+function MagneticButton({ children }: { children: React.ReactNode }) {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
+    const { clientX, clientY } = e;
+    const { height, width, left, top } = e.currentTarget.getBoundingClientRect();
+    const middleX = clientX - (left + width / 2);
+    const middleY = clientY - (top + height / 2);
+    setPosition({ x: middleX * 0.2, y: middleY * 0.2 });
+  };
+
+  const reset = () => {
+    setPosition({ x: 0, y: 0 });
+  };
+
+  return (
+    <motion.div
+      className="relative inline-block"
+      onMouseMove={handleMouse}
+      onMouseLeave={reset}
+      animate={{ x: position.x, y: position.y }}
+      transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
+    >
+      {children}
+    </motion.div>
   );
 }
 
