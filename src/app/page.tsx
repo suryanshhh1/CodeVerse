@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Code2 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/shared/Footer";
@@ -43,9 +43,21 @@ export default function Home() {
           animate="visible"
         >
           <motion.div variants={itemVariants} className="space-y-6 max-w-4xl mx-auto flex flex-col items-center">
-            <div className="inline-flex items-center rounded-full border border-primary/30 premium-glass px-4 py-2 text-sm font-medium text-primary mb-2 shadow-xl shadow-primary/10">
-              <Sparkles className="h-4 w-4 mr-2 animate-pulse text-primary" />
-              The Premium Computer Science Experience
+            <div className="flex flex-col items-center justify-center mb-4">
+              <div className="flex items-center justify-center gap-3 sm:gap-4">
+                <div className="flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-2xl shadow-primary/40">
+                  <Code2 className="h-6 w-6 sm:h-8 sm:w-8" />
+                </div>
+                <span className="font-black tracking-tighter text-4xl sm:text-5xl md:text-6xl text-foreground">
+                  CodeVerse
+                </span>
+              </div>
+              <motion.div 
+                initial={{ opacity: 0, scaleX: 0 }}
+                animate={{ opacity: 1, scaleX: 1 }}
+                transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+                className="mt-8 w-32 h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent drop-shadow-[0_0_8px_rgba(139,92,246,0.8)]"
+              />
             </div>
             
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter text-foreground leading-[1.1] md:leading-[1.1]">
