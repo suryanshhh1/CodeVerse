@@ -207,7 +207,6 @@ export function GlobalAIAssistant() {
               <CardHeader className="border-b border-border/50 bg-background/90 p-4 flex flex-row items-center justify-between space-y-0">
                 <CardTitle className="flex flex-col gap-1 text-lg">
                   <div className="flex items-center gap-2">
-                    <Sparkles className="h-5 w-5 text-primary" />
                     CodeVerse AI
                     {provider && (
                       <span className={`text-[10px] px-1.5 py-0.5 rounded-sm font-medium ${provider === "groq" ? "bg-green-500/10 text-green-500 border border-green-500/20" : "bg-yellow-500/10 text-yellow-500 border border-yellow-500/20"}`}>

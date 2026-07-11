@@ -431,11 +431,8 @@ export default function ChatClient({ initialConversations = [], user }: { initia
         <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 md:p-8 space-y-6">
           {!activeConversation || activeConversation.messages.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center max-w-2xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-4 ring-8 ring-primary/5">
-                <Sparkles className="w-10 h-10 text-primary" />
-              </div>
               <div>
-                <h1 className="text-4xl font-bold mb-2">CodeVerse AI Tutor</h1>
+                <h1 className="text-4xl font-bold mb-2">CodeVerse AI</h1>
                 <p className="text-muted-foreground text-lg">Your personal genius for computer science, coding, and interview prep.</p>
               </div>
               

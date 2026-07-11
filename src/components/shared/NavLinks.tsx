@@ -12,7 +12,7 @@ export const navLinksList = [
   { href: "/dsa", label: "DSA" },
   { href: "/projects", label: "Projects" },
   { href: "/planner", label: "Planner" },
-  { href: "/chat", label: "✨ CodeVerse AI" },
+  { href: "/chat", label: "CodeVerse AI" },
 ];
 
 export function NavLinks() {

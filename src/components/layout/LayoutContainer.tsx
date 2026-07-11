@@ -14,7 +14,7 @@ const layoutContainerVariants = cva(
       },
       offset: {
         none: "",
-        navbar: "pt-16 md:pt-20",
+        navbar: "pt-24 md:pt-28",
       },
     },
     defaultVariants: {
