@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { FolderGit2 } from "lucide-react";
 import Link from "next/link";
 import { LayoutContainer } from "@/components/layout/LayoutContainer";
+import { AmbientLighting } from "@/components/layout/AmbientLighting";
 
 export const metadata = {
   title: "Projects | CodeVerse",
@@ -16,8 +17,10 @@ export default async function ProjectsPage() {
   });
 
   return (
-    <LayoutContainer className="py-10 space-y-12 min-h-[calc(100vh-4rem)]">
-      <div className="flex flex-col gap-4 text-center max-w-2xl mx-auto">
+    <>
+      <AmbientLighting variant="projects" />
+      <LayoutContainer className="py-10 space-y-12 min-h-[calc(100vh-4rem)]">
+        <div className="flex flex-col gap-4 text-center max-w-2xl mx-auto">
         <h1 className="text-4xl font-bold tracking-tight flex items-center justify-center gap-3">
           <FolderGit2 className="h-8 w-8 text-primary" />
           Projects Library
@@ -52,6 +55,7 @@ export default async function ProjectsPage() {
           </Link>
         ))}
       </div>
-    </LayoutContainer>
+      </LayoutContainer>
+    </>
   );
 }

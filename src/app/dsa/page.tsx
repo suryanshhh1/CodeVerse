@@ -5,6 +5,7 @@ import { Code } from "lucide-react";
 import Link from "next/link";
 import DSAVisualizerBanner from "./DSAVisualizerBanner";
 import { LayoutContainer } from "@/components/layout/LayoutContainer";
+import { AmbientLighting } from "@/components/layout/AmbientLighting";
 
 export const metadata = {
   title: "Data Structures & Algorithms | CodeVerse",
@@ -22,8 +23,10 @@ export default async function DSAPage() {
   });
 
   return (
-    <LayoutContainer className="py-10 space-y-12 min-h-[calc(100vh-4rem)]">
-      <div className="flex flex-col gap-4 max-w-2xl">
+    <>
+      <AmbientLighting variant="dsa" />
+      <LayoutContainer className="py-10 space-y-12 min-h-[calc(100vh-4rem)]">
+        <div className="flex flex-col gap-4 text-center max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold tracking-tight flex items-center gap-3">
           <Code className="h-8 w-8 text-primary" />
           Data Structures & Algorithms
@@ -65,6 +68,7 @@ export default async function DSAPage() {
           ))}
         </div>
       </div>
-    </LayoutContainer>
+      </LayoutContainer>
+    </>
   );
 }

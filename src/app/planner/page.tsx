@@ -2,6 +2,7 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import PlannerClient from "./PlannerClient";
 import { redirect } from "next/navigation";
+import { AmbientLighting } from "@/components/layout/AmbientLighting";
 
 export default async function PlannerPage() {
   const session = await auth();
@@ -21,5 +22,10 @@ export default async function PlannerPage() {
   });
 
   // If they don't have a planner, we'll create a default one in the UI later
-  return <PlannerClient initialPlanners={planners} />;
+  return (
+    <>
+      <AmbientLighting variant="planner" />
+      <PlannerClient initialPlanners={planners} />
+    </>
+  );
 }

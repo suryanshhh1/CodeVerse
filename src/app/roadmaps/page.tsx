@@ -5,6 +5,7 @@ import { Map, ArrowRight, Clock } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { LayoutContainer } from "@/components/layout/LayoutContainer";
+import { AmbientLighting } from "@/components/layout/AmbientLighting";
 
 export default async function RoadmapsPage() {
   const roadmaps = await prisma.roadmap.findMany({
@@ -12,8 +13,10 @@ export default async function RoadmapsPage() {
   });
 
   return (
-    <LayoutContainer className="py-10 space-y-12 min-h-[calc(100vh-4rem)]">
-      <div className="flex flex-col gap-4 text-center max-w-2xl mx-auto">
+    <>
+      <AmbientLighting variant="roadmaps" />
+      <LayoutContainer className="py-10 space-y-12 min-h-[calc(100vh-4rem)]">
+        <div className="flex flex-col gap-4 text-center max-w-2xl mx-auto">
         <div className="flex justify-center mb-4">
           <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary shadow-lg ring-1 ring-primary/20">
             <Map className="h-8 w-8" />
@@ -53,6 +56,7 @@ export default async function RoadmapsPage() {
           </Link>
         ))}
       </div>
-    </LayoutContainer>
+      </LayoutContainer>
+    </>
   );
 }
