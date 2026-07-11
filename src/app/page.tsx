@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useSpring, useTransform } from "framer-motion";
 import { ArrowRight, Code2 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -9,6 +9,8 @@ import { Footer } from "@/components/shared/Footer";
 import { FloatingLogos } from "@/components/shared/FloatingLogos";
 import { DashboardShowcase } from "@/components/shared/DashboardShowcase";
 import { LandingSections } from "@/components/shared/LandingSections";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 export default function Home() {
   const containerVariants = {
@@ -36,6 +38,7 @@ export default function Home() {
       {/* Section 2: Cinematic Hero */}
       <section className="relative w-full min-h-screen flex items-center justify-center pt-24 pb-32 overflow-hidden">
         <FloatingLogos />
+        <HeroWatermark />
         
         <motion.div
           className="container px-4 md:px-6 relative z-10 flex flex-col items-center text-center space-y-12"
@@ -148,6 +151,62 @@ export default function Home() {
       <LandingSections />
 
       <Footer />
+    </div>
+  );
+}
+
+function HeroWatermark() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const { theme, systemTheme } = useTheme();
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({
+        x: (e.clientX / window.innerWidth - 0.5) * 20,
+        y: (e.clientY / window.innerHeight - 0.5) * 20,
+      });
+    };
+    
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (!mediaQuery.matches) {
+      window.addEventListener("mousemove", handleMouseMove);
+    }
+    
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  const smoothMouseX = useSpring(mousePosition.x, { stiffness: 40, damping: 20 });
+  const smoothMouseY = useSpring(mousePosition.y, { stiffness: 40, damping: 20 });
+
+  // Max 8px movement from mouse parallax
+  const parallaxX = useTransform(smoothMouseX, (v) => v * 0.4);
+  const parallaxY = useTransform(smoothMouseY, (v) => v * 0.4);
+
+  const currentTheme = theme === "system" ? systemTheme : theme;
+  const isDark = currentTheme === "dark";
+
+  return (
+    <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none z-0">
+      <motion.div
+        className="relative flex items-center justify-center"
+        style={{ x: parallaxX, y: parallaxY }}
+        animate={{ y: ["-3px", "3px", "-3px"] }}
+        transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
+      >
+        <Code2 className="w-[500px] h-[500px] md:w-[700px] md:h-[700px] text-primary opacity-[0.03] blur-[8px]" />
+        
+        {/* Soft Radial Glow */}
+        <motion.div
+          className="absolute inset-0 rounded-full blur-[100px] mix-blend-screen"
+          style={{
+            background: isDark 
+              ? "radial-gradient(circle, rgba(147,51,234,0.15) 0%, rgba(0,0,0,0) 70%)"
+              : "radial-gradient(circle, rgba(147,51,234,0.05) 0%, rgba(255,255,255,0) 70%)"
+          }}
+          animate={{ opacity: [0.3, 0.6, 0.3] }}
+          transition={{ repeat: Infinity, duration: 15, ease: "easeInOut" }}
+        />
+      </motion.div>
     </div>
   );
 }
