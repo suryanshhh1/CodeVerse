@@ -56,7 +56,7 @@ export default function RootLayout({
           <div className="relative flex min-h-screen flex-col">
             <AnnouncementsBanner />
             <Navbar />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 pt-16">{children}</main>
             <GlobalAIAssistant />
           </div>
         </ThemeProvider>

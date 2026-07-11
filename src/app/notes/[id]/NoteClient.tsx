@@ -41,7 +41,7 @@ export default function NoteClient({ note, isReadInitially, isLoggedIn }: any) {
   };
 
   return (
-    <LayoutContainer className="py-6 md:py-10 space-y-6 md:space-y-10 overflow-hidden sm:overflow-visible">
+    <LayoutContainer size="reading" className="py-6 md:py-10 space-y-6 md:space-y-10 overflow-hidden sm:overflow-visible">
       <div className="max-w-4xl mx-auto w-full">
         <Link href="/notes" className={buttonVariants({ variant: "ghost", className: "mb-2 md:mb-4 inline-flex items-center gap-2" })}>
           <ArrowLeft className="h-4 w-4" /> Back to Notes Library

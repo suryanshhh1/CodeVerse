@@ -12,9 +12,14 @@ const layoutContainerVariants = cva(
         reading: "max-w-4xl",
         full: "max-w-full",
       },
+      offset: {
+        none: "",
+        navbar: "pt-16 md:pt-20",
+      },
     },
     defaultVariants: {
       size: "default",
+      offset: "navbar",
     },
   }
 );
@@ -28,12 +33,13 @@ export interface LayoutContainerProps
 export function LayoutContainer({
   className,
   size,
+  offset,
   as: Component = "div",
   ...props
 }: LayoutContainerProps) {
   return (
     <Component
-      className={cn(layoutContainerVariants({ size, className }))}
+      className={cn(layoutContainerVariants({ size, offset, className }))}
       {...props}
     />
   );

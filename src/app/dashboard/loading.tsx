@@ -4,7 +4,7 @@ import { LayoutContainer } from "@/components/layout/LayoutContainer"
 
 export default function DashboardLoading() {
   return (
-    <LayoutContainer className="py-6 md:py-10 space-y-6 md:space-y-8 min-h-[calc(100vh-4rem)]">
+    <LayoutContainer size="wide" className="py-6 md:py-10 space-y-6 md:space-y-8 min-h-[calc(100vh-4rem)]">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="space-y-2">
           <Skeleton className="h-10 w-64" />
