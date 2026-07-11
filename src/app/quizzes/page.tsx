@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Brain, CheckCircle2, XCircle, ArrowRight, RotateCcw } from "lucide-react";
 import confetti from "canvas-confetti";
+import { LayoutContainer } from "@/components/layout/LayoutContainer";
 
 export default function QuizzesPage() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -54,7 +55,7 @@ export default function QuizzesPage() {
 
   if (isFinished) {
     return (
-      <div className="container max-w-3xl px-4 py-20 mx-auto">
+      <LayoutContainer className="py-20">
         <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}>
           <Card className="bg-card/50 backdrop-blur-sm border-border/50 text-center py-10 shadow-xl">
             <CardHeader>
@@ -77,12 +78,12 @@ export default function QuizzesPage() {
             </CardFooter>
           </Card>
         </motion.div>
-      </div>
+      </LayoutContainer>
     );
   }
 
   return (
-    <div className="container max-w-3xl px-4 py-10 mx-auto space-y-8">
+    <LayoutContainer className="py-10 space-y-8">
       <div className="flex items-center justify-between mb-8">
         <h1 className="text-2xl font-bold flex items-center gap-2">
           <Brain className="h-6 w-6 text-primary" /> Topic Quiz
@@ -169,6 +170,6 @@ export default function QuizzesPage() {
           </Card>
         </motion.div>
       </AnimatePresence>
-    </div>
+    </LayoutContainer>
   );
 }

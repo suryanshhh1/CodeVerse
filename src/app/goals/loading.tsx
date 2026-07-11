@@ -1,32 +1,32 @@
+import { Skeleton } from "@/components/ui/skeleton"
+import { LayoutContainer } from "@/components/layout/LayoutContainer"
+
 export default function GoalsLoading() {
   return (
-    <div className="container max-w-5xl px-4 py-10 mx-auto space-y-12">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-        <div className="space-y-2">
-          <div className="h-10 w-48 bg-muted/60 rounded-md animate-pulse"></div>
-          <div className="h-5 w-80 bg-muted/40 rounded-md animate-pulse"></div>
+    <LayoutContainer className="py-6 md:py-10 space-y-8 min-h-[calc(100vh-4rem)]">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-border/50 pb-6">
+        <div>
+          <Skeleton className="h-10 w-48 mb-2" />
+          <Skeleton className="h-5 w-64" />
         </div>
-        <div className="h-10 w-32 bg-primary/20 rounded-md animate-pulse"></div>
+        <Skeleton className="h-10 w-32 rounded-lg" />
       </div>
 
-      <div className="space-y-6">
-        {[...Array(4)].map((_, i) => (
-          <div key={i} className="bg-card/50 border border-border/50 rounded-xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-6 animate-pulse">
-            <div className="flex items-start gap-4 flex-1">
-              <div className="h-12 w-12 rounded-full bg-muted/60 shrink-0"></div>
-              <div className="space-y-3 w-full max-w-lg">
-                <div className="h-6 w-3/4 bg-muted/60 rounded-md"></div>
-                <div className="h-4 w-1/2 bg-muted/40 rounded-md"></div>
-                <div className="h-2 w-full bg-muted/30 rounded-full mt-4"></div>
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <div key={i} className="flex flex-col p-6 space-y-4 premium-glass rounded-2xl h-[200px]">
+            <Skeleton className="h-6 w-3/4" />
+            <Skeleton className="h-4 w-1/2 mb-4" />
+            <div className="mt-auto space-y-2">
+              <div className="flex justify-between">
+                <Skeleton className="h-4 w-12" />
+                <Skeleton className="h-4 w-8" />
               </div>
-            </div>
-            <div className="flex items-center gap-3 md:flex-col md:items-end">
-              <div className="h-8 w-24 bg-muted/40 rounded-md"></div>
-              <div className="h-8 w-24 bg-muted/40 rounded-md"></div>
+              <Skeleton className="h-2 w-full rounded-full" />
             </div>
           </div>
         ))}
       </div>
-    </div>
-  );
+    </LayoutContainer>
+  )
 }

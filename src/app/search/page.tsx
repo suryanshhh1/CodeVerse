@@ -2,8 +2,8 @@ import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import Link from "next/link";
-import { Search as SearchIcon, Map, Code2, BookText, ArrowRight, FolderGit2, Dumbbell, History, TrendingUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Search as SearchIcon, Map, Code2, BookText, FolderGit2, Dumbbell, History, TrendingUp } from "lucide-react";
+import { LayoutContainer } from "@/components/layout/LayoutContainer";
 
 export default async function SearchPage({ searchParams }: { searchParams: Promise<{ q: string }> }) {
   const resolvedParams = await searchParams;
@@ -85,9 +85,9 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
   const hasResults = roadmaps.length > 0 || languages.length > 0 || notes.length > 0 || dsaTopics.length > 0 || problems.length > 0 || projects.length > 0;
 
   return (
-    <div className="container max-w-7xl px-4 py-10 mx-auto space-y-12">
-      <div className="flex flex-col gap-4 max-w-2xl">
-        <h1 className="text-4xl font-bold tracking-tight flex items-center gap-3">
+    <LayoutContainer className="py-10 space-y-12 min-h-[calc(100vh-4rem)]">
+      <div className="flex flex-col gap-4 max-w-2xl mx-auto text-center">
+        <h1 className="text-4xl font-bold tracking-tight flex items-center justify-center gap-3">
           <SearchIcon className="h-8 w-8 text-primary" />
           {q ? `Search Results for "${q}"` : "Global Search"}
         </h1>
@@ -97,7 +97,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
       </div>
 
       {!q && (
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <Card className="bg-card/50 backdrop-blur-sm border-border/50">
             <CardHeader>
               <CardTitle className="flex items-center gap-2"><History className="w-5 h-5 text-primary"/> Recent Searches</CardTitle>
@@ -258,6 +258,6 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
           )}
         </div>
       )}
-    </div>
+    </LayoutContainer>
   );
 }

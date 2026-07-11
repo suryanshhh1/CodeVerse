@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { User as UserIcon, Trophy, Target, BookOpen, Flame, Map, Clock, FileText, LayoutDashboard } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { LayoutContainer } from "@/components/layout/LayoutContainer";
 
 export default function ProfileClient({ initialData }: { initialData: any }) {
   const { user, profile, achievements, goals, stats, streak } = initialData;
@@ -12,7 +13,7 @@ export default function ProfileClient({ initialData }: { initialData: any }) {
   const totalStudyTimeHours = Math.round((Number(stats?.totalStudyTimeMs) || 0) / 3600000);
 
   return (
-    <div className="container max-w-7xl px-4 py-10 mx-auto space-y-8 min-h-[calc(100vh-4rem)]">
+    <LayoutContainer className="py-10 space-y-8 min-h-[calc(100vh-4rem)]">
       
       {/* Profile Header */}
       <Card className="bg-card/50 backdrop-blur-sm border-border/50">
@@ -136,6 +137,6 @@ export default function ProfileClient({ initialData }: { initialData: any }) {
 
         </div>
       </div>
-    </div>
+    </LayoutContainer>
   );
 }

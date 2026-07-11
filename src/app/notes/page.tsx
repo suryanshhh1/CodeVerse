@@ -3,14 +3,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { BookText, ArrowRight, Clock } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { LayoutContainer } from "@/components/layout/LayoutContainer";
 
 export default async function NotesPage() {
   const notes = await prisma.note.findMany({
-    orderBy: { title: 'asc' }
+    orderBy: { createdAt: "desc" },
   });
 
   return (
-    <div className="container max-w-7xl px-4 py-10 mx-auto space-y-12">
+    <LayoutContainer className="py-10 space-y-12 min-h-[calc(100vh-4rem)]">
       <div className="flex flex-col gap-4 text-center max-w-2xl mx-auto">
         <div className="flex justify-center mb-4">
           <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary shadow-lg ring-1 ring-primary/20">
@@ -49,6 +51,6 @@ export default async function NotesPage() {
           </Link>
         ))}
       </div>
-    </div>
+    </LayoutContainer>
   );
 }

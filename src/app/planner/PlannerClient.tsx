@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Plus, CheckCircle2, Circle, Clock, Trash2 } from "lucide-react";
 import { createPlanner, createTask, toggleTaskStatus, deleteTask } from "./actions";
 import { toast } from "sonner";
+import { LayoutContainer } from "@/components/layout/LayoutContainer";
 
 type StudyTask = {
   id: string;
@@ -84,7 +85,7 @@ export default function PlannerClient({ initialPlanners }: { initialPlanners: St
   };
 
   return (
-    <div className="container max-w-5xl px-4 py-10 mx-auto space-y-8">
+    <LayoutContainer className="py-6 md:py-10 space-y-8 min-h-[calc(100vh-4rem)]">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Study Planner</h1>
@@ -107,7 +108,7 @@ export default function PlannerClient({ initialPlanners }: { initialPlanners: St
       ) : (
         <div className="grid gap-6 md:grid-cols-2">
           {planners.map(planner => (
-            <Card key={planner.id} className="bg-card/50 backdrop-blur-sm border-border/50 h-fit max-h-[600px] flex flex-col">
+            <Card key={planner.id} className="bg-card/50 backdrop-blur-sm border-border/50 h-fit max-h-[600px] flex flex-col group">
               <CardHeader className="border-b border-border/50 bg-background/50 pb-4">
                 <CardTitle>{planner.title}</CardTitle>
                 <CardDescription>
@@ -123,7 +124,7 @@ export default function PlannerClient({ initialPlanners }: { initialPlanners: St
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95 }}
-                        className={`flex items-center justify-between p-3 rounded-lg border \${task.status === "Done" ? 'bg-secondary/20 border-transparent opacity-60' : 'bg-background border-border/50 shadow-sm'}`}
+                        className={`flex items-center justify-between p-3 rounded-lg border ${task.status === "Done" ? 'bg-secondary/20 border-transparent opacity-60' : 'bg-background border-border/50 shadow-sm'}`}
                       >
                         <div className="flex items-center gap-3">
                           <button onClick={() => handleToggleTask(planner.id, task.id, task.status)}>
@@ -133,7 +134,7 @@ export default function PlannerClient({ initialPlanners }: { initialPlanners: St
                               <Circle className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
                             )}
                           </button>
-                          <span className={`text-sm font-medium \${task.status === "Done" ? 'line-through' : ''}`}>
+                          <span className={`text-sm font-medium ${task.status === "Done" ? 'line-through' : ''}`}>
                             {task.title}
                           </span>
                         </div>
@@ -170,6 +171,6 @@ export default function PlannerClient({ initialPlanners }: { initialPlanners: St
           ))}
         </div>
       )}
-    </div>
+    </LayoutContainer>
   );
 }

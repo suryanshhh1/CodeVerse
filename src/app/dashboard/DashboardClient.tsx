@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Flame, Trophy, Clock, CheckCircle2, Code2, FolderGit2, Calendar as CalendarIcon, Zap, BookOpen } from "lucide-react";
 import Link from "next/link";
 import { ThemeInput } from 'react-activity-calendar';
+import { LayoutContainer } from "@/components/layout/LayoutContainer";
 
 // Lazy load the heavy chart widget and disable SSR to prevent hydration errors completely
 const ActivityCalendar = dynamic(() => import('react-activity-calendar').then(mod => mod.ActivityCalendar), { 
@@ -73,7 +74,7 @@ export default function DashboardClient({ user, stats, streak, recentActivities,
   };
 
   return (
-    <div className="container max-w-7xl px-4 py-6 md:py-10 mx-auto space-y-6 md:space-y-8 min-h-[calc(100vh-4rem)] overflow-hidden sm:overflow-visible">
+    <LayoutContainer className="py-6 md:py-10 space-y-6 md:space-y-8 min-h-[calc(100vh-4rem)] overflow-hidden sm:overflow-visible">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="flex flex-col gap-2">
           <h1 className="text-3xl font-bold tracking-tight">Welcome back, {user.name || "Student"}!</h1>
@@ -223,6 +224,7 @@ export default function DashboardClient({ user, stats, streak, recentActivities,
           </Card>
         </motion.div>
       </div>
-    </div>
+      <div className="h-12" />
+    </LayoutContainer>
   );
 }

@@ -1,13 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChevronRight, Bookmark, CheckCircle2, FolderGit2, Code2, Rocket } from "lucide-react";
+import { ChevronRight, Bookmark, CheckCircle2, FolderGit2, Code2, Rocket, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { LayoutContainer } from "@/components/layout/LayoutContainer";
+import { cn } from "@/lib/utils";
 
 export default function ProjectClient({ project, initialCompleted, initialBookmarked, isLoggedIn }: any) {
   const router = useRouter();
@@ -61,82 +63,84 @@ export default function ProjectClient({ project, initialCompleted, initialBookma
   };
 
   return (
-    <div className="container max-w-4xl px-4 py-10 mx-auto space-y-10">
-      {/* Header */}
-      <div className="flex flex-col gap-6">
-        <Link href="/projects" className="text-muted-foreground hover:text-primary flex items-center gap-1 text-sm w-fit transition-colors">
-          <ChevronRight className="h-4 w-4 rotate-180" /> Back to Projects
-        </Link>
-        
-        <div className="flex justify-between items-start gap-4 flex-wrap">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">{project.title}</h1>
-          <div className="flex gap-2">
-            <Button variant="outline" size="icon" onClick={handleBookmark}>
-              <Bookmark className={`h-5 w-5 ${isBookmarked ? 'fill-primary text-primary' : ''}`} />
-            </Button>
-            <Button onClick={handleMarkCompleted} disabled={isSubmitting || isCompleted} className="gap-2">
-              {isCompleted ? <><CheckCircle2 className="w-4 h-4" /> Completed</> : "Mark as Completed"}
-            </Button>
+    <LayoutContainer className="py-10 space-y-10">
+      <div className="max-w-4xl mx-auto w-full space-y-10">
+        {/* Header */}
+        <div className="flex flex-col gap-6">
+          <Link href="/projects" className={buttonVariants({ variant: "ghost", className: "w-fit pl-0" })}>
+            <ArrowLeft className="h-4 w-4 mr-2" /> Back to Projects
+          </Link>
+          
+          <div className="flex justify-between items-start gap-4 flex-wrap">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">{project.title}</h1>
+            <div className="flex gap-2">
+              <Button variant="outline" size="icon" onClick={handleBookmark}>
+                <Bookmark className={`h-5 w-5 ${isBookmarked ? 'fill-primary text-primary' : ''}`} />
+              </Button>
+              <Button onClick={handleMarkCompleted} disabled={isSubmitting || isCompleted} className="gap-2">
+                {isCompleted ? <><CheckCircle2 className="w-4 h-4" /> Completed</> : "Mark as Completed"}
+              </Button>
+            </div>
+          </div>
+
+          <div className="flex gap-3 items-center flex-wrap">
+            <Badge variant={project.difficulty === "Beginner" ? "default" : project.difficulty === "Intermediate" ? "secondary" : "destructive"}>
+              {project.difficulty}
+            </Badge>
+            <span className="text-sm text-muted-foreground flex items-center gap-1"><FolderGit2 className="w-4 h-4" /> Project</span>
+            <span className="text-sm text-muted-foreground">{project.estimatedHours} Hours</span>
           </div>
         </div>
 
-        <div className="flex gap-3 items-center flex-wrap">
-          <Badge variant={project.difficulty === "Beginner" ? "default" : project.difficulty === "Intermediate" ? "secondary" : "destructive"}>
-            {project.difficulty}
-          </Badge>
-          <span className="text-sm text-muted-foreground flex items-center gap-1"><FolderGit2 className="w-4 h-4" /> Project</span>
-          <span className="text-sm text-muted-foreground">{project.estimatedHours} Hours</span>
-        </div>
-      </div>
+        <p className="text-lg text-muted-foreground leading-relaxed">
+          {project.description}
+        </p>
 
-      <p className="text-lg text-muted-foreground leading-relaxed">
-        {project.description}
-      </p>
-
-      {/* Tech Stack */}
-      <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-xl"><Code2 className="w-5 h-5 text-primary" /> Tech Stack</CardTitle>
-        </CardHeader>
-        <CardContent className="flex flex-wrap gap-2">
-          {project.techStack.map((tech: string) => (
-            <Badge key={tech} variant="secondary" className="px-3 py-1 text-sm">{tech}</Badge>
-          ))}
-        </CardContent>
-      </Card>
-
-      {/* Learning Outcomes */}
-      <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-xl"><Rocket className="w-5 h-5 text-primary" /> Learning Outcomes</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            {project.learningOutcomes.map((outcome: string, idx: number) => (
-              <li key={idx}>{outcome}</li>
+        {/* Tech Stack */}
+        <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-xl"><Code2 className="w-5 h-5 text-primary" /> Tech Stack</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-wrap gap-2">
+            {project.techStack.map((tech: string) => (
+              <Badge key={tech} variant="secondary" className="px-3 py-1 text-sm">{tech}</Badge>
             ))}
-          </ul>
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
 
-      {/* Implementation Guide Placeholder */}
-      <div className="space-y-6 pt-6">
-        <h2 className="text-2xl font-bold border-b border-border/50 pb-4">Implementation Guide</h2>
-        <div className="prose prose-invert max-w-none">
-          <h3>1. Setup</h3>
-          <p>Initialize your project and install the necessary dependencies using your preferred package manager (npm, yarn, or pnpm).</p>
-          <pre><code>mkdir {project.slug}\ncd {project.slug}\nnpm init -y</code></pre>
-          
-          <h3>2. Folder Structure</h3>
-          <p>Organize your project files logically. A common pattern is separating components, utilities, and assets.</p>
-          
-          <h3>3. Core Features</h3>
-          <p>Start by implementing the core features mentioned in the description. Focus on functionality before perfecting the UI.</p>
-          
-          <h3>4. Deployment</h3>
-          <p>Once your project is working locally, deploy it to a platform like Vercel, Netlify, or GitHub Pages.</p>
+        {/* Learning Outcomes */}
+        <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-xl"><Rocket className="w-5 h-5 text-primary" /> Learning Outcomes</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+              {project.learningOutcomes.map((outcome: string, idx: number) => (
+                <li key={idx}>{outcome}</li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+
+        {/* Implementation Guide Placeholder */}
+        <div className="space-y-6 pt-6">
+          <h2 className="text-2xl font-bold border-b border-border/50 pb-4">Implementation Guide</h2>
+          <div className="prose prose-invert max-w-none">
+            <h3>1. Setup</h3>
+            <p>Initialize your project and install the necessary dependencies using your preferred package manager (npm, yarn, or pnpm).</p>
+            <pre><code>mkdir {project.slug}\ncd {project.slug}\nnpm init -y</code></pre>
+            
+            <h3>2. Folder Structure</h3>
+            <p>Organize your project files logically. A common pattern is separating components, utilities, and assets.</p>
+            
+            <h3>3. Core Features</h3>
+            <p>Start by implementing the core features mentioned in the description. Focus on functionality before perfecting the UI.</p>
+            
+            <h3>4. Deployment</h3>
+            <p>Once your project is working locally, deploy it to a platform like Vercel, Netlify, or GitHub Pages.</p>
+          </div>
         </div>
       </div>
-    </div>
+    </LayoutContainer>
   );
 }

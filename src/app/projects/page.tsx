@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { FolderGit2 } from "lucide-react";
 import Link from "next/link";
+import { LayoutContainer } from "@/components/layout/LayoutContainer";
 
 export const metadata = {
   title: "Projects | CodeVerse",
@@ -11,13 +12,13 @@ export const metadata = {
 
 export default async function ProjectsPage() {
   const projects = await prisma.project.findMany({
-    orderBy: { createdAt: "asc" }
+    orderBy: { createdAt: "desc" },
   });
 
   return (
-    <div className="container max-w-7xl px-4 py-10 mx-auto space-y-12">
-      <div className="flex flex-col gap-4 max-w-2xl">
-        <h1 className="text-4xl font-bold tracking-tight flex items-center gap-3">
+    <LayoutContainer className="py-10 space-y-12 min-h-[calc(100vh-4rem)]">
+      <div className="flex flex-col gap-4 text-center max-w-2xl mx-auto">
+        <h1 className="text-4xl font-bold tracking-tight flex items-center justify-center gap-3">
           <FolderGit2 className="h-8 w-8 text-primary" />
           Projects Library
         </h1>
@@ -51,6 +52,6 @@ export default async function ProjectsPage() {
           </Link>
         ))}
       </div>
-    </div>
+    </LayoutContainer>
   );
 }

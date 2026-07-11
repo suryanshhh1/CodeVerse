@@ -10,6 +10,7 @@ import { Target, Plus, CheckCircle2, AlertCircle } from "lucide-react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import { LayoutContainer } from "@/components/layout/LayoutContainer";
 
 export default function GoalsClient({ initialGoals }: { initialGoals: any[] }) {
   const router = useRouter();
@@ -41,7 +42,7 @@ export default function GoalsClient({ initialGoals }: { initialGoals: any[] }) {
   };
 
   return (
-    <div className="container max-w-7xl px-4 py-10 mx-auto space-y-8 min-h-[calc(100vh-4rem)]">
+    <LayoutContainer className="py-6 md:py-10 space-y-8 min-h-[calc(100vh-4rem)]">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-border/50 pb-6">
         <div>
           <h1 className="text-4xl font-bold tracking-tight flex items-center gap-3">
@@ -143,6 +144,6 @@ export default function GoalsClient({ initialGoals }: { initialGoals: any[] }) {
           })}
         </div>
       )}
-    </div>
+    </LayoutContainer>
   );
 }

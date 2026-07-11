@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Code } from "lucide-react";
 import Link from "next/link";
 import DSAVisualizerBanner from "./DSAVisualizerBanner";
+import { LayoutContainer } from "@/components/layout/LayoutContainer";
 
 export const metadata = {
   title: "Data Structures & Algorithms | CodeVerse",
@@ -21,7 +22,7 @@ export default async function DSAPage() {
   });
 
   return (
-    <div className="container max-w-7xl px-4 py-10 mx-auto space-y-12">
+    <LayoutContainer className="py-10 space-y-12 min-h-[calc(100vh-4rem)]">
       <div className="flex flex-col gap-4 max-w-2xl">
         <h1 className="text-4xl font-bold tracking-tight flex items-center gap-3">
           <Code className="h-8 w-8 text-primary" />
@@ -64,6 +65,6 @@ export default async function DSAPage() {
           ))}
         </div>
       </div>
-    </div>
+    </LayoutContainer>
   );
 }

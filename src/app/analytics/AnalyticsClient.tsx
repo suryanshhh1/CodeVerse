@@ -6,6 +6,7 @@ import { ActivityCalendar } from 'react-activity-calendar';
 import { Flame, Clock, Target, Trophy, TrendingUp, History, BookOpen } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { format } from "date-fns";
+import { LayoutContainer } from "@/components/layout/LayoutContainer";
 
 export default function AnalyticsClient({ initialData }: { initialData: any }) {
   const { stats, streak, calendar, analytics, history } = initialData;
@@ -14,9 +15,9 @@ export default function AnalyticsClient({ initialData }: { initialData: any }) {
   const activityMonthly = Array.isArray(analytics.activityMonthly) ? analytics.activityMonthly : JSON.parse(analytics.activityMonthly || '[]');
 
   return (
-    <div className="container max-w-7xl px-4 py-6 md:py-10 mx-auto space-y-6 md:space-y-8 min-h-[calc(100vh-4rem)] overflow-hidden sm:overflow-visible">
+    <LayoutContainer className="py-6 md:py-10 space-y-6 md:space-y-8 min-h-[calc(100vh-4rem)] overflow-hidden sm:overflow-visible">
       <div className="flex flex-col gap-4 max-w-2xl">
-        <h1 className="text-4xl font-bold tracking-tight flex items-center gap-3">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight flex items-center gap-3">
           <TrendingUp className="h-8 w-8 text-primary" /> Learning Analytics
         </h1>
         <p className="text-xl text-muted-foreground">
@@ -168,7 +169,6 @@ export default function AnalyticsClient({ initialData }: { initialData: any }) {
           </CardContent>
         </Card>
       </div>
-
-    </div>
+    </LayoutContainer>
   );
 }

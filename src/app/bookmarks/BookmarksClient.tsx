@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import { LayoutContainer } from "@/components/layout/LayoutContainer";
 
 export default function BookmarksClient({ initialBookmarks }: { initialBookmarks: any[] }) {
   const router = useRouter();
@@ -47,7 +48,7 @@ export default function BookmarksClient({ initialBookmarks }: { initialBookmarks
   };
 
   return (
-    <div className="container max-w-7xl px-4 py-10 mx-auto space-y-8 min-h-[calc(100vh-4rem)]">
+    <LayoutContainer className="py-10 space-y-8 min-h-[calc(100vh-4rem)]">
       <div className="flex flex-col gap-4 max-w-2xl">
         <h1 className="text-4xl font-bold tracking-tight flex items-center gap-3">
           <Bookmark className="h-8 w-8 text-primary" /> Your Bookmarks
@@ -118,6 +119,6 @@ export default function BookmarksClient({ initialBookmarks }: { initialBookmarks
           ))}
         </div>
       )}
-    </div>
+    </LayoutContainer>
   );
 }

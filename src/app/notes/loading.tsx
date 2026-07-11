@@ -1,6 +1,9 @@
+import { Skeleton } from "@/components/ui/skeleton"
+import { LayoutContainer } from "@/components/layout/LayoutContainer"
+
 export default function NotesLoading() {
   return (
-    <div className="container max-w-7xl px-4 py-10 mx-auto space-y-12">
+    <LayoutContainer className="py-10 space-y-12">
       <div className="flex flex-col gap-4 text-center max-w-2xl mx-auto">
         <div className="flex justify-center mb-4">
           <div className="h-16 w-16 rounded-2xl bg-muted/60 animate-pulse"></div>
@@ -24,6 +27,6 @@ export default function NotesLoading() {
           </div>
         ))}
       </div>
-    </div>
-  );
+    </LayoutContainer>
+  )
 }

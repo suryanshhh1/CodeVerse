@@ -11,6 +11,7 @@ import { NavLinks } from "./NavLinks";
 import { MobileNav } from "./MobileNav";
 import { ThemeToggle } from "./ThemeToggle";
 import { useState, useEffect } from "react";
+import { LayoutContainer } from "../layout/LayoutContainer";
 
 export function NavbarClient({ session, signOutAction }: { session: unknown, signOutAction: () => void }) {
   const { scrollY } = useScroll();
@@ -44,7 +45,7 @@ export function NavbarClient({ session, signOutAction }: { session: unknown, sig
     >
       <motion.div 
         className={cn(
-          "w-full flex items-center justify-between px-4 md:px-8 h-16 transition-all duration-300",
+          "w-full flex justify-center h-16 transition-all duration-300",
           isScrolled ? "border border-border/50 premium-shadow" : "border-b border-border/10"
         )}
         style={{
@@ -53,9 +54,10 @@ export function NavbarClient({ session, signOutAction }: { session: unknown, sig
           backdropFilter: blurValue,
         }}
       >
-        {/* Left Side: Mobile Nav + Desktop Links */}
-        <div className="flex items-center gap-4 flex-1">
-          <MobileNav session={session} />
+        <LayoutContainer className="flex items-center justify-between h-full w-full">
+          {/* Left Side: Mobile Nav + Desktop Links */}
+          <div className="flex items-center gap-4 flex-1">
+            <MobileNav session={session} />
           <div className="hidden lg:flex">
             <NavLinks />
           </div>
@@ -112,7 +114,8 @@ export function NavbarClient({ session, signOutAction }: { session: unknown, sig
             <ThemeToggle />
           </div>
         </div>
-      </motion.div>
+      </LayoutContainer>
+    </motion.div>
     </motion.header>
   );
 }

@@ -8,6 +8,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { LayoutContainer } from "@/components/layout/LayoutContainer";
 
 export default function NoteClient({ note, isReadInitially, isLoggedIn }: any) {
   const router = useRouter();
@@ -40,11 +41,12 @@ export default function NoteClient({ note, isReadInitially, isLoggedIn }: any) {
   };
 
   return (
-    <div className="container max-w-4xl px-4 py-6 md:py-10 mx-auto space-y-6 md:space-y-10 overflow-hidden sm:overflow-visible">
-      <Link href="/notes" className={buttonVariants({ variant: "ghost", className: "mb-2 md:mb-4 inline-flex items-center gap-2" })}>
-        <ArrowLeft className="h-4 w-4" /> Back to Notes Library
-      </Link>
-      
+    <LayoutContainer className="py-6 md:py-10 space-y-6 md:space-y-10 overflow-hidden sm:overflow-visible">
+      <div className="max-w-4xl mx-auto w-full">
+        <Link href="/notes" className={buttonVariants({ variant: "ghost", className: "mb-2 md:mb-4 inline-flex items-center gap-2" })}>
+          <ArrowLeft className="h-4 w-4" /> Back to Notes Library
+        </Link>
+        
         <div className="flex flex-col gap-4">
         <div className="flex items-center gap-4 mb-2">
           <Badge variant="outline" className="text-primary border-primary/50">
@@ -191,5 +193,6 @@ export default function NoteClient({ note, isReadInitially, isLoggedIn }: any) {
         </section>
       </div>
     </div>
+    </LayoutContainer>
   );
 }
