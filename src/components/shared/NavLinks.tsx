@@ -19,7 +19,7 @@ export function NavLinks() {
   const pathname = usePathname();
 
   return (
-    <nav className="hidden md:flex gap-6 text-sm font-medium text-muted-foreground">
+    <nav className="hidden md:flex items-center gap-4 xl:gap-6 text-sm font-medium text-muted-foreground">
       {navLinksList.map(({ href, label }) => {
         // Active if exact match OR if it's a nested route under this href
         // e.g. href="/notes" matches pathname="/notes" and "/notes/java"
@@ -30,7 +30,7 @@ export function NavLinks() {
             key={href}
             href={href}
             className={cn(
-              "relative transition-colors hover:text-foreground group",
+              "relative transition-colors hover:text-foreground group whitespace-nowrap",
               isActive ? "text-primary font-semibold" : ""
             )}
           >

@@ -47,38 +47,17 @@ export default function Home() {
           animate="visible"
         >
           <motion.div variants={itemVariants} className="space-y-6 max-w-4xl mx-auto flex flex-col items-center">
-            <div className="flex flex-col items-center justify-center mb-4">
-              <motion.div 
-                className="flex items-center justify-center gap-3 sm:gap-4"
-                animate={{ y: [-3, 3, -3] }}
-                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              >
-                <div className="flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-2xl shadow-primary/40">
-                  <Code2 className="h-6 w-6 sm:h-8 sm:w-8" />
-                </div>
-                <span className="font-black tracking-tighter text-4xl sm:text-5xl md:text-6xl text-foreground">
-                  CodeVerse
-                </span>
-              </motion.div>
-              <motion.div 
-                initial={{ opacity: 0, scaleX: 0 }}
-                animate={{ 
-                  opacity: 1, 
-                  scaleX: 1,
-                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
-                }}
-                transition={{ 
-                  opacity: { delay: 0.4, duration: 0.8, ease: "easeOut" },
-                  scaleX: { delay: 0.4, duration: 0.8, ease: "easeOut" },
-                  backgroundPosition: { repeat: Infinity, duration: 8, ease: "linear" }
-                }}
-                className="mt-8 w-32 h-[1px] drop-shadow-[0_0_8px_rgba(139,92,246,0.8)]"
-                style={{
-                  background: "linear-gradient(90deg, transparent, rgba(139,92,246,0.2), rgba(139,92,246,0.8), rgba(139,92,246,0.2), transparent)",
-                  backgroundSize: "200% 100%"
-                }}
-              />
-            </div>
+            <motion.div 
+              variants={itemVariants}
+              className="flex items-center justify-center gap-3 mb-6"
+            >
+              <div className="flex h-8 w-8 items-center justify-center rounded-[10px] bg-primary text-primary-foreground shadow-lg shadow-primary/30">
+                <Code2 className="h-5 w-5" />
+              </div>
+              <span className="font-black tracking-tight text-xl text-foreground">
+                CodeVerse
+              </span>
+            </motion.div>
             
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter text-foreground leading-[1.1] md:leading-[1.1]">
               Master CS. <br className="hidden sm:block" />
