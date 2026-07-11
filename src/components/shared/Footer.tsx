@@ -94,9 +94,32 @@ export function Footer() {
         </div>
       </div>
       
-      <div className="container px-4 md:px-6 max-w-7xl mx-auto mt-12 pt-8 border-t border-border/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground/60">
+      <div className="container px-4 md:px-6 max-w-7xl mx-auto mt-12 pt-8 border-t border-border/10 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-muted-foreground/60">
         <p>&copy; {new Date().getFullYear()} CodeVerse. All rights reserved.</p>
-        <p>Built with Next.js & Framer Motion.</p>
+        <div className="flex flex-col items-center md:items-end gap-3">
+          <div className="flex flex-col items-center md:items-end leading-tight gap-1">
+            <span className="text-muted-foreground/60">Designed & Developed by</span>
+            <span className="text-foreground/80 font-medium text-sm">Suryansh Pathak</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <a 
+              href="https://github.com/suryanshhh1" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground/70 hover:text-foreground transition-all duration-300 hover:-translate-y-[2px] hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] opacity-80 hover:opacity-100 cursor-pointer"
+            >
+              <GithubIcon className="w-4 h-4" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/suryansh-pathak-253984360/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground/70 hover:text-foreground transition-all duration-300 hover:-translate-y-[2px] hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] opacity-80 hover:opacity-100 cursor-pointer"
+            >
+              <LinkedinIcon className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );
